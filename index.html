@@ -647,7 +647,7 @@
                         while(y > -1 && current_price < parseInt(new_row[y].split(';')[3])) {
                           y--
                         }
-                        console.log(y)
+
                         if(y == -1) {
                           new_row.splice(0,0,rows_copy[x])
                         }else new_row.splice(y+1,0,rows_copy[x])
@@ -1054,8 +1054,6 @@
                 for(var x = 1; x < rows_copy.length; x++) {
                   let current_price = parseInt(rows_copy[x].split(';')[4])
 
-                  console.log(current_price)
-                  console.log(parseInt(new_row[x-1].split(';')[4]))
 
                   if(current_price < parseInt(new_row[x-1].split(';')[4])) {
                     if(x - 1 == 0) {
@@ -1071,10 +1069,10 @@
                       } else {
                         
                         while(y > -1 && current_price < parseInt(new_row[y].split(';')[4])) {
-                          console.log('usao')
+
                           y--
                         }
-                        console.log(y)
+
                         if(y == -1) {
                           new_row.splice(0,0,rows_copy[x])
                         }else new_row.splice(y+1,0,rows_copy[x])
@@ -1088,7 +1086,7 @@
                     new_row.push(rows_copy[x])
                   } 
 
-                  console.log([...new_row])
+
                 }
 
 
