@@ -1,0 +1,148 @@
+@media only screen and (min-width: 1000px) {
+    
+    
+    #interactiveNav .spoljni-div {
+        padding: 10px !important;
+        max-height: 157px;
+    }
+    
+    #interactiveNav .spoljni-div img {
+        position: relative;
+        margin-top: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 130px;
+        max-width: 130px;
+        padding: 0 !important;
+    }
+    
+    #interactiveNav .crveni-krug {
+        top: -70px;
+        margin-left: 81px;
+        font-size: 15px;
+        width: 50px;
+        padding: 2px !important;
+    }
+    
+    #interactiveNav .zuti-cenovnik {
+        top: -70px;
+        width: 85px !important;
+        margin-left: 46px;
+        padding: 0;
+        height: 26px;
+    }
+    
+    #interactiveNav .cenovnik-left > div {
+        font-size: 23px;
+        margin-left: 0;
+    }
+    
+    #interactiveNav .cenovnik-left sup {
+        font-size: 12px;
+        margin-left: 3px;
+    }
+    
+    #interactiveNav .cenovnik-right > div {
+        margin-left: 50px;
+        font-weight: normal !important;
+        margin-top: -7px;
+        font-size: 12px;
+    }
+    
+    #interactiveNav .cenovnik-right sup {
+        font-size: 8px;
+    }
+    
+    .nav:first-child {
+        margin-left: -40px !important;
+    }
+    
+    .baner-kategorije .plava-cena {
+        width: 100% !important;
+        height: auto !important;
+        margin-left: 0 !important;
+    }
+    
+    .zuti-cenovnik.plava-cena {
+        background-color: #2bb4de !important;
+    }
+    
+    .plava-cena .cenovnik-left > div {
+        color: #000 !important;
+    }
+    
+    .kategorije > .proizvodi-row {
+        padding-top: 0 !important;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    nav img {
+        width: auto;
+        margin-left: -10px;
+        padding: 5px;
+    }
+    
+    #interactiveNav .spoljni-div img:not(.cover) {
+        max-height: 160px;
+        max-width: 160px;
+    }
+    
+    nav .nav__items[id] {
+        height: 250px;
+    }
+    
+    nav .crveni-krug {
+        top: -90px;
+        margin-left: 68%;
+        font-size: 20px;
+        width: 60px;
+        padding: 2px;
+        height: 29px;
+        font-weight: 100 !important;
+    }
+    
+    nav .zuti-cenovnik {
+        margin-left: 27% !important;
+        width: 130px !important;
+        top: -90px !important;
+    }
+    
+    nav .cenovnik-left > div {
+        font-size: 30px;
+        margin-left: 0px;
+    }
+    
+    nav .cenovnik-right {
+        margin-top: 14px;
+        margin-left: -99%;
+    }
+    
+    nav .cenovnik-right > div {
+        margin-left: 88px;
+        font-size: 15px;
+    }
+    
+    .crveni-krug {
+        top: 155px;
+        font-size: 25px;
+        margin-left: 147%;
+    }
+    
+    .mobile-banner.plava-cena {
+        width: 97% !important;
+    }
+
+    .zuti-cenovnik.plava-cena {
+        background-color: #2bb4de !important;
+        top: 200px !important;
+    }
+    
+    .plava-cena .cenovnik-left > div {
+        color: #000 !important;
+    }    
+    
+}

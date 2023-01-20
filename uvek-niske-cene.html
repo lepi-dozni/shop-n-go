@@ -1,0 +1,788 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <title>Uvek niske cene
+    </title>
+        <link rel="shortcut icon" type="image/jpg" href="https://maxi.sales-snap.com/asset/387:shopngofaviconpng"/>
+<meta property="og:image" content="https://maxi.sales-snap.com/asset/387:shopngofaviconpng"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="1024"/>
+<meta property="og:image:height" content="1024"/>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TLXTJG8');</script>
+<!-- End Google Tag Manager -->
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/globali.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="css/kategorija.css"/>-->
+    
+    <link rel="stylesheet" type="text/css" href="css/kategorija.css"/>
+    <link rel="stylesheet" type="text/css" href="css/dinamika.css"/>
+
+
+</head>
+
+
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLXTJG8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://maxi.sales-snap.com/focus/1.js" type="text/javascript" charset="utf-8" async="async"></script>
+    <script src="https://maxi.sales-snap.com/focus/2.js" type="text/javascript" charset="utf-8" async="async"></script>
+
+    <script>
+
+        function determineWindowWidth() {
+            var width = window.innerWidth - 150
+            document.getElementById('glavni-kontejner').style.width =  width
+        }
+
+
+        // function checkPopup() {
+        //     if(document.getElementsByClassName('mf-modal-iframe').length > 0) 
+                
+        //         document.getElementsByClassName('mf-modal-iframe-top')[0].contentDocument.getElementsByClassName('mf-modal-close')[0].children[0].click()
+            
+        //     console.log('move')
+        // }
+
+        setTimeout(function() {
+            // document.getElementById('glavni-kontejner').style = 'display:block;'
+
+            document.getElementsByClassName('header-div')[0].style = 'visibility:visible;'
+
+            setTimeout(function() {
+                document.getElementsByClassName('online-katalog-slika-div')[0].style = 'visibility:visible;'
+
+               
+
+                    setTimeout(function() {
+                        document.getElementsByClassName('tabela-proizvoda-div')[0].style = 'visibility:visible;'
+
+                        setTimeout(function() {
+                            document.getElementsByClassName('ljubicasta-pozadina')[0].style = 'visibility:visible;'
+                        }, 10)
+
+                    }, 10) 
+               
+
+            }, 10)    
+            
+            
+        }, 10)
+
+        // setTimeout(function() {
+        //     checkPopup()
+        // }, 10000)
+
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/huawei/i.test(userAgent)) {
+                window.location = 'https://appgallery.huawei.com/app/C105399993'
+                return "https://my-link.com";
+            }
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                window.location = 'https://play.google.com/store/apps/details?id=com.delhaize.maxi.loyalty'
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location = 'https://apps.apple.com/us/app/moj-maxi/id1557471653'
+                return "iOS";
+            }
+
+            return "unknown";
+        }
+
+
+async function getData() {
+    const response = await fetch('tabele/plava-cena.csv', {cache:"no-store"});
+    // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
+    const data = await response.text();
+    
+    // const name_row = data.split('\n')
+
+    const rows = data.split('\n').slice(1)
+
+    var counter = 0;
+
+    var red = 0;
+    
+    // var naziv_kategorija = name_row[1].split(',')
+
+    // document.getElementById('desktop_naslov').innerHTML = naziv_kategorija[0]
+    // document.getElementById('mobile_naslov').innerHTML = naziv_kategorija[0]
+
+    // var podnaslov_kategorija = name_row[1].split(',')
+    // document.getElementById('desktop_podnaslov').innerHTML = podnaslov_kategorija[1]
+    // document.getElementById('mobile_podnaslov').innerHTML = podnaslov_kategorija[1]
+
+    rows.forEach(element => {
+        const row = element.split(';')
+        const naziv = row[0]
+        const stara_cena = row[1]
+        // const nova_cena = row[2]
+        // const popust = row[3]
+        const url = row[2]
+        const trajanje = row[3]
+        const vazenje = row[4]
+        // console.log(row)
+       //  document.getElementById('naziv-' + counter).innerHTML = naziv
+       //  document.getElementById('stara-cena-' + counter).innerHTML = stara_cena
+       //  document.getElementById('nova-cena-' + counter).innerHTML = nova_cena
+       //  document.getElementById('popust-' + counter).innerHTML = popust
+       //  // document.getElementById('url-' + counter).innerHTML = url
+       //  counter++
+       //  console.log(counter)
+       
+       console.log(row)
+       
+
+       if(counter % 4 == 0 || counter == 0) {
+          var tabela_row = document.createElement('div') 
+          tabela_row.setAttribute('class', 'proizvodi-row')
+          var row_id = 'proizvodi-row-' + red
+          tabela_row.setAttribute('id', row_id)
+          // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
+            //  console.log(tabela_row)
+          document.getElementById('tabela-proizvoda').append(tabela_row)
+
+          var cell = document.createElement('div')
+          cell.setAttribute('class', 'prozivodi-cell')
+          cell.setAttribute('id', 'cell-' + counter)
+
+        //   var link = document.createElement('a')
+        //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+        //   link.setAttribute('href', homepage)
+        //   link.setAttribute('target', '_self')
+        //   link.setAttribute('id', 'link-' + counter)
+
+          var razmak = document.createElement('br')
+
+          var slika = document.createElement('img')
+          slika.setAttribute('src', url)
+          slika.setAttribute('id', 'slika-' + counter)
+
+        //   link.append(slika)
+
+          var naziv_1 = document.createElement('div')
+          naziv_1.setAttribute('id', 'naziv-' + counter)
+          naziv_1.setAttribute('class', 'naziv-proizvoda')
+          
+          naziv_1.innerHTML = naziv
+
+          var stara_cena_1 = document.createElement('div')
+          stara_cena_1.setAttribute('id', 'stara-cena-' + counter)
+          var stara_cena_tekst = stara_cena.split('.')
+          
+          if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+          else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+        //   var nova_cena_1 = document.createElement('div')
+        //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+        //   var nova_cena_tekst = nova_cena.split('.')
+        //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+        //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+        //   var popust_1 = document.createElement('div')
+        //   popust_1.setAttribute('id', 'popust-' + counter)
+        //   popust_1.innerHTML = popust
+
+
+        //   cell.append(link)
+        //   cell.append(naziv_1)
+        //   cell.append(stara_cena_1)
+        //   cell.append(nova_cena_1)
+        //   cell.append(popust_1)
+
+          var inner_cell_1 = document.createElement('div')
+          inner_cell_1.setAttribute('class', 'div-inside')
+          inner_cell_1.append(slika)
+
+        //   var popust_container = document.createElement('div')
+        //   popust_container.setAttribute('class', 'crveni-krug')
+          inner_cell_1.append(naziv_1)
+        //   popust_container.append(popust_1)
+
+          
+        //   inner_cell_1.append(popust_container)
+
+        
+        var inner_cell_2 = document.createElement('div')
+        inner_cell_2.setAttribute('class', 'div-inside')
+        // inner_cell_2.append(naziv_1)
+
+        var zuti_cenovnik = document.createElement('div')
+        zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
+
+        var cenovnik_left = document.createElement('div')
+        cenovnik_left.setAttribute('class', 'cenovnik-left')
+        cenovnik_left.append(stara_cena_1)
+
+        // var cenovnik_right = document.createElement('div')
+        // cenovnik_right.setAttribute('class', 'cenovnik-right')
+        // cenovnik_right.append(stara_cena_1)
+
+        zuti_cenovnik.append(cenovnik_left)
+        // zuti_cenovnik.append(cenovnik_right)
+
+        inner_cell_2.append(zuti_cenovnik)
+
+
+          var outer_cell = document.createElement('div')
+          outer_cell.setAttribute('class', 'slicica-div')
+          outer_cell.append(inner_cell_1)
+          outer_cell.append(inner_cell_2)
+        //   outer_cell.append(cell)
+
+        var outer_outer_cell = document.createElement('div')
+        outer_outer_cell.setAttribute('class', 'spoljni-div')
+        outer_outer_cell.append(outer_cell)
+
+
+        
+            var rok = document.createElement('div')
+            rok.setAttribute('class', 'trajanje')
+            if(trajanje != undefined) rok.append(trajanje)
+            outer_outer_cell.append(rok)
+            
+            var lokacija = document.createElement('div')
+            lokacija.setAttribute('class', 'lokacija')
+            if(vazenje != undefined) lokacija.append(vazenje)
+            outer_outer_cell.append(lokacija)
+        // console.log(vazenje)
+
+        tabela_row.append(outer_outer_cell)
+
+          red++;
+
+        
+       } else {
+
+          var cell = document.createElement('div')
+          cell.setAttribute('class', 'prozivodi-cell')
+          cell.setAttribute('id', 'cell-' + counter)
+
+
+        //   var link = document.createElement('a')
+        //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+        //   link.setAttribute('href', homepage)
+        //   link.setAttribute('target', '_self')
+        //   link.setAttribute('id', 'link-' + counter)
+
+          var razmak = document.createElement('br')
+
+          var slika = document.createElement('img')
+          slika.setAttribute('src', url)
+          slika.setAttribute('id', 'slika-' + counter)
+
+        //   link.append(slika)
+
+          var naziv_1 = document.createElement('div')
+          naziv_1.setAttribute('id', 'naziv-' + counter)
+          naziv_1.setAttribute('class', 'naziv-proizvoda')
+          naziv_1.innerHTML = naziv
+
+          var stara_cena_1 = document.createElement('div')
+          stara_cena_1.setAttribute('id', 'stara-cena-' + counter)
+          var stara_cena_tekst = stara_cena.split('.')
+          if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+          else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+        //   var nova_cena_1 = document.createElement('div')
+        //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+        //   var nova_cena_tekst = nova_cena.split('.')
+        //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+        //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+        //   var popust_1 = document.createElement('div')
+        //   popust_1.setAttribute('id', 'popust-' + counter)
+        //   popust_1.innerHTML = popust
+
+
+          var inner_cell_1 = document.createElement('div')
+          inner_cell_1.setAttribute('class', 'div-inside')
+          inner_cell_1.append(slika)
+
+        //   var popust_container = document.createElement('div')
+        //   popust_container.setAttribute('class', 'crveni-krug')
+        //   inner_cell_1.append(naziv_1)
+        //   popust_container.append(popust_1)
+
+          
+        //   inner_cell_1.append(popust_container)
+          inner_cell_1.append(naziv_1)
+        
+        var inner_cell_2 = document.createElement('div')
+        inner_cell_2.setAttribute('class', 'div-inside')
+        // inner_cell_2.append(naziv_1)
+
+        var zuti_cenovnik = document.createElement('div')
+        zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
+
+        var cenovnik_left = document.createElement('div')
+        cenovnik_left.setAttribute('class', 'cenovnik-left')
+        cenovnik_left.append(stara_cena_1)
+
+        // var cenovnik_right = document.createElement('div')
+        // cenovnik_right.setAttribute('class', 'cenovnik-right')
+        // cenovnik_right.append(stara_cena_1)
+
+        zuti_cenovnik.append(cenovnik_left)
+        // zuti_cenovnik.append(cenovnik_right)
+
+        inner_cell_2.append(zuti_cenovnik)
+
+
+          var outer_cell = document.createElement('div')
+          outer_cell.setAttribute('class', 'slicica-div')
+          outer_cell.append(inner_cell_1)
+          outer_cell.append(inner_cell_2)
+        //   outer_cell.append(cell)
+
+        //   tabela_row.append(outer_cell)
+
+        var outer_outer_cell = document.createElement('div')
+        outer_outer_cell.setAttribute('class', 'spoljni-div')
+        outer_outer_cell.append(outer_cell)
+
+        // tabela_row.append(outer_outer_cell)
+
+
+        var rok = document.createElement('div')
+            rok.setAttribute('class', 'trajanje')
+            if(trajanje != undefined) rok.append(trajanje)
+            outer_outer_cell.append(rok)
+            
+            var lokacija = document.createElement('div')
+            lokacija.setAttribute('class', 'lokacija')
+            if(vazenje != undefined) lokacija.append(vazenje)
+            outer_outer_cell.append(lokacija)
+            
+            // console.log(vazenje)
+            
+        var query = 'proizvodi-row-' + (red - 1)
+
+          
+
+          document.getElementById(query).append(outer_outer_cell)
+       }
+       counter++
+    });
+
+    
+   
+}  
+
+async function getDataSidebar() {
+    const response = await fetch('tabele/sidebar_artikli.csv', {cache:"no-store"});
+    const data = await response.text();
+    
+    var counter = 1
+
+    const rows = data.split('\n').slice(1)
+    
+    
+        rows.forEach(element => {
+        const row = element.split(';')
+        const url = row[0]
+        const stara_cena = row[1]
+        const nova_cena = row[2]
+        const popust = row[3]
+        const link = row[4]
+        console.log(url)
+      
+        //   var tabela_row = document.createElement('div') 
+        //   tabela_row.setAttribute('class', 'proizvodi-row')
+        //   var row_id = 'proizvodi-row-' + red
+        //   tabela_row.setAttribute('id', row_id)
+        //     console.log(tabela_row)
+        //   document.getElementById('tabela-proizvoda').append(tabela_row)
+
+        //   var cell = document.createElement('div')
+        //   cell.setAttribute('class', 'prozivodi-cell')
+        //   cell.setAttribute('id', 'cell-' + counter)
+
+        //   var link = document.createElement('a')
+        //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+        //   link.setAttribute('href', homepage)
+        //   link.setAttribute('target', '_self')
+        //   link.setAttribute('id', 'link-' + counter)
+
+        //   var razmak = document.createElement('br')
+
+          var slika = document.createElement('img')
+          slika.setAttribute('src', url)
+          slika.setAttribute('id', 'slika-' + counter)
+
+        //   link.append(slika)
+
+        //   var naziv_1 = document.createElement('div')
+        //   naziv_1.setAttribute('id', 'naziv-' + counter)
+        //   naziv_1.setAttribute('class', 'naziv-proizvoda')
+        //   console.log(naziv)
+        //   naziv_1.innerHTML = naziv
+
+          var stara_cena_1 = document.createElement('div')
+          stara_cena_1.setAttribute('id', 'stara-cena-' + counter)
+          var stara_cena_tekst = stara_cena.split('.')
+          
+          if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+          else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+          var nova_cena_1 = document.createElement('div')
+          nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+          var nova_cena_tekst = nova_cena.split('.')
+          if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+          else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+          var popust_1 = document.createElement('div')
+          popust_1.setAttribute('id', 'popust-' + counter)
+          popust_1.innerHTML = popust
+
+
+        //   var inner_cell_1 = document.createElement('div')
+        //   inner_cell_1.setAttribute('class', 'div-inside')
+        //   inner_cell_1.append(slika)
+
+          var popust_container = document.createElement('div')
+          popust_container.setAttribute('class', 'crveni-krug')
+        //   inner_cell_1.append(naziv_1)
+          popust_container.append(popust_1)
+
+          
+        //   inner_cell_1.append(popust_container)
+
+        
+        // var inner_cell_2 = document.createElement('div')
+        // inner_cell_2.setAttribute('class', 'div-inside')
+        // inner_cell_2.append(naziv_1)
+
+        var zuti_cenovnik = document.createElement('div')
+        zuti_cenovnik.setAttribute('class', 'zuti-cenovnik')
+
+        var cenovnik_left = document.createElement('div')
+        cenovnik_left.setAttribute('class', 'cenovnik-left')
+        cenovnik_left.append(nova_cena_1)
+
+        var cenovnik_right = document.createElement('div')
+        cenovnik_right.setAttribute('class', 'cenovnik-right')
+        cenovnik_right.append(stara_cena_1)
+
+        zuti_cenovnik.append(cenovnik_left)
+        zuti_cenovnik.append(cenovnik_right)
+
+        // inner_cell_2.append(zuti_cenovnik)
+
+
+        //   var outer_cell = document.createElement('div')
+        //   outer_cell.setAttribute('class', 'slicica-div')
+        //   outer_cell.append(inner_cell_1)
+        //   outer_cell.append(inner_cell_2)
+        //   outer_cell.append(cell)
+
+        var outer_outer_cell = document.createElement('div')
+        outer_outer_cell.setAttribute('class', 'spoljni-div')
+        outer_outer_cell.append(slika)
+        outer_outer_cell.append(popust_container)
+        outer_outer_cell.append(zuti_cenovnik)
+        
+         var query = 'sidebar_proizvod_' + counter
+        
+        if(link != undefined) {
+            var link_wrapper = document.createElement('a')
+            link_wrapper.setAttribute('href', link)
+            link_wrapper.setAttribute('target', '_self')
+            link_wrapper.append(outer_outer_cell)
+            document.getElementById(query).append(link_wrapper)
+        } else document.getElementById(query).append(outer_outer_cell)
+        
+        counter++
+
+    
+
+        
+        
+    });
+}
+getDataSidebar() 
+getData()
+    </script>
+<!--     <script src="//maxi.sales-snap.com/focus/3.js" type="text/javascript" charset="utf-8" async="async"></script> -->
+
+    <nav class="nav__cont" id="interactiveNav"  >
+      <ul class="nav">
+        <li class="nav__items">
+            <a class="home" href="https://shopandgo.in.rs" target="_self" >
+            <img id="nav_pocetna" onclick="clickNavLink(event)" class="cover home" src="https://maxi.sales-snap.com/asset/313:side-bar-buttonpng">
+          </a>
+        </li> 
+      <!--   <nav onmouseenter="enterNav()" onmouseleave="leaveNav()"></nav> -->
+        <li class="nav__items">
+            <p class="top-ponuda">POGLEDAJ TOP PONUDU</p><br/>
+           <!--  <img height="100" width="100" class="down-arrow" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/112:arrow-downpng"> -->
+        </li>
+        <!--<li class="nav__items">-->
+        <!--    <img id="izaberi_sveze_piktogram" class="cover gif" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/487:gif4darkgif">-->
+        <!--  <a class="linked-image" href="https://maxi.sales-snap.com/izaberi-uvek-sveze" target="_self" ><img id="izaberi_sveze_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/488:gif4dark-no-buttongif"></a>-->
+        <!--</li>         -->
+<!--         <li class="nav__items">
+            <img class="cover" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/120:sveesvakogdanaiconpng">
+          <a class="linked-image" href="https://maxi.sales-snap.com/page/preview/20" target="_self" ><img src="https://maxi.sales-snap.com/asset/125:vectorsmartobject5png"></a>
+        </li>  -->
+        <!--<li class="nav__items" style="background-color: #754ec4 !important;">-->
+        <!--    <img id="delikates_piktogram" class="cover" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/293:delikates-1png">-->
+        <!--  <a class="linked-image" href="https://maxi.sales-snap.com/uzivaj-u-ukusnom-delikatesu" target="_self" ><img id="delikates_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/489:artboard-25png5"></a>-->
+        <!--</li>              -->
+        
+        <!-- NOVI SIDEBAR             -->
+        <li id="sidebar_proizvod_1" class="nav__items">
+            <!--<img class="cover" src="https://maxi.sales-snap.com/asset/889:untitled-1limunpng">-->
+          <!--<a class="linked-image" href="https://maxi.sales-snap.com/uzivaj-u-ukusnom-delikatesu" target="_self" ><img id="delikates_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/489:artboard-25png5"></a>-->
+        </li>          
+        <li id="sidebar_proizvod_2" class="nav__items">
+            <!--<img id="sidebar_proizvod_2" class="cover" src="https://maxi.sales-snap.com/asset/890:untitled-2psdsirpng">-->
+         <!--<a class="linked-image" href="https://maxi.sales-snap.com/pripremi-ukusan-obrok" target="_self"><img id="pripremi_obrok_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/490:artboard-26png5"></a>-->
+        </li> 
+        <li id="sidebar_proizvod_3" class="nav__items">
+            <!--<img id="sidebar_proizvod_3" class="cover" src="https://maxi.sales-snap.com/asset/891:untitled-2psdsunkapng">-->
+         <!--<a class="linked-image" href="https://maxi.sales-snap.com/pripremi-ukusan-obrok" target="_self"><img id="pripremi_obrok_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/490:artboard-26png5"></a>-->
+        </li>   
+        <li id="sidebar_proizvod_4" class="nav__items">
+            <!--<img id="sidebar_proizvod_4" class="cover" src="https://maxi.sales-snap.com/asset/892:untitled-2psdcokoladno-mlekopng">-->
+         <!--<a class="linked-image" href="https://maxi.sales-snap.com/pripremi-ukusan-obrok" target="_self"><img id="pripremi_obrok_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/490:artboard-26png5"></a>-->
+        </li>   
+        <li id="sidebar_proizvod_5" class="nav__items">
+            <!--<img id="sidebar_proizvod_5" class="cover" src="https://maxi.sales-snap.com/asset/893:untitled-2psdmaramicepng">-->
+         <!--<a class="linked-image" href="https://maxi.sales-snap.com/pripremi-ukusan-obrok" target="_self"><img id="pripremi_obrok_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/490:artboard-26png5"></a>-->
+        </li>           
+        
+        <!--<li class="nav__items">-->
+        <!--    <img id="pripremi_obrok_piktogram" class="cover" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/294:ulje1png">-->
+        <!-- <a class="linked-image" href="https://maxi.sales-snap.com/pripremi-ukusan-obrok" target="_self"><img id="pripremi_obrok_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/490:artboard-26png5"></a>-->
+        <!--</li>-->
+        
+        <li class="nav__items">
+            <a href="https://www.maxi.rs/?utm_source=SG_Liflet&utm_medium=SG_liflet_ikonica&utm_campaign=SG" target="_self"><img style="padding:10px !important;" id="pripremi_obrok_piktogram" class="cover" src="https://maxi.sales-snap.com/asset/888:artboard-2-1png"></a>
+         <!--<a class="linked-image" href="https://maxi.sales-snap.com/pripremi-ukusan-obrok" target="_self"><img id="pripremi_obrok_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/490:artboard-26png5"></a>-->
+        </li>            
+        
+          
+        <!--<li class="nav__items">-->
+        <!--    <img id="gricni_piktogram" class="cover" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/295:grickalice1png">-->
+        <!--  <a class="linked-image" href="https://maxi.sales-snap.com/gricni-i-osvezi-se" target="_self"><img id="gricni_link" onclick="clickNavLink(event)" src="https://maxi.sales-snap.com/asset/491:artboard-27png5"></a>-->
+        <!--</li>-->
+          
+<!--         <li class="nav__items">
+            <img class="cover" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/124:omiljeneceneiconpng">
+          <a class="linked-image" href="https://maxi.sales-snap.com/page/preview/20" target="_self"><img src="https://maxi.sales-snap.com/asset/129:vectorsmartobject9png"></a>
+        </li> -->
+            
+      </ul>
+    </nav>
+
+    // <script>
+
+    //     function expandNav(event) {
+    //         console.log('kkskk')
+
+    //         event.stopPropagation()
+    //         if(document.getElementById('interactiveNav').classList.contains('openNav')) document.getElementsByClassName('openListItem')[0].classList.remove('openListItem')
+    //         document.getElementById('interactiveNav').classList.add('openNav')
+
+    //             event.target.parentElement.classList.add('openListItem')
+
+    //     }
+
+    //     function enterNav() {
+    //         document.getElementById('interactiveNav').classList.add('openNav')
+    //                                 document.getElementsByClassName('nav__items')[0].classList.add('openListItem')
+    //                     document.getElementsByClassName('nav__items')[1].classList.add('openListItem')
+    //                     document.getElementsByClassName('nav__items')[2].classList.add('openListItem')
+    //                     document.getElementsByClassName('nav__items')[3].classList.add('openListItem')
+    //                     document.getElementsByClassName('nav__items')[4].classList.add('openListItem')
+    //     }
+
+    //     function leaveNav() {
+    //         document.getElementById('interactiveNav').classList.remove('openNav')
+    //                                 document.getElementsByClassName('nav__items')[0].classList.remove('openListItem')
+    //                     document.getElementsByClassName('nav__items')[1].classList.remove('openListItem')
+    //                     document.getElementsByClassName('nav__items')[2].classList.remove('openListItem')
+    //                     document.getElementsByClassName('nav__items')[3].classList.remove('openListItem')
+    //                     document.getElementsByClassName('nav__items')[4].classList.remove('openListItem')
+    //     }    
+
+
+
+    // </script>
+
+
+    <div id="glavni-kontejner" class="kontejner" onclick="closeNav(event)">
+        <script>
+
+            function closeNav(event) {
+                console.log('close')
+
+                if(document.getElementById('interactiveNav').classList.contains('openNav')) {
+                        event.preventDefault()
+                        document.getElementById('interactiveNav').classList.remove('openNav')
+                        document.getElementsByClassName('openListItem')[0].classList.remove('openListItem')
+                } else if(event.target.parentElement.hasAttribute('href') && event.target.parentElement.parentElement.parentElement.classList.contains('tabela-social-div')) {
+                    window.open(event.target.parentElement.getAttribute('href'), "_blank")
+                } else if(event.target.parentElement.hasAttribute('href') && event.target.parentElement.parentElement.parentElement.classList.contains('happy-hour')) {
+                    window.open(event.target.parentElement.getAttribute('href'), "_blank")
+                }
+                else if (event.target.parentElement.hasAttribute('href') && !event.target.parentElement.parentElement.classList.contains('social')) {
+                    window.location = event.target.parentElement.getAttribute('href')
+                }
+                
+            }
+
+            function clickNavLink(event) {
+
+                window.location = event.target.parentElement.getAttribute('href')
+            }
+
+        </script>
+
+        <div class="header-div" style="visibility: hidden;">
+            <div class="levo-header">
+    
+            </div>
+            <center><a href="https://shopandgo.in.rs" target="_self"><img src="https://maxi.sales-snap.com/asset/119:logopng" id="iw2i"></a></center>
+            <div class="desno-header">
+            </div>
+        </div>
+        <div class="online-katalog-slika-div" style="visibility: hidden;">
+            <div class="baner-kategorije">
+                <!--<div class="desktop-banner">-->
+
+                <!--    <div id="desktop_naslov" class="baner-naslov"></div>-->
+                <!--    <div id="desktop_podnaslov" class="baner-podnaslov-trajanje"></div>-->
+                <!--    <img class="baner-pozadina" alt="" src="https://maxi.sales-snap.com/asset/620:kategorijeizaberi-uvek-svezedesktop-1-minpng">-->
+
+                <!--</div>-->
+
+                <!--<div class="mobile-banner">-->
+
+                <!--    <div id="mobile_naslov" class="baner-naslov"></div>-->
+                <!--    <div id="mobile_podnaslov" class="baner-podnaslov-trajanje"></div>-->
+                <!--    <img class="baner-pozadina" alt="" src="https://maxi.sales-snap.com/asset/620:kategorijeizaberi-uvek-svezedesktop-1-minpng">-->
+
+                <!--</div>-->
+                 
+                     <img src="https://maxi.sales-snap.com/asset/935:kategorije1plava-cenadesktoppng2" class="desktop-banner plava-cena">
+                    <img src="https://maxi.sales-snap.com/asset/936:kategorije1plava-cenamobpng2" class="mobile-banner plava-cena">
+                 
+                </div>
+        </div>
+
+        <div class="tabela-proizvoda-div kategorije" >
+            <div class="proizvodi-row" id="tabela-proizvoda">
+
+            </div>
+
+
+
+
+            <!--<div class="promo-section" style="display: flex;">-->
+            <!--    <div class="proizvodi-row promo-banner">-->
+
+            <!--        <div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/514:kategorije48-108plava-cenahome-pagepng" class="promo-banner" id="il1xl"></a>-->
+            <!--        </div>-->
+            <!--    </div>  -->
+          
+            <!--</div>-->
+
+        </div>
+        <div class="ljubicasta-pozadina" style="visibility: hidden;">
+             <div class="proizvodi-row footer">
+
+                <div class="proizvodi-cell single-image f-sekcija">
+                     <script type="text/javascript" src="https://maxi.sales-snap.com/form/generate.js?id=6"></script> 
+
+
+
+                </div>
+            </div>              
+        <div class="aplikacije-div">
+            <div id="borderTop">
+                
+            </div>
+<!--             <div id="izv3b-2-2" class="ytvideo">
+                <center><iframe allowfullscreen="" width="560" height="315" src="https://www.youtube.com/embed/gJcJTj53j1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></center>
+            </div> -->
+<!--             <div class="span-top">
+                <center>
+                    <h2>Da li ste zadovoljni našom uslugom?
+                    </h2><br><span>Odaberite jedan od dva ponuđena odgovora</span><br><br>
+                    <form>
+                        <div class="wrappovani-inputi">
+                            <div><input type="radio" name="zadovoljstvo"><b id="xxx1"><span class="vecitext">Da, zadovoljan/na sam uslugom</span></b></div>
+                            <div><input type="radio" name="zadovoljstvo" class="marginleft5"><b id="xxx2"><span class="vecitext">Ne, nisam zadovoljan/na uslugom</span></b></div>
+                        </div>
+                        <br><br><span>Instaliraj Shop N Go loyality aplikaciju i ostvari dodatne pogodnosti</span>
+                    </form>
+                </center>
+            </div> -->
+            <div class="tabela-social-div">
+                <div class="social-cell-facebook"><a href="https://sr-rs.facebook.com/shopandgosrbija/" target="_blank"><img src="https://maxi.sales-snap.com/asset/139:fbpng" id="im987"></a></div>
+                <div class="social-cell-instagram"><a href="https://www.instagram.com/shopandgosrbija/" target="_blank"><img src="https://maxi.sales-snap.com/asset/140:igpng" id="i8mcf"></a></div>
+<!--                 <div class="social-cell-linkedin"><a href="https://www.linkedin.com/company/delhaize-serbia/?originalSubdomain=rs" target="_blank"><img src="https://maxi.sales-snap.com/asset/141:lnpng" id="iputik"></a></div> -->
+                <div class="social-cell-youtube"><a href="https://www.youtube.com/channel/UCDDgelQ8MvzfqCY-Y5gyKLw" target="_blank"><img src="https://maxi.sales-snap.com/asset/142:ytpng" id="iputik"></a></div>
+            </div>              
+            <div class="tabela-aplikacije-div">
+                <div class="aplikacije-cell"><a onclick="getMobileOperatingSystem()" href="#" target="_blank"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" id="im987"></a></div>
+<!--                 <div class="aplikacije-cell"><a href="https://apps.apple.com/us/app/moj-maxi/id1557471653" target="_blank"><img src="https://maxi.sales-snap.com/asset/138:googleplaybuttonpng" id="im987"></a></div>
+                <div class="aplikacije-cell"><a href="https://play.google.com/store/apps/details?id=com.delhaize.maxi.loyalty" target="_blank"><img src="https://maxi.sales-snap.com/asset/136:appstorepng" id="i8mcf"></a></div>
+                <div class="aplikacije-cell"><a href="https://appgallery.huawei.com/app/C105399993" target="_blank"><img src="https://maxi.sales-snap.com/asset/137:appgallerypng" id="iputik"></a></div> -->
+            </div>
+          
+        </div>
+        <div class="footer">
+<!--             <div class="f-sekcija">
+                <h3>Prijavite se za Newsletter</h3><br>
+                <form><input type="email" class="email-polje"><br><input type="submit" value="Prijavite se" class="dugme-submit-forme"></form>
+            </div> -->
+            <div class="f-sekcija">
+                <!-- <h3>Potrebna vam je pomoć?
+                </h3> -->
+                <br>
+                <a href="https://maxi.sales-snap.com/o-kompaniji">O kompaniji</a>
+                <br>
+                <a href="tel:0800-3537030">Pozovite nas</a>
+                <br>
+<!--                 <a href="#">Mapa dostave</a>
+                <br> -->
+                <a href="https://maxi.sales-snap.com/kolacici">Politika kolačića</a><br><br><br>
+                <!-- <img src="https://maxi.sales-snap.com/asset/38:downloadpng1" id="i91blm"> -->
+            </div>
+
+        </div>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
