@@ -45,19 +45,9 @@
         .proizvodi-row.footer{
           width: unset !important;
         }
-<<<<<<< Updated upstream
-=======
         #interactiveNav .spoljni-div{
           max-height: unset !important;
         }
-        .top-ponuda-new{
-          font-size: 25px !important;
-          overflow-wrap: break-word;
-          text-align: center;
-          font-weight: 800;
-          width: unset;
-        }
->>>>>>> Stashed changes
         .close-menu,
         .burger-menu{
             cursor: pointer;
@@ -101,7 +91,8 @@
         /* .banner-slider{
             width: 80%;
         } */
-        .banner-slider img{
+        .banner-slider img,
+        .banner-slider-mobile img{
             height: auto;
         }
         #myUL{
@@ -120,12 +111,20 @@
           height: auto;
           overflow: visible;
         }
+        /* #mauticform_input_njuzleterkatalogforma_submit{
+          opacity: 0;
+        } */
         /* media queries redesign */
         @media only screen and (max-width: 320px) {
             .search-wrapper,
-            #myUL,
-            .banner-slider{
+            #myUL{
               width: 240px !important;
+            }
+            .banner-slider{
+              display: none;
+            }
+            .banner-slider-mobile{
+              display: block;
             }
             .kalkulator{
               margin-top: 24px !important;
@@ -139,44 +138,49 @@
             #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
               width: 240px !important;
             }
-            #mauticform_input_njuzleterkatalogforma_submit{
-              width: 100px !important;
-              margin-left: 31px !important;
-              margin-top: -130px !important;
-              position: absolute;
+            #kalkulator,
+            .sort-wrapper{
+              width: 97% !important;
             }
-            .top-ponuda-new{
-              font-size: 20px !important;
+            .sort-button{
+              width: 100% !important;
+            }
+            #kalkulator{
+              font-size: 34px;
+              height: auto !important;
+            }
+            #kalkulator > div{
+              margin-top: 6px !important;
+            }
+            .discount-sort .close-button{
+              right: unset;
+              top: -12px;
+              left: -15px;
             }
         }
         @media only screen and (min-width: 320px) and (max-width: 600px)  {
-            .top-ponuda-new{
-              font-size: 20px !important;
-            }
             .search-wrapper,
-            #myUL,
-            .banner-slider{
+            #myUL{
               width: 320px !important;
+            }
+            .banner-slider{
+              display: none;
+            }
+            .banner-slider-mobile{
+              display: block;
             }
             .kalkulator{
               margin-top: 24px !important;
               margin-left: -13px !important;
             }
             .burger-menu{
-              left: 10px !important;
-              top: 50px !important;
+              left: 0px !important;
+              top: 27px !important;
               height: 40px;
             }
             #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
               width: 300px !important;
             }
-<<<<<<< Updated upstream
-            #mauticform_input_njuzleterkatalogforma_submit{
-              width: 100px !important;
-              margin-left: 52px !important;
-              margin-top: -130px !important;
-              position: absolute;
-=======
             #kalkulator,
             .sort-wrapper{
               width: 97% !important;
@@ -191,7 +195,7 @@
             }
             #kalkulator{
               font-size: 34px;
-              /* height: auto !important; */
+              height: auto !important;
             }
             #kalkulator > div{
               margin-top: 6px !important;
@@ -204,7 +208,6 @@
               right: unset;
               top: -12px;
               left: -15px;
->>>>>>> Stashed changes
             }
         }
         @media only screen and (min-width: 600px) and (max-width: 768px)  {
@@ -212,168 +215,149 @@
               margin-top: 24px !important;
               margin-left: -13px !important;
             }
-            .top-ponuda-new{
-              font-size: 20px !important;
-            }
             .search-wrapper,
-            #myUL,
-            .banner-slider{
+            #myUL{
               width: 400px !important;
             }
+            .banner-slider{
+              display: none;
+            }
+            .banner-slider-mobile{
+              display: block;
+            }
             .burger-menu{
-              left: 12px !important;
-              top: 80px !important;
+              left: 0px !important;
+              top: 27px !important;
               height: 40px;
             }
             #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
               width: 450px !important;
             }
-            #mauticform_input_njuzleterkatalogforma_submit{
-              width: 100px !important;
-              margin-left: 131px !important;
-              margin-top: -130px !important;
-              position: absolute;
+            #kalkulator,
+            .sort-wrapper{
+              width: 97% !important;
+            }
+            .sort-button{
+              width: 100% !important;
+            }
+            .sort-button{
+              width: 100% !important;
+              font-size: 34px;
+              padding: 20px;
+            }
+            #kalkulator{
+              font-size: 34px;
+            }
+            #kalkulator > div{
+              margin-top: 21px !important;
+            }
+            .price-sort,
+            .discount-sort{
+              font-size: 20px !important;
+            }
+            .discount-sort .close-button{
+              right: unset;
+              top: -12px;
+              left: -15px;
             }
         }
-<<<<<<< Updated upstream
-=======
-        @media only screen and (min-width: 500px) and (max-width: 550px){
-    
-          #glavni-kontejner:not(.margin-reset-menu-active) .submit-mask{
-              top: 319px;
-              left: 63%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-          #glavni-kontejner.margin-reset-menu-active .submit-mask{
-              top: 167px;
-              left: 63%;
-              height: 120px !important;
-              width: 120px !important;
+        @media only screen and (min-width: 600px) and (max-width: 700px){
+          
+        }
+        @media only screen and (min-width: 700px) and (max-width: 800px){
+          .submit-mask{
+              top: 129px;
+              right: 104px;
+              height: 80px !important;
+              width: 80px !important;
           }
         }
-        @media only screen and (min-width: 550px) and (max-width: 590px){
-    
-          #glavni-kontejner:not(.margin-reset-menu-active) .submit-mask{
-              top: 198px;
-              left: 63%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-          #glavni-kontejner.margin-reset-menu-active .submit-mask{
-              top: 167px;
-              left: 63%;
-              height: 120px !important;
-              width: 120px !important;
+        @media only screen and (min-width: 800px) and (max-width: 996px){
+          .submit-mask{
+              top: 129px;
+              right: 94px;
+              height: 80px !important;
+              width: 115px !important;
           }
         }
-        @media only screen and (min-width: 640px) and (max-width: 720px){
-          #glavni-kontejner:not(.margin-reset-menu-active) .submit-mask{
-              top: 158px;
-              left: 73%;
-              height: 170px !important;
-              width: 120px !important;
-          }
-          #glavni-kontejner.margin-reset-menu-active .submit-mask{
-              top: 108px;
-              left: 71%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-        }
-        @media only screen and (min-width: 720px) and (max-width: 870px){
-          #glavni-kontejner:not(.margin-reset-menu-active) .submit-mask{
-              top: 108px;
-              left: 73%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-          #glavni-kontejner.margin-reset-menu-active .submit-mask{
-              top: 108px;
-              left: 63%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-        }
-        @media only screen and (min-width: 800px) and (max-width: 870px){
-          #glavni-kontejner:not(.margin-reset-menu-active) .submit-mask{
-              top: 108px;
-              left: 73%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-          #glavni-kontejner.margin-reset-menu-active .submit-mask{
-              top: 108px;
-              left: 63%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-        }
-        @media only screen and (min-width: 870px) and (max-width: 996px){
-          #glavni-kontejner:not(.margin-reset-menu-active) .submit-mask{
-              top: 108px;
-              left: 73%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-          #glavni-kontejner.margin-reset-menu-active .submit-mask{
-              top: 108px;
-              left: 63%;
-              height: 120px !important;
-              width: 120px !important;
-          }
-        }
->>>>>>> Stashed changes
         @media only screen and (min-width: 768px) and (max-width: 996px){
             .kalkulator{
               margin-top: 24px !important;
               margin-left: -9px !important;
             }
-            .top-ponuda-new{
-              font-size: 20px !important;
-            }
             .search-wrapper,
-            #myUL,
-            .banner-slider{
+            #myUL{
               width: 500px !important;
             }
+            .banner-slider{
+              display: none;
+            }
+            .banner-slider-mobile{
+              display: block;
+            }
             .burger-menu{
-              left: 33px !important;
-              top: 75px !important;
+              left: 0px !important;
+              top: 27px !important;
               height: 50px;
             }
             #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
               width: 500px !important;
             }
-            #mauticform_input_njuzleterkatalogforma_submit{
-              width: 100px !important;
-              margin-left: 161px !important;
-              margin-top: -135px !important;
-              position: absolute;
+            #kalkulator,
+            .sort-wrapper{
+              width: 97% !important;
+            }
+            .sort-button{
+              width: 100% !important;
+              font-size: 34px;
+              padding: 20px;
+            }
+            #kalkulator{
+              font-size: 34px;
+            }
+            #kalkulator > div{
+              margin-top: 21px !important;
+            }
+            .price-sort,
+            .discount-sort{
+              font-size: 20px !important;
+            }
+            .discount-sort .close-button{
+              right: unset;
+              top: -12px;
+              left: -15px;
             }
         }
         @media only screen and (min-width: 996px){
             #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
                 width: 600px !important;
             }
-            #mauticform_input_njuzleterkatalogforma_submit{
-              width: 100px !important;
-              margin-left: -91px;
-              margin-top: 70px;
-              position: absolute;
-            }
             .search-wrapper,
-            #myUL,
-            .banner-slider{
+            #myUL{
               width: 800px !important;
             }
-         
+            .banner-slider{
+              display: block;
+            }
+            .banner-slider-mobile{
+              display: none;
+            }
+            
         }
         @media only screen and (min-width: 996px){
             .search-wrapper,
-            #myUL,
-            .banner-slider{
+            #myUL{
               width: 800px !important;
+            }
+            .banner-slider{
+              display: block;
+            }
+            .banner-slider-mobile{
+              display: none;
+            }
+            .submit-mask{
+              top: 59px;
+              right: -429px;
             }
         }
         /* media queries redesign */
@@ -698,16 +682,16 @@
             color: #4C2987;
             display: block;
             width: 280px;
-            height: 80px;
+            height: auto;
             text-align: center;
             overflow: hidden;
-            padding-top: 30px;
             color: #4C2987;
             background-color: #F8D000;
             border-radius: 80px;
             cursor: pointer;
             margin-top: 20px;
             margin-bottom: 20px;
+            padding: 20px;
         }
         .sort-wrapper{
             width: 280px;
@@ -784,14 +768,10 @@
           background: url('/SVG/newsletter_button.svg') no-repeat right center;
           background-color: white;
         }
-<<<<<<< Updated upstream
-        #mauticform_input_njuzleterkatalogforma_submit{
-          font-size: 6px !important;
-=======
         .submit-mask{
           height: 60px;
           width: 60px;
-          /* outline: 3px solid white; */
+          outline: 3px solid white;
           z-index: 100;
           position: absolute;
           cursor: pointer;
@@ -801,7 +781,6 @@
         }
         #mauticform_njuzleterkatalogforma_submit{
           display: none;
->>>>>>> Stashed changes
         }
         /* newsletter */
         /* show more */
@@ -2347,29 +2326,17 @@
           </li> 
 
           <!--   <nav onmouseenter="enterNav()" onmouseleave="leaveNav()"></nav> -->
-          <li class="nav__items">
-              <p class="top-ponuda">POGLEDAJ TOP PONUDU</p><br/>
+          <!-- <li class="nav__items"> -->
+              <!-- <p class="top-ponuda">POGLEDAJ TOP PONUDU</p><br/> -->
             <!--  <img height="100" width="100" class="down-arrow" onclick="expandNav(event)" src="https://maxi.sales-snap.com/asset/112:arrow-downpng"> -->
-          </li>
+          <!-- </li> -->
           
           <!-- NOVI SIDEBAR             -->
           <li id="sidebar_proizvod_1" class="nav__items">
-<<<<<<< Updated upstream
-
-          </li>          
-          <li id="sidebar_proizvod_2" class="nav__items">
-
-          </li> 
-          <li id="sidebar_proizvod_3" class="nav__items">
-
-          </li>   
-          <li id="sidebar_proizvod_4" class="nav__items">
-
-=======
             <a href="izaberi-uvek-sveze.html">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1487:izaberi-uvek-svezepng1" alt="izaberi uvek sveze">
-                <p class="top-ponuda-new">IZABERI UVEK SVEŽE</p>
+                <p class="top-ponuda">IZABERI UVEK SVEŽE</p>
               </div>
             </a>
           </li>          
@@ -2377,7 +2344,7 @@
             <a href="uzivaj-u-ukusnom-delikatesu.html">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1488:delikatespng" alt="uzivaj u ukusnom delikatesu">
-                <p class="top-ponuda-new">UŽIVAJ U UKUSNOM DELIKATESU</p>
+                <p class="top-ponuda">UŽIVAJ U UKUSNOM DELIKATESU</p>
               </div>
             </a>
           </li> 
@@ -2385,7 +2352,7 @@
             <a href="pripremi-ukusan-obrok.html">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1489:ukusan-obrokpng" alt="pripremi ukusan obrok">
-                <p class="top-ponuda-new">PRIPREMI UKUSAN OBROK</p>
+                <p class="top-ponuda">PRIPREMI UKUSAN DORUCAK</p>
               </div>
             </a>
           </li>   
@@ -2393,18 +2360,17 @@
             <a href="gricni-i-osvezi-se.html">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1490:gricnipng" alt="gricni i osvezi se">
-                <p class="top-ponuda-new">GRICNI I OSVEŽI SE</p>
+                <p class="top-ponuda">GRICNI I OSVEŽI SE</p>
               </div>
             </a>
->>>>>>> Stashed changes
           </li>   
           <li id="sidebar_proizvod_5" class="nav__items">
 
           </li>           
           
-          <li class="nav__items">
+          <!-- <li class="nav__items">
               <a href="https://www.maxi.rs/?utm_source=SG_Liflet&utm_medium=SG_liflet_ikonica&utm_campaign=SG" target="_self"><img style="padding:10px !important;" id="pripremi_obrok_piktogram" class="cover" src="https://maxi.sales-snap.com/asset/888:artboard-2-1png"></a>
-          </li>            
+          </li>             -->
             
         </ul>
 
@@ -2500,6 +2466,11 @@
             <img src="dummy_pictures/banner2.png"/>
             <img src="dummy_pictures/banner3.png"/>
           </div>
+          <div class="banner-slider-mobile">
+            <img src="dummy_pictures/banner-mob1.png"/>
+            <img src="dummy_pictures/banner-mob2.png"/>
+            <img src="dummy_pictures/banner-mob3.png"/>
+          </div>
           <!-- redesign -->
          <div class="search-wrapper">
            <img class="search-icon" src="/SVG/search.svg"/>
@@ -2538,11 +2509,11 @@
         </script>
 
 
-        <div class="online-katalog-slika-div" id="i2ztu">
+        <!-- <div class="online-katalog-slika-div" id="i2ztu">
             <center>
                <img src="https://maxi.sales-snap.com/asset/974:home-banner1367x547png1" class="desktop-banner"><img src="https://maxi.sales-snap.com/asset/975:home-bannermobpng2" class="mobile-banner">
             </center>
-        </div>
+        </div> -->
         
         <div class="kategorije-div" id="ikr01">
             <center>
@@ -2569,7 +2540,7 @@
         <!-- redesign -->
         <div id="kalkulator">
           <div id="proizvod_1" style="text-align:center;">
-              <span>Ukupna usteda: </span>
+              <span>Ukupna uŠteda: </span>
               <span class="usteda">0</span>
               <span> din</span>
           </div>
@@ -2753,24 +2724,34 @@
               autoplay: true,
               speed: 500
           });
+          $('.banner-slider-mobile').slick({
+              infinite: true,
+              dots: true,
+              autoplay: true,
+              speed: 500
+          });
           // slick slider 
           // sorting options 
           $('.sort-button').on('click', function(){
             $('.price-sort').toggleClass('sort-display-block')
             $('.discount-sort').toggleClass('sort-display-block')
           })
-          $('.sort-wrapper .close-button').on('click', function(){
-            // $('.price-sort').removeClass('sort-display-block')
-            // $('.discount-sort').removeClass('sort-display-block')
-            $(this).children('.close-button').removeClass('sort-display-block')
+          $('.sort-wrapper .close-button').on('click', function(e){
+            e.stopPropagation()
+            $(this).parent().removeClass('active-sort')
+            $(this).removeClass('sort-display-block')
           })
           $('.sort-wrapper .price-sort').on('click', function(){
-            $('.price-sort').toggleClass('active-sort')
-            $(this).children('.close-button').toggleClass('sort-display-block')
+            $('.price-sort').addClass('active-sort')
+            $('.discount-sort').removeClass('active-sort')
+            $(this).children('.close-button').addClass('sort-display-block')
+            $('.discount-sort .close-button').removeClass('sort-display-block')
           })
           $('.sort-wrapper .discount-sort').on('click', function(){
-            $('.discount-sort').toggleClass('active-sort')
-            $(this).children('.close-button').toggleClass('sort-display-block')
+            $('.discount-sort').addClass('active-sort')
+            $('.price-sort').removeClass('active-sort')
+            $('.price-sort .close-button').removeClass('sort-display-block')
+            $(this).children('.close-button').addClass('sort-display-block')
           })
           // sorting options 
           // scroll
@@ -2793,6 +2774,13 @@
             }
           })
           // search options 
+          // newsletter 
+          var submitMask = '<div class="submit-mask"></div>'
+          $('#mauticform_njuzleterkatalogforma_prijavite_se_za_newslette').append(submitMask)
+          $('.submit-mask').on('click', function(){
+            $('#mauticform_input_njuzleterkatalogforma_submit').click()
+          })
+          // newsletter 
         });
         // redesign
     
