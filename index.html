@@ -9,7 +9,7 @@
       <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
       <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0 maximum-scale=1.0">
       <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-      <title>Shop-N-Go katalog - Pocetna</title>
+      <title>Shop&Go katalog - Početna</title>
       <link rel="shortcut icon" type="image/jpg" href="https://maxi.sales-snap.com/asset/387:shopngofaviconpng"/>
       <meta property="og:image" content="https://maxi.sales-snap.com/asset/387:shopngofaviconpng"/>
       <meta property="og:image:type" content="image/png"/>
@@ -19,7 +19,7 @@
 
       <!-- redesign  -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-      <script src="js/push/onesignal/redesign.js"></script>
+
       <!-- <link rel="stylesheet" type="text/css" href="css/redesign.css"/> -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -39,904 +39,7 @@
 
       <link rel="stylesheet" type="text/css" href="css/dinamika.css"/>
 
-      <!-- NOVI STIL -->
-      <style>
-        /* redesign */
-        /* home and globals*/
-        .proizvodi-row.footer{
-          width: unset !important;
-        }
-        #interactiveNav .spoljni-div{
-          max-height: unset !important;
-        }
-        .close-menu,
-        .burger-menu{
-            cursor: pointer;
-        }
-        #glavni-kontejner{
-          transition: all .45s ease-in-out;
-          -moz-transition: all .45s ease-in-out;
-          -webkit-transition: all .45s  ease-in-out;
-        }
-        .margin-reset-menu-active{
-          margin-left: 0 !important;
-        }
-        .burger-menu{
-            width: 100px;
-            position: absolute;
-            height: auto;
-            left: 20px;
-            top: 20px;
-        }
-        .show-more-options{
-            color: #fff;
-        }
-        @keyframes slideOut {
-            from {left: 0;}
-            to {left: -300px;}
-        }
-        @keyframes slideIn {
-            from {left: -300px;}
-            to {left: 0;}
-        }
-        .side-bar-slide-right{
-            left: 0px;
-            animation-name: slideIn;
-            animation-duration: 0.6s;
-        }
-        .side-bar-slide-left{
-            left: -300px;
-            animation-name: slideOut;
-            animation-duration: 0.6s;
-        }
-        /* .banner-slider{
-            width: 80%;
-        } */
-        .banner-slider img,
-        .banner-slider-mobile img{
-            height: auto;
-        }
-        #myUL{
-          position: absolute;
-          transition: all .45s ease-in-out;
-          -moz-transition: all .45s ease-in-out;
-          -webkit-transition: all .45s  ease-in-out;
-        }
-        .search-wrapper ul:not(.visible-search-results){
-          opacity: 0;
-          height: 0;
-          overflow: hidden;
-        }
-        .visible-search-results{
-          opacity: 1 !important;
-          height: auto;
-          overflow: visible;
-        }
-        /* #mauticform_input_njuzleterkatalogforma_submit{
-          opacity: 0;
-        } */
-        /* media queries redesign */
-        @media only screen and (max-width: 320px) {
-            .search-wrapper,
-            #myUL{
-              width: 240px !important;
-            }
-            .banner-slider{
-              display: none;
-            }
-            .banner-slider-mobile{
-              display: block;
-            }
-            .kalkulator{
-              margin-top: 24px !important;
-              margin-left: -9px !important;
-            }
-            .burger-menu{
-              left: -27px !important;
-              top: 37px !important;
-              height: 20px;
-            }
-            #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
-              width: 240px !important;
-            }
-            #kalkulator,
-            .sort-wrapper{
-              width: 97% !important;
-            }
-            .sort-button{
-              width: 100% !important;
-            }
-            #kalkulator{
-              font-size: 34px;
-              height: auto !important;
-            }
-            #kalkulator > div{
-              margin-top: 6px !important;
-            }
-            .discount-sort .close-button{
-              right: unset;
-              top: -12px;
-              left: -15px;
-            }
-        }
-        @media only screen and (min-width: 320px) and (max-width: 600px)  {
-            .search-wrapper,
-            #myUL{
-              width: 320px !important;
-            }
-            .banner-slider{
-              display: none;
-            }
-            .banner-slider-mobile{
-              display: block;
-            }
-            .kalkulator{
-              margin-top: 24px !important;
-              margin-left: -13px !important;
-            }
-            .burger-menu{
-              left: 0px !important;
-              top: 27px !important;
-              height: 40px;
-            }
-            #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
-              width: 300px !important;
-            }
-            #kalkulator,
-            .sort-wrapper{
-              width: 97% !important;
-            }
-            .sort-button{
-              width: 100% !important;
-            }
-            .sort-button{
-              width: 100% !important;
-              font-size: 34px;
-              padding: 20px;
-            }
-            #kalkulator{
-              font-size: 34px;
-              height: auto !important;
-            }
-            #kalkulator > div{
-              margin-top: 6px !important;
-            }
-            .price-sort,
-            .discount-sort{
-              font-size: 20px !important;
-            }
-            .discount-sort .close-button{
-              right: unset;
-              top: -12px;
-              left: -15px;
-            }
-        }
-        @media only screen and (min-width: 600px) and (max-width: 768px)  {
-            .kalkulator{
-              margin-top: 24px !important;
-              margin-left: -13px !important;
-            }
-            .search-wrapper,
-            #myUL{
-              width: 400px !important;
-            }
-            .banner-slider{
-              display: none;
-            }
-            .banner-slider-mobile{
-              display: block;
-            }
-            .burger-menu{
-              left: 0px !important;
-              top: 27px !important;
-              height: 40px;
-            }
-            #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
-              width: 450px !important;
-            }
-            #kalkulator,
-            .sort-wrapper{
-              width: 97% !important;
-            }
-            .sort-button{
-              width: 100% !important;
-            }
-            .sort-button{
-              width: 100% !important;
-              font-size: 34px;
-              padding: 20px;
-            }
-            #kalkulator{
-              font-size: 34px;
-            }
-            #kalkulator > div{
-              margin-top: 21px !important;
-            }
-            .price-sort,
-            .discount-sort{
-              font-size: 20px !important;
-            }
-            .discount-sort .close-button{
-              right: unset;
-              top: -12px;
-              left: -15px;
-            }
-        }
-        @media only screen and (min-width: 600px) and (max-width: 700px){
-          
-        }
-        @media only screen and (min-width: 700px) and (max-width: 800px){
-          .submit-mask{
-              top: 129px;
-              right: 104px;
-              height: 80px !important;
-              width: 80px !important;
-          }
-        }
-        @media only screen and (min-width: 800px) and (max-width: 996px){
-          .submit-mask{
-              top: 129px;
-              right: 94px;
-              height: 80px !important;
-              width: 115px !important;
-          }
-        }
-        @media only screen and (min-width: 768px) and (max-width: 996px){
-            .kalkulator{
-              margin-top: 24px !important;
-              margin-left: -9px !important;
-            }
-            .search-wrapper,
-            #myUL{
-              width: 500px !important;
-            }
-            .banner-slider{
-              display: none;
-            }
-            .banner-slider-mobile{
-              display: block;
-            }
-            .burger-menu{
-              left: 0px !important;
-              top: 27px !important;
-              height: 50px;
-            }
-            #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
-              width: 500px !important;
-            }
-            #kalkulator,
-            .sort-wrapper{
-              width: 97% !important;
-            }
-            .sort-button{
-              width: 100% !important;
-              font-size: 34px;
-              padding: 20px;
-            }
-            #kalkulator{
-              font-size: 34px;
-            }
-            #kalkulator > div{
-              margin-top: 21px !important;
-            }
-            .price-sort,
-            .discount-sort{
-              font-size: 20px !important;
-            }
-            .discount-sort .close-button{
-              right: unset;
-              top: -12px;
-              left: -15px;
-            }
-        }
-        @media only screen and (min-width: 996px){
-            #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
-                width: 600px !important;
-            }
-            .search-wrapper,
-            #myUL{
-              width: 800px !important;
-            }
-            .banner-slider{
-              display: block;
-            }
-            .banner-slider-mobile{
-              display: none;
-            }
 
-            .mobile-newsletter {
-              display: none !important;
-            }
-            
-        }
-        @media only screen and (min-width: 996px){
-            .search-wrapper,
-            #myUL{
-              width: 800px !important;
-            }
-            .banner-slider{
-              display: block;
-            }
-            .banner-slider-mobile{
-              display: none;
-            }
-            .submit-mask{
-              top: 59px;
-              right: -429px;
-            }
-        }
-        /* media queries redesign */
-        /* Slider */
-        .slick-loading .slick-list
-        {
-            background: #fff url('./ajax-loader.gif') center center no-repeat;
-        }
-
-        /* Icons */
-        @font-face
-        {
-            font-family: 'slick';
-            font-weight: normal;
-            font-style: normal;
-
-            src: url('./fonts/slick.eot');
-            src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
-        }
-        /* Arrows */
-        .slick-prev,
-        .slick-next
-        {
-            font-size: 0;
-            line-height: 0;
-
-            position: absolute;
-            top: 50%;
-
-            display: block;
-
-            width: 20px;
-            height: 20px;
-            padding: 0;
-            -webkit-transform: translate(0, -50%);
-            -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-
-            cursor: pointer;
-
-            color: transparent;
-            border: none;
-            outline: none;
-            background: transparent;
-        }
-        .slick-prev:hover,
-        .slick-prev:focus,
-        .slick-next:hover,
-        .slick-next:focus
-        {
-            color: transparent;
-            outline: none;
-            background: transparent;
-        }
-        .slick-prev:hover:before,
-        .slick-prev:focus:before,
-        .slick-next:hover:before,
-        .slick-next:focus:before
-        {
-            opacity: 1;
-        }
-        .slick-prev.slick-disabled:before,
-        .slick-next.slick-disabled:before
-        {
-            opacity: .25;
-        }
-
-        .slick-prev:before,
-        .slick-next:before
-        {
-            font-family: 'slick';
-            font-size: 20px;
-            line-height: 1;
-
-            opacity: .75;
-            color: white;
-
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .slick-prev
-        {
-            left: -25px;
-        }
-        [dir='rtl'] .slick-prev
-        {
-            right: -25px;
-            left: auto;
-        }
-        .slick-prev:before
-        {
-            content: '←';
-        }
-        [dir='rtl'] .slick-prev:before
-        {
-            content: '→';
-        }
-
-        .slick-next
-        {
-            right: -25px;
-        }
-        [dir='rtl'] .slick-next
-        {
-            right: auto;
-            left: -25px;
-        }
-        .slick-next:before
-        {
-            content: '→';
-        }
-        [dir='rtl'] .slick-next:before
-        {
-            content: '←';
-        }
-
-        /* Dots */
-        .slick-dotted.slick-slider
-        {
-            margin-bottom: 30px;
-        }
-
-        .slick-dots
-        {
-            position: absolute;
-            bottom: -25px;
-
-            display: block;
-
-            width: 100%;
-            padding: 0;
-            margin: 0;
-
-            list-style: none;
-
-            text-align: center;
-        }
-        .slick-dots li
-        {
-            position: relative;
-
-            display: inline-block;
-
-            width: 20px;
-            height: 20px;
-            margin: 0 5px;
-            padding: 0;
-
-            cursor: pointer;
-        }
-        .slick-dots li button
-        {
-            font-size: 0;
-            line-height: 0;
-
-            display: block;
-
-            width: 20px;
-            height: 20px;
-            padding: 5px;
-
-            cursor: pointer;
-
-            color: transparent;
-            border: 0;
-            outline: none;
-            background: transparent;
-        }
-        .slick-dots li button:hover,
-        .slick-dots li button:focus
-        {
-            outline: none;
-        }
-        .slick-dots li button:hover:before,
-        .slick-dots li button:focus:before
-        {
-            opacity: 1;
-        }
-        .slick-dots li button:before
-        {
-            font-family: 'slick';
-            font-size: 50px;
-            line-height: 20px;
-
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            width: 20px;
-            height: 20px;
-
-            content: '•';
-            text-align: center;
-
-            opacity: .25;
-            color: black;
-
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .slick-dots li.slick-active button:before
-        {
-            opacity: .75;
-            color: black;
-        }
-        /* home  */
-        /* calculator page */
-
-        .telo-kalkulatora button{
-            width: 70px;
-            border: 4px solid #4C2987;
-            color: #4C2987;
-            background-color: #fff;
-            border-radius: 20px;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 0;
-            cursor: pointer;
-        }
-        .telo-kalkulatora .kolicina{
-            color: #4C2987;
-            font-weight: bold;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        .telo-kalkulatora{
-          margin-bottom: 10px;
-          flex-wrap: wrap;
-          align-items: center;
-        }
-        /* checkbox */
-        .selektor-kalkulatora {
-            display: block;
-            position: relative;
-            padding-left: 35px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            font-size: 22px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        .selektor-kalkulatora input {
-            position: absolute;
-            opacity: 0;
-            cursor: pointer;
-            height: 20px;
-            width: 20px;
-            left: 0;
-            z-index: 1;
-        }
-        /* <span class="checkmark"></span> */
-        .checkmark {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 30px;
-            width: 30px;
-            background-color: #fff;
-            border: 4px solid #4C2987;
-            display: block !important;
-            border-radius: 10px;
-        }
-        .selektor-kalkulatora:hover input ~ .checkmark {
-            background-color: #fff;
-        }
-        .selektor-kalkulatora input:checked ~ .checkmark {
-            background-color: #4C2987;
-        }
-        .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-        }
-        .selektor-kalkulatora input:checked ~ .checkmark:after {
-            display: block;
-        }
-        .selektor-kalkulatora .checkmark:after {
-            left: 5px;
-            top: 0px;
-            width: 7px;
-            height: 13px;
-            border: solid #F8D000;
-            border-width: 0 5px 5px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-        }
-        /* checkbox */
-        /* calculator */
-        #kalkulator{
-            display: block;
-            width: 280px;
-            height: 80px;
-            color: #fff;
-            text-transform: uppercase;
-            overflow: hidden;
-            font-weight: bold;
-            background-color: #4C2987;
-            position: sticky;
-            top: 10px;
-            z-index: 100;
-        }
-        #kalkulator > div{
-            margin-top: 30px;
-        }
-        .usteda,
-        .usteda + span{
-            color: #F8D000;
-        }
-        .kalkulator{
-          margin-top: -10px;
-          margin-left: -10px;
-          position: absolute;
-        }
-        /* calculator */
-        /* sorting options */
-        .sort-button{
-            font-weight: bold;
-            color: #4C2987;
-            display: block;
-            width: 280px;
-            height: auto;
-            text-align: center;
-            overflow: hidden;
-            color: #4C2987;
-            background-color: #F8D000;
-            border-radius: 80px;
-            cursor: pointer;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-        .sort-wrapper{
-            width: 280px;
-            display: block;
-        }
-        .price-sort{
-            float: left;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 10px;
-            color: #4C2987;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 40px;
-            background-color: #F8D000;
-            position: relative;
-            margin-bottom: 20px;
-            /* display: none; */
-            opacity: 0;
-            transition: all .45s ease-in-out;
-            -moz-transition: all .45s ease-in-out;
-            -webkit-transition: all .45s  ease-in-out;
-        }
-        .discount-sort{
-            float: right;
-            text-transform: uppercase;
-            position: relative;
-            font-weight: bold;
-            font-size: 10px;
-            border-radius: 40px;
-            color: #4C2987;
-            background-color: #F8D000;
-            cursor: pointer;
-            padding: 10px;
-            margin-bottom: 20px;
-            opacity: 0;
-            /* display: none; */
-            transition: all .45s ease-in-out;
-            -moz-transition: all .45s ease-in-out;
-            -webkit-transition: all .45s  ease-in-out;
-        }
-        .close-button{
-          position: absolute;
-          top: -14px;
-          background-color: #F8D000;
-          right: -14px;
-          font-size: 15px;
-          padding: 3px 6px 3px 6px;
-          border-radius: 100%;
-          border: 3px solid;
-          opacity: 0;
-        }
-        .sort-display-block{
-          /* display: block !important; */
-          opacity: 1;
-        }
-        .active-sort{
-          outline: 3px solid #4C2987;
-        }
-        /* sorting options */
-        /* calculator page */
-        /* search */
-        .search-icon{
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            margin-top: 13px;
-            margin-left: 10px;
-        }
-        /* search */
-        /* newsletter */
-        #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
-          border-radius: 95px;
-          background: url('/SVG/newsletter_button.svg') no-repeat right center;
-          background-color: white;
-        }
-        .submit-mask{
-          height: 60px;
-          width: 60px;
-          outline: 3px solid white;
-          z-index: 100;
-          position: absolute;
-          cursor: pointer;
-        }
-        #mauticform_njuzleterkatalogforma_prijavite_se_za_newslette{
-          position: relative;
-        }
-        #mauticform_njuzleterkatalogforma_submit{
-          display: none;
-        }
-        /* newsletter */
-        /* show more */
-        .hide-opacity{
-          opacity: 0 !important;
-        }
-        .show-more-nav-button{
-          display: none;
-          position: absolute;
-          height: 100px;
-          width: 100px;
-          z-index: 100;
-          left: 25px;
-          top: calc(100vh - 100px);
-          background-color: #4C2987;
-          color: #fff;
-          opacity: 1;
-          transition: all .45s ease-in-out;
-          -moz-transition: all .45s ease-in-out;
-          -webkit-transition: all .45s  ease-in-out;
-        }
-        /* show more */
-        /* redesign */
-        .proizvodi-row {
-          flex-wrap: wrap;
-        }
-
-        .promo-banner {
-          padding: 25px !important;
-        }
-
-        #tabela-proizvoda .promo-banner > .single-image,
-        #tabela-proizvoda-cena .promo-banner > .single-image,
-        #tabela-proizvoda-popust .promo-banner > .single-image {
-          width: inherit !important;
-        }
-
-        .sortirana-cena,
-        .sortirani-popust {
-          display: none;
-        }
-
-        #myInput {
-          background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-          background-position: 10px 12px; /* Position the search icon */
-          background-repeat: no-repeat; /* Do not repeat the icon image */
-          width: 100%; /* Full-width */
-          font-size: 16px; /* Increase font-size */
-          padding: 12px 20px 12px 40px; /* Add some padding */
-          /* border: 1px solid #ddd; Add a grey border */
-          margin-bottom: 12px; /* Add some space below the input */
-          margin-bottom: 12px;
-          border-radius: 10px;
-          border: 4px solid #4C2987;
-        }
-
-        #myUL {
-          /* Remove default list styling */
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        #myUL li a {
-          border: 1px solid #ddd; /* Add a border to all links */
-          margin-top: -1px; /* Prevent double borders */
-          background-color: #f6f6f6; /* Grey background color */
-          padding: 12px; /* Add some padding */
-          text-decoration: none; /* Remove default text underline */
-          font-size: 18px; /* Increase the font-size */
-          color: black; /* Add a black text color */
-          display: block; /* Make it into a block element to fill the whole list */
-        }
-
-        #myUL li a:hover:not(.header) {
-          background-color: #eee; /* Add a hover effect to all links, except for headers */
-        }
-
-        .search-wrapper ,
-        #myUL{
-          width: 400px;
-        }
-
-
-
-        /* NIKOLA style */
-        .price-sort:not(.sort-display-block),
-        .discount-sort:not(.sort-display-block) {
-          display: none;
-        }
-
-        @media only screen and (max-width: 996px) {
-          .mobile-newsletter .mauticform_wrapper {
-            background-color: #4C2987;
-            width: 97%;
-            border-radius: 20px;
-          }
-
-          .mobile-newsletter .mauticform-label {
-            text-align: center !important;
-            color: #fff !important;
-            font-size: 2.1em !important;
-            margin-top: 30px;
-          }
-
-          .mobile-newsletter .mauticform-has-error .mauticform-errormsg {
-            text-align: center;
-            margin-top: 15px;
-          }
-
-          .mobile-newsletter #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette {
-            margin: auto !important;
-            display: block !important;
-          }
-
-          .mobile-newsletter .mauticform-row {
-            margin-bottom: 60px !important;
-          }
-
-          .mobile-newsletter .mauticform-message {
-            width: 100% !important;
-            text-align: center !important;
-          }
-
-          .submit-mask {
-            top: 66px !important;
-            right: 119px !important;
-          }
-
-          .proizvodi-row.footer {
-            padding-top: 80px !important;
-          }
-
-          .proizvodi-row.footer > .f-sekcija.single-image {
-            display: none !important;
-          }
-
-          .ljubicasta-pozadina > .footer > .f-sekcija {
-            margin-top: 20px !important;
-          }
-
-          .mobile-newsletter-wrapper {
-            width: 100%;
-            height: auto;
-            display: flex;
-          }
-
-
-        }
-
-      </style>
    </head>
    <body>
 
@@ -951,7 +54,7 @@
             function determineWindowWidth(procenat, selektor) {
               var procenat_sirine = procenat
               setTimeout(function() {
-                console.log(selektor)
+                // console.log(selektor)
                 var width = window.innerWidth * procenat_sirine / 100
                 document.querySelector(selektor).style.width =  width
                 document.querySelector(selektor).style.display = 'block'
@@ -1035,6 +138,7 @@
                 // KREIRANJE HTML ELEMENATA ZA ARTIKLE
                 rows.forEach(element => {
                     const row = element.split(';')
+                    const  kategorija = row[0]
                     const naziv = row[1]
                     const stara_cena = row[2]
                     const nova_cena = row[3]
@@ -1044,6 +148,128 @@
                     const vazenje = row[7]
 
                   if(counter % 4 == 0 || counter == 0) {
+
+                    if(kategorija == '5') {
+                          
+                          var tabela_row = document.createElement('div') 
+                          tabela_row.setAttribute('class', 'proizvodi-row')
+                          var row_id = 'proizvodi-row-' + red
+                          tabela_row.setAttribute('id', row_id)
+                          // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
+                            //  console.log(tabela_row)
+                          document.getElementById('tabela-proizvoda').append(tabela_row)
+
+                          var cell = document.createElement('div')
+                          cell.setAttribute('class', 'prozivodi-cell')
+                          cell.setAttribute('id', 'cell-' + counter)
+
+                        //   var link = document.createElement('a')
+                        //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+                        //   link.setAttribute('href', homepage)
+                        //   link.setAttribute('target', '_self')
+                        //   link.setAttribute('id', 'link-' + counter)
+
+                          var razmak = document.createElement('br')
+
+                          var slika = document.createElement('img')
+                          slika.setAttribute('src', url)
+                          slika.setAttribute('id', 'slika-' + counter)
+
+                        //   link.append(slika)
+
+                          var naziv_1 = document.createElement('div')
+                          naziv_1.setAttribute('id', 'naziv-' + counter)
+                          naziv_1.setAttribute('class', 'naziv-proizvoda')
+                          
+                          naziv_1.innerHTML = naziv
+
+                          var stara_cena_1 = document.createElement('div')
+                          stara_cena_1.setAttribute('id', 'stara-cena-' + counter)
+                          var stara_cena_tekst = stara_cena.split('.')
+                          
+                          if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                          else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+                        //   var nova_cena_1 = document.createElement('div')
+                        //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+                        //   var nova_cena_tekst = nova_cena.split('.')
+                        //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                        //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                        //   var popust_1 = document.createElement('div')
+                        //   popust_1.setAttribute('id', 'popust-' + counter)
+                        //   popust_1.innerHTML = popust
+
+
+                        //   cell.append(link)
+                        //   cell.append(naziv_1)
+                        //   cell.append(stara_cena_1)
+                        //   cell.append(nova_cena_1)
+                        //   cell.append(popust_1)
+
+                          var inner_cell_1 = document.createElement('div')
+                          inner_cell_1.setAttribute('class', 'div-inside')
+                          inner_cell_1.append(slika)
+
+                        //   var popust_container = document.createElement('div')
+                        //   popust_container.setAttribute('class', 'crveni-krug')
+                          inner_cell_1.append(naziv_1)
+                        //   popust_container.append(popust_1)
+
+                          
+                        //   inner_cell_1.append(popust_container)
+
+                        
+                        var inner_cell_2 = document.createElement('div')
+                        inner_cell_2.setAttribute('class', 'div-inside')
+                        // inner_cell_2.append(naziv_1)
+
+                        var zuti_cenovnik = document.createElement('div')
+                        zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
+
+                        var cenovnik_left = document.createElement('div')
+                        cenovnik_left.setAttribute('class', 'cenovnik-left')
+                        cenovnik_left.append(stara_cena_1)
+
+                        // var cenovnik_right = document.createElement('div')
+                        // cenovnik_right.setAttribute('class', 'cenovnik-right')
+                        // cenovnik_right.append(stara_cena_1)
+
+                        zuti_cenovnik.append(cenovnik_left)
+                        // zuti_cenovnik.append(cenovnik_right)
+
+                        inner_cell_2.append(zuti_cenovnik)
+
+
+                          var outer_cell = document.createElement('div')
+                          outer_cell.setAttribute('class', 'slicica-div')
+                          outer_cell.append(inner_cell_1)
+                          outer_cell.append(inner_cell_2)
+                        //   outer_cell.append(cell)
+
+                        var outer_outer_cell = document.createElement('div')
+                        outer_outer_cell.setAttribute('class', 'spoljni-div')
+                        outer_outer_cell.append(outer_cell)
+
+
+                        
+                            var rok = document.createElement('div')
+                            rok.setAttribute('class', 'trajanje')
+                            if(trajanje != undefined) rok.append(trajanje)
+                            outer_outer_cell.append(rok)
+                            
+                            var lokacija = document.createElement('div')
+                            lokacija.setAttribute('class', 'lokacija')
+                            if(vazenje != undefined) lokacija.append(vazenje)
+                            outer_outer_cell.append(lokacija)
+                        // console.log(vazenje)
+
+                        tabela_row.append(outer_outer_cell)
+
+                          red++;
+                    } else {
+
+                      
                       var tabela_row = document.createElement('div') 
                       tabela_row.setAttribute('class', 'proizvodi-row')
                       var row_id = 'proizvodi-row-' + red
@@ -1068,7 +294,7 @@
 
                       var stara_cena_1 = document.createElement('div')
                       stara_cena_1.setAttribute('id', 'stara-cena-' + counter)
-                              stara_cena_1.setAttribute('data-id', stara_cena)
+                      stara_cena_1.setAttribute('data-id', stara_cena)
                       var stara_cena_tekst = stara_cena.split('.')
                       
                       if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
@@ -1234,9 +460,122 @@
                         tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
                         document.getElementById('tabela-proizvoda').append(tabela_row)
                       }
+                    }
+                      
                     
                   } else {
 
+                    if(kategorija == '5') {
+                      var cell = document.createElement('div')
+                      cell.setAttribute('class', 'prozivodi-cell')
+                      cell.setAttribute('id', 'cell-' + counter)
+
+
+                    //   var link = document.createElement('a')
+                    //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+                    //   link.setAttribute('href', homepage)
+                    //   link.setAttribute('target', '_self')
+                    //   link.setAttribute('id', 'link-' + counter)
+
+                      var razmak = document.createElement('br')
+
+                      var slika = document.createElement('img')
+                      slika.setAttribute('src', url)
+                      slika.setAttribute('id', 'slika-' + counter)
+
+                    //   link.append(slika)
+
+                      var naziv_1 = document.createElement('div')
+                      naziv_1.setAttribute('id', 'naziv-' + counter)
+                      naziv_1.setAttribute('class', 'naziv-proizvoda')
+                      naziv_1.innerHTML = naziv
+
+                      var stara_cena_1 = document.createElement('div')
+                      stara_cena_1.setAttribute('id', 'stara-cena-' + counter)
+                      var stara_cena_tekst = stara_cena.split('.')
+                      if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                      else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+                    //   var nova_cena_1 = document.createElement('div')
+                    //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+                    //   var nova_cena_tekst = nova_cena.split('.')
+                    //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                    //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                    //   var popust_1 = document.createElement('div')
+                    //   popust_1.setAttribute('id', 'popust-' + counter)
+                    //   popust_1.innerHTML = popust
+
+
+                      var inner_cell_1 = document.createElement('div')
+                      inner_cell_1.setAttribute('class', 'div-inside')
+                      inner_cell_1.append(slika)
+
+                      //   var popust_container = document.createElement('div')
+                      //   popust_container.setAttribute('class', 'crveni-krug')
+                      //   inner_cell_1.append(naziv_1)
+                      //   popust_container.append(popust_1)
+
+                        
+                      //   inner_cell_1.append(popust_container)
+                        inner_cell_1.append(naziv_1)
+                      
+                      var inner_cell_2 = document.createElement('div')
+                      inner_cell_2.setAttribute('class', 'div-inside')
+                      // inner_cell_2.append(naziv_1)
+
+                      var zuti_cenovnik = document.createElement('div')
+                      zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
+
+                      var cenovnik_left = document.createElement('div')
+                      cenovnik_left.setAttribute('class', 'cenovnik-left')
+                      cenovnik_left.append(stara_cena_1)
+
+                      // var cenovnik_right = document.createElement('div')
+                      // cenovnik_right.setAttribute('class', 'cenovnik-right')
+                      // cenovnik_right.append(stara_cena_1)
+
+                      zuti_cenovnik.append(cenovnik_left)
+                      // zuti_cenovnik.append(cenovnik_right)
+
+                      inner_cell_2.append(zuti_cenovnik)
+
+
+                        var outer_cell = document.createElement('div')
+                        outer_cell.setAttribute('class', 'slicica-div')
+                        outer_cell.append(inner_cell_1)
+                        outer_cell.append(inner_cell_2)
+                      //   outer_cell.append(cell)
+
+                      //   tabela_row.append(outer_cell)
+
+                      var outer_outer_cell = document.createElement('div')
+                      outer_outer_cell.setAttribute('class', 'spoljni-div')
+                      outer_outer_cell.append(outer_cell)
+
+                      // tabela_row.append(outer_outer_cell)
+
+
+                      var rok = document.createElement('div')
+                          rok.setAttribute('class', 'trajanje')
+                          if(trajanje != undefined) rok.append(trajanje)
+                          outer_outer_cell.append(rok)
+                          
+                          var lokacija = document.createElement('div')
+                          lokacija.setAttribute('class', 'lokacija')
+                          if(vazenje != undefined) lokacija.append(vazenje)
+                          outer_outer_cell.append(lokacija)
+                          
+                          // console.log(vazenje)
+                          
+                      var query = 'proizvodi-row-' + (red - 1)
+
+                        
+
+                        document.getElementById(query).append(outer_outer_cell)
+
+
+                    } else {
                       var cell = document.createElement('div')
                       cell.setAttribute('class', 'prozivodi-cell')
                       cell.setAttribute('id', 'cell-' + counter)
@@ -1390,6 +729,9 @@
                       outer_outer_cell.append(telo_kalkulatora)
                       
                       // KALKULATOR END
+                    }
+
+
 
                   }
                   counter++
@@ -1539,6 +881,7 @@
 
                 new_row.forEach(element => {
                     const row = element.split(';')
+                    const kategorija = row[0]
                     const naziv = row[1]
                     const stara_cena = row[2]
                     const nova_cena = row[3]
@@ -1548,197 +891,436 @@
                     const vazenje = row[7]                  
 
                     if(counter % 4 == 0 || counter == 0) {
-                      var tabela_row = document.createElement('div') 
-                      tabela_row.setAttribute('class', 'proizvodi-row')
-                      var row_id = 'proizvodi-row-cena-' + red
-                      tabela_row.setAttribute('id', row_id)
-                      // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
-                        //  console.log(tabela_row)
-                      document.getElementById('tabela-proizvoda-cena').append(tabela_row)
 
-                      var cell = document.createElement('div')
-                      cell.setAttribute('class', 'prozivodi-cell')
-                      cell.setAttribute('id', 'cell-cena-' + counter)
+                      if(kategorija == '5') {
+                        
+                        var tabela_row = document.createElement('div') 
+                        tabela_row.setAttribute('class', 'proizvodi-row')
+                        var row_id = 'proizvodi-row-cena-' + red
+                        tabela_row.setAttribute('id', row_id)
+                        // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
+                          //  console.log(tabela_row)
+                        document.getElementById('tabela-proizvoda-cena').append(tabela_row)
 
-                      var razmak = document.createElement('br')
+                        var cell = document.createElement('div')
+                        cell.setAttribute('class', 'prozivodi-cell')
+                        cell.setAttribute('id', 'cell-cena' + counter)
 
-                      var slika = document.createElement('img')
-                      slika.setAttribute('src', url)
-                      slika.setAttribute('id', 'slika-cena-' + counter)
+                      //   var link = document.createElement('a')
+                      //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+                      //   link.setAttribute('href', homepage)
+                      //   link.setAttribute('target', '_self')
+                      //   link.setAttribute('id', 'link-' + counter)
 
-                      var naziv_1 = document.createElement('div')
-                      naziv_1.setAttribute('id', 'naziv-cena-' + counter)
-                      naziv_1.setAttribute('class', 'naziv-proizvoda')
+                        var razmak = document.createElement('br')
 
-                      naziv_1.innerHTML = naziv
+                        var slika = document.createElement('img')
+                        slika.setAttribute('src', url)
+                        slika.setAttribute('id', 'slika-cena' + counter)
 
-                      var stara_cena_1 = document.createElement('div')
-                      stara_cena_1.setAttribute('id', 'stara-cena-cena-' + counter)
-                      stara_cena_1.setAttribute('data-id', stara_cena)
-                      var stara_cena_tekst = stara_cena.split('.')
-                      
-                      if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                      //   link.append(slika)
+
+                        var naziv_1 = document.createElement('div')
+                        naziv_1.setAttribute('id', 'naziv-cena' + counter)
+                        naziv_1.setAttribute('class', 'naziv-proizvoda')
+                        
+                        naziv_1.innerHTML = naziv
+
+                        var stara_cena_1 = document.createElement('div')
+                        stara_cena_1.setAttribute('id', 'stara-cena-cena' + counter)
+                        var stara_cena_tekst = stara_cena.split('.')
+                        
+                        if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
                         else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
 
-                      var nova_cena_1 = document.createElement('div')
-                      nova_cena_1.setAttribute('id', 'nova-cena-cena-' + counter)
-                      nova_cena_1.setAttribute('data-id', nova_cena)
-                      var nova_cena_tekst = nova_cena.split('.')
+                      //   var nova_cena_1 = document.createElement('div')
+                      //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+                      //   var nova_cena_tekst = nova_cena.split('.')
+                      //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                      //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                      //   var popust_1 = document.createElement('div')
+                      //   popust_1.setAttribute('id', 'popust-' + counter)
+                      //   popust_1.innerHTML = popust
+
+
+                      //   cell.append(link)
+                      //   cell.append(naziv_1)
+                      //   cell.append(stara_cena_1)
+                      //   cell.append(nova_cena_1)
+                      //   cell.append(popust_1)
+
+                        var inner_cell_1 = document.createElement('div')
+                        inner_cell_1.setAttribute('class', 'div-inside')
+                        inner_cell_1.append(slika)
+
+                      //   var popust_container = document.createElement('div')
+                      //   popust_container.setAttribute('class', 'crveni-krug')
+                        inner_cell_1.append(naziv_1)
+                      //   popust_container.append(popust_1)
+
+                        
+                      //   inner_cell_1.append(popust_container)
+
                       
-                      if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
-                        else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
-
-                      var popust_1 = document.createElement('div')
-                      popust_1.setAttribute('id', 'popust-cena-' + counter)
-                      popust_1.innerHTML = popust
-
-                      var inner_cell_1 = document.createElement('div')
-                      inner_cell_1.setAttribute('class', 'div-inside')
-                      inner_cell_1.append(slika)
-
-                      var popust_container = document.createElement('div')
-                      popust_container.setAttribute('class', 'crveni-krug')
-                      inner_cell_1.append(naziv_1)
-                      popust_container.append(popust_1)
-
-                      
-                      inner_cell_1.append(popust_container)
-
-                    
                       var inner_cell_2 = document.createElement('div')
                       inner_cell_2.setAttribute('class', 'div-inside')
                       // inner_cell_2.append(naziv_1)
 
                       var zuti_cenovnik = document.createElement('div')
-                      zuti_cenovnik.setAttribute('class', 'zuti-cenovnik')
+                      zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
 
                       var cenovnik_left = document.createElement('div')
                       cenovnik_left.setAttribute('class', 'cenovnik-left')
-                      cenovnik_left.append(nova_cena_1)
+                      cenovnik_left.append(stara_cena_1)
 
-                      var cenovnik_right = document.createElement('div')
-                      cenovnik_right.setAttribute('class', 'cenovnik-right')
-                      cenovnik_right.append(stara_cena_1)
+                      // var cenovnik_right = document.createElement('div')
+                      // cenovnik_right.setAttribute('class', 'cenovnik-right')
+                      // cenovnik_right.append(stara_cena_1)
 
                       zuti_cenovnik.append(cenovnik_left)
-                      zuti_cenovnik.append(cenovnik_right)
+                      // zuti_cenovnik.append(cenovnik_right)
 
                       inner_cell_2.append(zuti_cenovnik)
 
 
-                      var outer_cell = document.createElement('div')
-                      outer_cell.setAttribute('class', 'slicica-div')
-                      outer_cell.append(inner_cell_1)
-                      outer_cell.append(inner_cell_2)
-                    //   outer_cell.append(cell)
+                        var outer_cell = document.createElement('div')
+                        outer_cell.setAttribute('class', 'slicica-div')
+                        outer_cell.append(inner_cell_1)
+                        outer_cell.append(inner_cell_2)
+                      //   outer_cell.append(cell)
 
                       var outer_outer_cell = document.createElement('div')
                       outer_outer_cell.setAttribute('class', 'spoljni-div')
                       outer_outer_cell.append(outer_cell)
 
-                
-              
-                    
-                      var rok = document.createElement('div')
-                      rok.setAttribute('class', 'trajanje')
-                      if(trajanje != undefined) rok.append(trajanje)
-                      outer_outer_cell.append(rok)
-                        
-                      var lokacija = document.createElement('div')
-                      lokacija.setAttribute('class', 'lokacija')
-                      if(vazenje != undefined) lokacija.append(vazenje)
-                      outer_outer_cell.append(lokacija)
-                    // console.log(vazenje)
+
+                      
+                          var rok = document.createElement('div')
+                          rok.setAttribute('class', 'trajanje')
+                          if(trajanje != undefined) rok.append(trajanje)
+                          outer_outer_cell.append(rok)
+                          
+                          var lokacija = document.createElement('div')
+                          lokacija.setAttribute('class', 'lokacija')
+                          if(vazenje != undefined) lokacija.append(vazenje)
+                          outer_outer_cell.append(lokacija)
+                      // console.log(vazenje)
 
                       tabela_row.append(outer_outer_cell)
 
-                      // KALKULATOR START
-                      var kalkulator = document.createElement('div')
-                      kalkulator.setAttribute('class', 'kalkulator')
-                    
-                    
-                      var selektor_kalkulatora = document.createElement('div')
-                      selektor_kalkulatora.setAttribute('class','selektor-kalkulatora')
-                      
-                      var cekboks = document.createElement('input')
-                      cekboks.setAttribute('class','cekboks-kalkulatora')
-                      cekboks.setAttribute('type', 'checkbox')
-                      
-                      var span_cekboks = document.createElement('span')
-                      span_cekboks.setAttribute('class', 'checkmark')
-                      
-                      var telo_kalkulatora = document.createElement('div')
-                      telo_kalkulatora.setAttribute('class','telo-kalkulatora')
-                      telo_kalkulatora.setAttribute('style', 'display:none;')
-                      
-                      var minus_dugme = document.createElement('button')
-                      minus_dugme.setAttribute('class','decrease')
-                      minus_dugme.innerHTML = '-'
-                      
-                      var kolicina = document.createElement('span')
-                      kolicina.setAttribute('class', 'kolicina')
-                      kolicina.innerHTML = '0'
-                      
-                      var plus_dugme = document.createElement('button')
-                      plus_dugme.setAttribute('class','increase')
-                      plus_dugme.innerHTML = '+'
-                      
-                      var iznos_popusta = document.createElement('span')
-                      iznos_popusta.setAttribute('class', 'popust-artikal')
-                      iznos_popusta.setAttribute('style', 'display:none')
-                      iznos_popusta.innerHTML = '0'
-                      
-                      telo_kalkulatora.append(minus_dugme)
-                      telo_kalkulatora.append(kolicina)
-                      telo_kalkulatora.append(plus_dugme)
-                      telo_kalkulatora.append(iznos_popusta)
-                      
-                      selektor_kalkulatora.append(cekboks)
-                      selektor_kalkulatora.append(span_cekboks)
-                      // selektor_kalkulatora.append(telo_kalkulatora)
-                      kalkulator.append(selektor_kalkulatora)
-                    
-                      outer_outer_cell.prepend(kalkulator)
-                      outer_outer_cell.append(telo_kalkulatora)
-                    
-                      // KALKULATOR END
+                        red++;
 
-
-                      red++;
-
-                      if(counter == 0) {
+                      } else {
 
                         var tabela_row = document.createElement('div') 
-                        tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
-                        // var row_id = 'promo-banner-cena'
-                        // tabela_row.setAttribute('id', row_id)
-                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                        tabela_row.setAttribute('class', 'proizvodi-row')
+                        var row_id = 'proizvodi-row-cena-' + red
+                        tabela_row.setAttribute('id', row_id)
+                        // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
+                          //  console.log(tabela_row)
                         document.getElementById('tabela-proizvoda-cena').append(tabela_row)
 
-                      } else if(counter == 4) {
+                        var cell = document.createElement('div')
+                        cell.setAttribute('class', 'prozivodi-cell')
+                        cell.setAttribute('id', 'cell-cena-' + counter)
 
-                        var tabela_row = document.createElement('div') 
-                        tabela_row.setAttribute('class', 'proizvodi-row mobile-newsletter')
-                        // var row_id = 'mobile-newsletter-cena'
-                        // tabela_row.setAttribute('id', row_id)
-                        // var njuzleter = document.createElement('script')
-                        // njuzleter.setAttribute('src', 'https://maxi.sales-snap.com/form/generate.js?id=6')
-                        // tabela_row.append(njuzleter)
+                        var razmak = document.createElement('br')
 
-                        document.getElementById('tabela-proizvoda-cena').append(tabela_row)
+                        var slika = document.createElement('img')
+                        slika.setAttribute('src', url)
+                        slika.setAttribute('id', 'slika-cena-' + counter)
 
-                      } else if(counter == 8) {
+                        var naziv_1 = document.createElement('div')
+                        naziv_1.setAttribute('id', 'naziv-cena-' + counter)
+                        naziv_1.setAttribute('class', 'naziv-proizvoda')
 
-                        var tabela_row = document.createElement('div') 
-                        tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
-                        // var row_id = 'promo-banner'
-                        // tabela_row.setAttribute('id', row_id)
-                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
-                        document.getElementById('tabela-proizvoda-cena').append(tabela_row)
+                        naziv_1.innerHTML = naziv
 
+                        var stara_cena_1 = document.createElement('div')
+                        stara_cena_1.setAttribute('id', 'stara-cena-cena-' + counter)
+                        stara_cena_1.setAttribute('data-id', stara_cena)
+                        var stara_cena_tekst = stara_cena.split('.')
+                        
+                        if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                          else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+                        var nova_cena_1 = document.createElement('div')
+                        nova_cena_1.setAttribute('id', 'nova-cena-cena-' + counter)
+                        nova_cena_1.setAttribute('data-id', nova_cena)
+                        var nova_cena_tekst = nova_cena.split('.')
+                        
+                        if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                          else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                        var popust_1 = document.createElement('div')
+                        popust_1.setAttribute('id', 'popust-cena-' + counter)
+                        popust_1.innerHTML = popust
+
+                        var inner_cell_1 = document.createElement('div')
+                        inner_cell_1.setAttribute('class', 'div-inside')
+                        inner_cell_1.append(slika)
+
+                        var popust_container = document.createElement('div')
+                        popust_container.setAttribute('class', 'crveni-krug')
+                        inner_cell_1.append(naziv_1)
+                        popust_container.append(popust_1)
+
+                        
+                        inner_cell_1.append(popust_container)
+
+                      
+                        var inner_cell_2 = document.createElement('div')
+                        inner_cell_2.setAttribute('class', 'div-inside')
+                        // inner_cell_2.append(naziv_1)
+
+                        var zuti_cenovnik = document.createElement('div')
+                        zuti_cenovnik.setAttribute('class', 'zuti-cenovnik')
+
+                        var cenovnik_left = document.createElement('div')
+                        cenovnik_left.setAttribute('class', 'cenovnik-left')
+                        cenovnik_left.append(nova_cena_1)
+
+                        var cenovnik_right = document.createElement('div')
+                        cenovnik_right.setAttribute('class', 'cenovnik-right')
+                        cenovnik_right.append(stara_cena_1)
+
+                        zuti_cenovnik.append(cenovnik_left)
+                        zuti_cenovnik.append(cenovnik_right)
+
+                        inner_cell_2.append(zuti_cenovnik)
+
+
+                        var outer_cell = document.createElement('div')
+                        outer_cell.setAttribute('class', 'slicica-div')
+                        outer_cell.append(inner_cell_1)
+                        outer_cell.append(inner_cell_2)
+                      //   outer_cell.append(cell)
+
+                        var outer_outer_cell = document.createElement('div')
+                        outer_outer_cell.setAttribute('class', 'spoljni-div')
+                        outer_outer_cell.append(outer_cell)
+
+                  
+                
+                      
+                        var rok = document.createElement('div')
+                        rok.setAttribute('class', 'trajanje')
+                        if(trajanje != undefined) rok.append(trajanje)
+                        outer_outer_cell.append(rok)
+                          
+                        var lokacija = document.createElement('div')
+                        lokacija.setAttribute('class', 'lokacija')
+                        if(vazenje != undefined) lokacija.append(vazenje)
+                        outer_outer_cell.append(lokacija)
+                      // console.log(vazenje)
+
+                        tabela_row.append(outer_outer_cell)
+
+                        // KALKULATOR START
+                        var kalkulator = document.createElement('div')
+                        kalkulator.setAttribute('class', 'kalkulator')
+                      
+                      
+                        var selektor_kalkulatora = document.createElement('div')
+                        selektor_kalkulatora.setAttribute('class','selektor-kalkulatora')
+                        
+                        var cekboks = document.createElement('input')
+                        cekboks.setAttribute('class','cekboks-kalkulatora')
+                        cekboks.setAttribute('type', 'checkbox')
+                        
+                        var span_cekboks = document.createElement('span')
+                        span_cekboks.setAttribute('class', 'checkmark')
+                        
+                        var telo_kalkulatora = document.createElement('div')
+                        telo_kalkulatora.setAttribute('class','telo-kalkulatora')
+                        telo_kalkulatora.setAttribute('style', 'display:none;')
+                        
+                        var minus_dugme = document.createElement('button')
+                        minus_dugme.setAttribute('class','decrease')
+                        minus_dugme.innerHTML = '-'
+                        
+                        var kolicina = document.createElement('span')
+                        kolicina.setAttribute('class', 'kolicina')
+                        kolicina.innerHTML = '0'
+                        
+                        var plus_dugme = document.createElement('button')
+                        plus_dugme.setAttribute('class','increase')
+                        plus_dugme.innerHTML = '+'
+                        
+                        var iznos_popusta = document.createElement('span')
+                        iznos_popusta.setAttribute('class', 'popust-artikal')
+                        iznos_popusta.setAttribute('style', 'display:none')
+                        iznos_popusta.innerHTML = '0'
+                        
+                        telo_kalkulatora.append(minus_dugme)
+                        telo_kalkulatora.append(kolicina)
+                        telo_kalkulatora.append(plus_dugme)
+                        telo_kalkulatora.append(iznos_popusta)
+                        
+                        selektor_kalkulatora.append(cekboks)
+                        selektor_kalkulatora.append(span_cekboks)
+                        // selektor_kalkulatora.append(telo_kalkulatora)
+                        kalkulator.append(selektor_kalkulatora)
+                      
+                        outer_outer_cell.prepend(kalkulator)
+                        outer_outer_cell.append(telo_kalkulatora)
+                      
+                        // KALKULATOR END
+
+
+                        red++;
+
+                        if(counter == 0) {
+
+                          var tabela_row = document.createElement('div') 
+                          tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
+                          // var row_id = 'promo-banner-cena'
+                          // tabela_row.setAttribute('id', row_id)
+                          tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                          document.getElementById('tabela-proizvoda-cena').append(tabela_row)
+
+                        } else if(counter == 4) {
+
+                          var tabela_row = document.createElement('div') 
+                          tabela_row.setAttribute('class', 'proizvodi-row mobile-newsletter')
+                          // var row_id = 'mobile-newsletter-cena'
+                          // tabela_row.setAttribute('id', row_id)
+                          // var njuzleter = document.createElement('script')
+                          // njuzleter.setAttribute('src', 'https://maxi.sales-snap.com/form/generate.js?id=6')
+                          // tabela_row.append(njuzleter)
+
+                          document.getElementById('tabela-proizvoda-cena').append(tabela_row)
+
+                        } else if(counter == 8) {
+
+                          var tabela_row = document.createElement('div') 
+                          tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
+                          // var row_id = 'promo-banner'
+                          // tabela_row.setAttribute('id', row_id)
+                          tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
+                          document.getElementById('tabela-proizvoda-cena').append(tabela_row)
+
+                        }
                       }
+
+                     
                     
                   } else {
+
+                    if(kategorija == '5') {
+                      
+                      var cell = document.createElement('div')
+                      cell.setAttribute('class', 'prozivodi-cell')
+                      cell.setAttribute('id', 'cell-cena' + counter)
+
+
+                    //   var link = document.createElement('a')
+                    //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+                    //   link.setAttribute('href', homepage)
+                    //   link.setAttribute('target', '_self')
+                    //   link.setAttribute('id', 'link-' + counter)
+
+                      var razmak = document.createElement('br')
+
+                      var slika = document.createElement('img')
+                      slika.setAttribute('src', url)
+                      slika.setAttribute('id', 'slika-cena' + counter)
+
+                    //   link.append(slika)
+
+                      var naziv_1 = document.createElement('div')
+                      naziv_1.setAttribute('id', 'naziv-cena' + counter)
+                      naziv_1.setAttribute('class', 'naziv-proizvoda')
+                      naziv_1.innerHTML = naziv
+
+                      var stara_cena_1 = document.createElement('div')
+                      stara_cena_1.setAttribute('id', 'stara-cena-cena' + counter)
+                      var stara_cena_tekst = stara_cena.split('.')
+                      if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                      else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+                    //   var nova_cena_1 = document.createElement('div')
+                    //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+                    //   var nova_cena_tekst = nova_cena.split('.')
+                    //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                    //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                    //   var popust_1 = document.createElement('div')
+                    //   popust_1.setAttribute('id', 'popust-' + counter)
+                    //   popust_1.innerHTML = popust
+
+
+                      var inner_cell_1 = document.createElement('div')
+                      inner_cell_1.setAttribute('class', 'div-inside')
+                      inner_cell_1.append(slika)
+
+                      //   var popust_container = document.createElement('div')
+                      //   popust_container.setAttribute('class', 'crveni-krug')
+                      //   inner_cell_1.append(naziv_1)
+                      //   popust_container.append(popust_1)
+
+                        
+                      //   inner_cell_1.append(popust_container)
+                        inner_cell_1.append(naziv_1)
+                      
+                      var inner_cell_2 = document.createElement('div')
+                      inner_cell_2.setAttribute('class', 'div-inside')
+                      // inner_cell_2.append(naziv_1)
+
+                      var zuti_cenovnik = document.createElement('div')
+                      zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
+
+                      var cenovnik_left = document.createElement('div')
+                      cenovnik_left.setAttribute('class', 'cenovnik-left')
+                      cenovnik_left.append(stara_cena_1)
+
+                      // var cenovnik_right = document.createElement('div')
+                      // cenovnik_right.setAttribute('class', 'cenovnik-right')
+                      // cenovnik_right.append(stara_cena_1)
+
+                      zuti_cenovnik.append(cenovnik_left)
+                      // zuti_cenovnik.append(cenovnik_right)
+
+                      inner_cell_2.append(zuti_cenovnik)
+
+
+                        var outer_cell = document.createElement('div')
+                        outer_cell.setAttribute('class', 'slicica-div')
+                        outer_cell.append(inner_cell_1)
+                        outer_cell.append(inner_cell_2)
+                      //   outer_cell.append(cell)
+
+                      //   tabela_row.append(outer_cell)
+
+                      var outer_outer_cell = document.createElement('div')
+                      outer_outer_cell.setAttribute('class', 'spoljni-div')
+                      outer_outer_cell.append(outer_cell)
+
+                      // tabela_row.append(outer_outer_cell)
+
+
+                      var rok = document.createElement('div')
+                          rok.setAttribute('class', 'trajanje')
+                          if(trajanje != undefined) rok.append(trajanje)
+                          outer_outer_cell.append(rok)
+                          
+                          var lokacija = document.createElement('div')
+                          lokacija.setAttribute('class', 'lokacija')
+                          if(vazenje != undefined) lokacija.append(vazenje)
+                          outer_outer_cell.append(lokacija)
+                          
+                          // console.log(vazenje)
+                          
+                      var query = 'proizvodi-row-cena-' + (red - 1)
+
+                        
+
+                      document.getElementById(query).append(outer_outer_cell)
+
+
+                    } else {
+
 
                       var cell = document.createElement('div')
                       cell.setAttribute('class', 'prozivodi-cell')
@@ -1899,6 +1481,9 @@
                       outer_outer_cell.append(telo_kalkulatora)
                     
                     // KALKULATOR END
+                    }
+
+                      
 
                   }
                   counter++
@@ -1968,6 +1553,7 @@
 
                 reversed_array.forEach(element => {
                     const row = element.split(';')
+                    const kategorija = row[0]
                     const naziv = row[1]
                     const stara_cena = row[2]
                     const nova_cena = row[3]
@@ -1977,14 +1563,437 @@
                     const vazenje = row[7]
                   
 
-                  if(counter % 4 == 0 || counter == 0) {
-                      var tabela_row = document.createElement('div') 
-                      tabela_row.setAttribute('class', 'proizvodi-row')
-                      var row_id = 'proizvodi-row-popust-' + red
-                      tabela_row.setAttribute('id', row_id)
-                      // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
-                        //  console.log(tabela_row)
-                      document.getElementById('tabela-proizvoda-popust').append(tabela_row)
+                    if(counter % 4 == 0 || counter == 0) {
+
+                      if(kategorija == '5') {
+                        
+                        var tabela_row = document.createElement('div') 
+                        tabela_row.setAttribute('class', 'proizvodi-row')
+                        var row_id = 'proizvodi-row-popust-' + red
+                        tabela_row.setAttribute('id', row_id)
+                        // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
+                          //  console.log(tabela_row)
+                        document.getElementById('tabela-proizvoda-popust').append(tabela_row)
+
+                        var cell = document.createElement('div')
+                        cell.setAttribute('class', 'prozivodi-cell')
+                        cell.setAttribute('id', 'cell-popust' + counter)
+
+                      //   var link = document.createElement('a')
+                      //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+                      //   link.setAttribute('href', homepage)
+                      //   link.setAttribute('target', '_self')
+                      //   link.setAttribute('id', 'link-' + counter)
+
+                        var razmak = document.createElement('br')
+
+                        var slika = document.createElement('img')
+                        slika.setAttribute('src', url)
+                        slika.setAttribute('id', 'slika-popust' + counter)
+
+                      //   link.append(slika)
+
+                        var naziv_1 = document.createElement('div')
+                        naziv_1.setAttribute('id', 'naziv-popust' + counter)
+                        naziv_1.setAttribute('class', 'naziv-proizvoda')
+                        
+                        naziv_1.innerHTML = naziv
+
+                        var stara_cena_1 = document.createElement('div')
+                        stara_cena_1.setAttribute('id', 'stara-cena-popust' + counter)
+                        var stara_cena_tekst = stara_cena.split('.')
+                        
+                        if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                        else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+                      //   var nova_cena_1 = document.createElement('div')
+                      //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+                      //   var nova_cena_tekst = nova_cena.split('.')
+                      //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                      //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                      //   var popust_1 = document.createElement('div')
+                      //   popust_1.setAttribute('id', 'popust-' + counter)
+                      //   popust_1.innerHTML = popust
+
+
+                      //   cell.append(link)
+                      //   cell.append(naziv_1)
+                      //   cell.append(stara_cena_1)
+                      //   cell.append(nova_cena_1)
+                      //   cell.append(popust_1)
+
+                        var inner_cell_1 = document.createElement('div')
+                        inner_cell_1.setAttribute('class', 'div-inside')
+                        inner_cell_1.append(slika)
+
+                      //   var popust_container = document.createElement('div')
+                      //   popust_container.setAttribute('class', 'crveni-krug')
+                        inner_cell_1.append(naziv_1)
+                      //   popust_container.append(popust_1)
+
+                        
+                      //   inner_cell_1.append(popust_container)
+
+
+                      var inner_cell_2 = document.createElement('div')
+                      inner_cell_2.setAttribute('class', 'div-inside')
+                      // inner_cell_2.append(naziv_1)
+
+                      var zuti_cenovnik = document.createElement('div')
+                      zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
+
+                      var cenovnik_left = document.createElement('div')
+                      cenovnik_left.setAttribute('class', 'cenovnik-left')
+                      cenovnik_left.append(stara_cena_1)
+
+                      // var cenovnik_right = document.createElement('div')
+                      // cenovnik_right.setAttribute('class', 'cenovnik-right')
+                      // cenovnik_right.append(stara_cena_1)
+
+                      zuti_cenovnik.append(cenovnik_left)
+                      // zuti_cenovnik.append(cenovnik_right)
+
+                      inner_cell_2.append(zuti_cenovnik)
+
+
+                        var outer_cell = document.createElement('div')
+                        outer_cell.setAttribute('class', 'slicica-div')
+                        outer_cell.append(inner_cell_1)
+                        outer_cell.append(inner_cell_2)
+                      //   outer_cell.append(cell)
+
+                      var outer_outer_cell = document.createElement('div')
+                      outer_outer_cell.setAttribute('class', 'spoljni-div')
+                      outer_outer_cell.append(outer_cell)
+
+
+
+                          var rok = document.createElement('div')
+                          rok.setAttribute('class', 'trajanje')
+                          if(trajanje != undefined) rok.append(trajanje)
+                          outer_outer_cell.append(rok)
+                          
+                          var lokacija = document.createElement('div')
+                          lokacija.setAttribute('class', 'lokacija')
+                          if(vazenje != undefined) lokacija.append(vazenje)
+                          outer_outer_cell.append(lokacija)
+                      // console.log(vazenje)
+
+                      tabela_row.append(outer_outer_cell)
+
+                        red++;
+
+                      } else {
+
+                        var tabela_row = document.createElement('div') 
+                        tabela_row.setAttribute('class', 'proizvodi-row')
+                        var row_id = 'proizvodi-row-popust-' + red
+                        tabela_row.setAttribute('id', row_id)
+                        // '<div class="proizvodi-row" id="proizvodi-row-' + counter + '"</div>'
+                          //  console.log(tabela_row)
+                        document.getElementById('tabela-proizvoda-popust').append(tabela_row)
+
+                        var cell = document.createElement('div')
+                        cell.setAttribute('class', 'prozivodi-cell')
+                        cell.setAttribute('id', 'cell-popust-' + counter)
+
+                        var razmak = document.createElement('br')
+
+                        var slika = document.createElement('img')
+                        slika.setAttribute('src', url)
+                        slika.setAttribute('id', 'slika-popust-' + counter)
+
+                        var naziv_1 = document.createElement('div')
+                        naziv_1.setAttribute('id', 'naziv-popust-' + counter)
+                        naziv_1.setAttribute('class', 'naziv-proizvoda')
+
+                        naziv_1.innerHTML = naziv
+
+                        var stara_cena_1 = document.createElement('div')
+                        stara_cena_1.setAttribute('id', 'stara-cena-popust-' + counter)
+                        stara_cena_1.setAttribute('data-id', stara_cena)
+                        var stara_cena_tekst = stara_cena.split('.')
+                        
+                        if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                          else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+                        var nova_cena_1 = document.createElement('div')
+                        nova_cena_1.setAttribute('id', 'nova-cena-popust-' + counter)
+                        nova_cena_1.setAttribute('data-id', nova_cena)
+                        var nova_cena_tekst = nova_cena.split('.')
+                        
+                        if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                          else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                        var popust_1 = document.createElement('div')
+                        popust_1.setAttribute('id', 'popust-popust-' + counter)
+                        popust_1.innerHTML = popust
+
+                        var inner_cell_1 = document.createElement('div')
+                        inner_cell_1.setAttribute('class', 'div-inside')
+                        inner_cell_1.append(slika)
+
+                        var popust_container = document.createElement('div')
+                        popust_container.setAttribute('class', 'crveni-krug')
+                        inner_cell_1.append(naziv_1)
+                        popust_container.append(popust_1)
+
+                        
+                        inner_cell_1.append(popust_container)
+
+
+                        var inner_cell_2 = document.createElement('div')
+                        inner_cell_2.setAttribute('class', 'div-inside')
+                        // inner_cell_2.append(naziv_1)
+
+                        var zuti_cenovnik = document.createElement('div')
+                        zuti_cenovnik.setAttribute('class', 'zuti-cenovnik')
+
+                        var cenovnik_left = document.createElement('div')
+                        cenovnik_left.setAttribute('class', 'cenovnik-left')
+                        cenovnik_left.append(nova_cena_1)
+
+                        var cenovnik_right = document.createElement('div')
+                        cenovnik_right.setAttribute('class', 'cenovnik-right')
+                        cenovnik_right.append(stara_cena_1)
+
+                        zuti_cenovnik.append(cenovnik_left)
+                        zuti_cenovnik.append(cenovnik_right)
+
+                        inner_cell_2.append(zuti_cenovnik)
+
+
+                        var outer_cell = document.createElement('div')
+                        outer_cell.setAttribute('class', 'slicica-div')
+                        outer_cell.append(inner_cell_1)
+                        outer_cell.append(inner_cell_2)
+                      //   outer_cell.append(cell)
+
+                        var outer_outer_cell = document.createElement('div')
+                        outer_outer_cell.setAttribute('class', 'spoljni-div')
+                        outer_outer_cell.append(outer_cell)
+
+
+
+
+                        var rok = document.createElement('div')
+                        rok.setAttribute('class', 'trajanje')
+                        if(trajanje != undefined) rok.append(trajanje)
+                        outer_outer_cell.append(rok)
+                          
+                        var lokacija = document.createElement('div')
+                        lokacija.setAttribute('class', 'lokacija')
+                        if(vazenje != undefined) lokacija.append(vazenje)
+                        outer_outer_cell.append(lokacija)
+                      // console.log(vazenje)
+
+                        tabela_row.append(outer_outer_cell)
+
+                        // KALKULATOR START
+                        var kalkulator = document.createElement('div')
+                        kalkulator.setAttribute('class', 'kalkulator')
+
+
+                        var selektor_kalkulatora = document.createElement('div')
+                        selektor_kalkulatora.setAttribute('class','selektor-kalkulatora')
+                        
+                        var cekboks = document.createElement('input')
+                        cekboks.setAttribute('class','cekboks-kalkulatora')
+                        cekboks.setAttribute('type', 'checkbox')
+                        
+                        var span_cekboks = document.createElement('span')
+                        span_cekboks.setAttribute('class', 'checkmark')
+                        
+                        var telo_kalkulatora = document.createElement('div')
+                        telo_kalkulatora.setAttribute('class','telo-kalkulatora')
+                        telo_kalkulatora.setAttribute('style', 'display:none;')
+                        
+                        var minus_dugme = document.createElement('button')
+                        minus_dugme.setAttribute('class','decrease')
+                        minus_dugme.innerHTML = '-'
+                        
+                        var kolicina = document.createElement('span')
+                        kolicina.setAttribute('class', 'kolicina')
+                        kolicina.innerHTML = '0'
+                        
+                        var plus_dugme = document.createElement('button')
+                        plus_dugme.setAttribute('class','increase')
+                        plus_dugme.innerHTML = '+'
+                        
+                        var iznos_popusta = document.createElement('span')
+                        iznos_popusta.setAttribute('class', 'popust-artikal')
+                        iznos_popusta.setAttribute('style', 'display:none')
+                        iznos_popusta.innerHTML = '0'
+                        
+                        telo_kalkulatora.append(minus_dugme)
+                        telo_kalkulatora.append(kolicina)
+                        telo_kalkulatora.append(plus_dugme)
+                        telo_kalkulatora.append(iznos_popusta)
+                        
+                        selektor_kalkulatora.append(cekboks)
+                        selektor_kalkulatora.append(span_cekboks)
+                        // selektor_kalkulatora.append(telo_kalkulatora)
+                        kalkulator.append(selektor_kalkulatora)
+
+                        outer_outer_cell.prepend(kalkulator)
+                        outer_outer_cell.append(telo_kalkulatora)
+
+                        // KALKULATOR END
+
+
+                        red++;
+
+                        if(counter == 0) {
+
+                          var tabela_row = document.createElement('div') 
+                          tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
+                          // var row_id = 'promo-banner-cena'
+                          // tabela_row.setAttribute('id', row_id)
+                          tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                          document.getElementById('tabela-proizvoda-popust').append(tabela_row)
+
+                        } else if(counter == 4) {
+
+                          var tabela_row = document.createElement('div') 
+                          tabela_row.setAttribute('class', 'proizvodi-row mobile-newsletter')
+                          // var row_id = 'mobile-newsletter-cena'
+                          // tabela_row.setAttribute('id', row_id)
+                          // var njuzleter = document.createElement('script')
+                          // njuzleter.setAttribute('src', 'https://maxi.sales-snap.com/form/generate.js?id=6')
+                          // tabela_row.append(njuzleter)
+
+                          document.getElementById('tabela-proizvoda-popust').append(tabela_row)
+
+                        } else if(counter == 8) {
+
+                          var tabela_row = document.createElement('div') 
+                          tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
+                          // var row_id = 'promo-banner'
+                          // tabela_row.setAttribute('id', row_id)
+                          tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
+                          document.getElementById('tabela-proizvoda-popust').append(tabela_row)
+
+                        }
+                      }
+
+
+
+                      } else {
+
+                      if(kategorija == '5') {
+
+                      var cell = document.createElement('div')
+                      cell.setAttribute('class', 'prozivodi-cell')
+                      cell.setAttribute('id', 'cell-popust' + counter)
+
+
+                      //   var link = document.createElement('a')
+                      //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
+                      //   link.setAttribute('href', homepage)
+                      //   link.setAttribute('target', '_self')
+                      //   link.setAttribute('id', 'link-' + counter)
+
+                      var razmak = document.createElement('br')
+
+                      var slika = document.createElement('img')
+                      slika.setAttribute('src', url)
+                      slika.setAttribute('id', 'slika-popust' + counter)
+
+                      //   link.append(slika)
+
+                      var naziv_1 = document.createElement('div')
+                      naziv_1.setAttribute('id', 'naziv-popust' + counter)
+                      naziv_1.setAttribute('class', 'naziv-proizvoda')
+                      naziv_1.innerHTML = naziv
+
+                      var stara_cena_1 = document.createElement('div')
+                      stara_cena_1.setAttribute('id', 'stara-cena-popust' + counter)
+                      var stara_cena_tekst = stara_cena.split('.')
+                      if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
+                      else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
+
+                      //   var nova_cena_1 = document.createElement('div')
+                      //   nova_cena_1.setAttribute('id', 'nova-cena-' + counter)
+                      //   var nova_cena_tekst = nova_cena.split('.')
+                      //   if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
+                      //   else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
+
+                      //   var popust_1 = document.createElement('div')
+                      //   popust_1.setAttribute('id', 'popust-' + counter)
+                      //   popust_1.innerHTML = popust
+
+
+                      var inner_cell_1 = document.createElement('div')
+                      inner_cell_1.setAttribute('class', 'div-inside')
+                      inner_cell_1.append(slika)
+
+                      //   var popust_container = document.createElement('div')
+                      //   popust_container.setAttribute('class', 'crveni-krug')
+                      //   inner_cell_1.append(naziv_1)
+                      //   popust_container.append(popust_1)
+
+                        
+                      //   inner_cell_1.append(popust_container)
+                        inner_cell_1.append(naziv_1)
+
+                      var inner_cell_2 = document.createElement('div')
+                      inner_cell_2.setAttribute('class', 'div-inside')
+                      // inner_cell_2.append(naziv_1)
+
+                      var zuti_cenovnik = document.createElement('div')
+                      zuti_cenovnik.setAttribute('class', 'zuti-cenovnik plava-cena')
+
+                      var cenovnik_left = document.createElement('div')
+                      cenovnik_left.setAttribute('class', 'cenovnik-left')
+                      cenovnik_left.append(stara_cena_1)
+
+                      // var cenovnik_right = document.createElement('div')
+                      // cenovnik_right.setAttribute('class', 'cenovnik-right')
+                      // cenovnik_right.append(stara_cena_1)
+
+                      zuti_cenovnik.append(cenovnik_left)
+                      // zuti_cenovnik.append(cenovnik_right)
+
+                      inner_cell_2.append(zuti_cenovnik)
+
+
+                        var outer_cell = document.createElement('div')
+                        outer_cell.setAttribute('class', 'slicica-div')
+                        outer_cell.append(inner_cell_1)
+                        outer_cell.append(inner_cell_2)
+                      //   outer_cell.append(cell)
+
+                      //   tabela_row.append(outer_cell)
+
+                      var outer_outer_cell = document.createElement('div')
+                      outer_outer_cell.setAttribute('class', 'spoljni-div')
+                      outer_outer_cell.append(outer_cell)
+
+                      // tabela_row.append(outer_outer_cell)
+
+
+                      var rok = document.createElement('div')
+                          rok.setAttribute('class', 'trajanje')
+                          if(trajanje != undefined) rok.append(trajanje)
+                          outer_outer_cell.append(rok)
+                          
+                          var lokacija = document.createElement('div')
+                          lokacija.setAttribute('class', 'lokacija')
+                          if(vazenje != undefined) lokacija.append(vazenje)
+                          outer_outer_cell.append(lokacija)
+                          
+                          // console.log(vazenje)
+                          
+                      var query = 'proizvodi-row-popust-' + (red - 1)
+
+                        
+
+                      document.getElementById(query).append(outer_outer_cell)
+
+
+                      } else {
+
 
                       var cell = document.createElement('div')
                       cell.setAttribute('class', 'prozivodi-cell')
@@ -1996,19 +2005,18 @@
                       slika.setAttribute('src', url)
                       slika.setAttribute('id', 'slika-popust-' + counter)
 
-                    //   link.append(slika)
+                      //   link.append(slika)
 
                       var naziv_1 = document.createElement('div')
                       naziv_1.setAttribute('id', 'naziv-popust-' + counter)
                       naziv_1.setAttribute('class', 'naziv-proizvoda')
-                    //   console.log(naziv)
                       naziv_1.innerHTML = naziv
 
                       var stara_cena_1 = document.createElement('div')
                       stara_cena_1.setAttribute('id', 'stara-cena-popust-' + counter)
                       stara_cena_1.setAttribute('data-id', stara_cena)
+
                       var stara_cena_tekst = stara_cena.split('.')
-                      
                       if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
                         else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
 
@@ -2016,13 +2024,14 @@
                       nova_cena_1.setAttribute('id', 'nova-cena-popust-' + counter)
                       nova_cena_1.setAttribute('data-id', nova_cena)
                       var nova_cena_tekst = nova_cena.split('.')
-                      
+
                       if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
                         else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
 
                       var popust_1 = document.createElement('div')
                       popust_1.setAttribute('id', 'popust-popust-' + counter)
                       popust_1.innerHTML = popust
+
 
                       var inner_cell_1 = document.createElement('div')
                       inner_cell_1.setAttribute('class', 'div-inside')
@@ -2033,10 +2042,10 @@
                       inner_cell_1.append(naziv_1)
                       popust_container.append(popust_1)
 
-                      
-                      inner_cell_1.append(popust_container)
 
-                    
+                      inner_cell_1.append(popust_container)
+                      //   inner_cell_1.append(naziv_1)
+
                       var inner_cell_2 = document.createElement('div')
                       inner_cell_2.setAttribute('class', 'div-inside')
                       // inner_cell_2.append(naziv_1)
@@ -2062,216 +2071,28 @@
                       outer_cell.setAttribute('class', 'slicica-div')
                       outer_cell.append(inner_cell_1)
                       outer_cell.append(inner_cell_2)
-                    //   outer_cell.append(cell)
+                      //   outer_cell.append(cell)
+
+                      //   tabela_row.append(outer_cell)
 
                       var outer_outer_cell = document.createElement('div')
                       outer_outer_cell.setAttribute('class', 'spoljni-div')
                       outer_outer_cell.append(outer_cell)
 
+
+
+                      // tabela_row.append(outer_outer_cell)
+
+
                       var rok = document.createElement('div')
                       rok.setAttribute('class', 'trajanje')
-                        
+
                       if(trajanje != undefined) rok.append(trajanje)
                       outer_outer_cell.append(rok)
                         
                       var lokacija = document.createElement('div')
                       lokacija.setAttribute('class', 'lokacija')
-                      
-                      if(vazenje != undefined) lokacija.append(vazenje)
-                      outer_outer_cell.append(lokacija)
-                    // console.log(vazenje)
 
-                      tabela_row.append(outer_outer_cell)
-
-                      // KALKULATOR START
-                      var kalkulator = document.createElement('div')
-                      kalkulator.setAttribute('class', 'kalkulator')
-                      
-                      
-                      var selektor_kalkulatora = document.createElement('div')
-                      selektor_kalkulatora.setAttribute('class','selektor-kalkulatora')
-                      
-                      var cekboks = document.createElement('input')
-                      cekboks.setAttribute('class','cekboks-kalkulatora')
-                      cekboks.setAttribute('type', 'checkbox')
-                      
-                      var span_cekboks = document.createElement('span')
-                      span_cekboks.setAttribute('class', 'checkmark')
-                      
-                      var telo_kalkulatora = document.createElement('div')
-                      telo_kalkulatora.setAttribute('class','telo-kalkulatora')
-                      telo_kalkulatora.setAttribute('style', 'display:none;')
-                      
-                      var minus_dugme = document.createElement('button')
-                      minus_dugme.setAttribute('class','decrease')
-                      minus_dugme.innerHTML = '-'
-                      
-                      var kolicina = document.createElement('span')
-                      kolicina.setAttribute('class', 'kolicina')
-                      kolicina.innerHTML = '0'
-                      
-                      var plus_dugme = document.createElement('button')
-                      plus_dugme.setAttribute('class','increase')
-                      plus_dugme.innerHTML = '+'
-                      
-                      var iznos_popusta = document.createElement('span')
-                      iznos_popusta.setAttribute('class', 'popust-artikal')
-                      iznos_popusta.setAttribute('style', 'display:none')
-                      iznos_popusta.innerHTML = '0'
-                      
-                      telo_kalkulatora.append(minus_dugme)
-                      telo_kalkulatora.append(kolicina)
-                      telo_kalkulatora.append(plus_dugme)
-                      telo_kalkulatora.append(iznos_popusta)
-                      
-                      selektor_kalkulatora.append(cekboks)
-                      selektor_kalkulatora.append(span_cekboks)
-                      // selektor_kalkulatora.append(telo_kalkulatora)
-                      kalkulator.append(selektor_kalkulatora)
-                      
-                      
-                      
-                      
-                      outer_outer_cell.prepend(kalkulator)
-                      outer_outer_cell.append(telo_kalkulatora)
-                      
-                      // KALKULATOR END
-
-                      red++;
-
-                      if(counter == 0) {
-
-                        var tabela_row = document.createElement('div') 
-                        tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
-                        // var row_id = 'promo-banner-cena'
-                        // tabela_row.setAttribute('id', row_id)
-                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
-                        document.getElementById('tabela-proizvoda-popust').append(tabela_row)
-
-                      } else if(counter == 4) {
-
-                        var tabela_row = document.createElement('div') 
-                        tabela_row.setAttribute('class', 'proizvodi-row mobile-newsletter')
-                        // var row_id = 'mobile-newsletter-cena'
-                        // tabela_row.setAttribute('id', row_id)
-                        // var njuzleter = document.createElement('script')
-                        // njuzleter.setAttribute('src', 'https://maxi.sales-snap.com/form/generate.js?id=6')
-                        // tabela_row.append(njuzleter)
-
-                        document.getElementById('tabela-proizvoda-popust').append(tabela_row)
-
-                      } else if(counter == 8) {
-
-                        var tabela_row = document.createElement('div') 
-                        tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
-                        // var row_id = 'promo-banner'
-                        // tabela_row.setAttribute('id', row_id)
-                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
-                        document.getElementById('tabela-proizvoda-popust').append(tabela_row)
-
-                      }
-                    
-                  } else {
-
-                      var cell = document.createElement('div')
-                      cell.setAttribute('class', 'prozivodi-cell')
-                      cell.setAttribute('id', 'cell-popust-' + counter)
-
-                      var razmak = document.createElement('br')
-
-                      var slika = document.createElement('img')
-                      slika.setAttribute('src', url)
-                      slika.setAttribute('id', 'slika-popust-' + counter)
-
-                    //   link.append(slika)
-
-                      var naziv_1 = document.createElement('div')
-                      naziv_1.setAttribute('id', 'naziv-popust-' + counter)
-                      naziv_1.setAttribute('class', 'naziv-proizvoda')
-                      naziv_1.innerHTML = naziv
-
-                      var stara_cena_1 = document.createElement('div')
-                      stara_cena_1.setAttribute('id', 'stara-cena-popust-' + counter)
-                      stara_cena_1.setAttribute('data-id', stara_cena)
-                    
-                      var stara_cena_tekst = stara_cena.split('.')
-
-                      if(stara_cena_tekst[1] === '00') stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup style="visibility:hidden;">' + stara_cena_tekst[1] + '</sup>'
-                        else stara_cena_1.innerHTML = stara_cena_tekst[0] + '<sup>' + stara_cena_tekst[1] + '</sup>'
-
-                      var nova_cena_1 = document.createElement('div')
-                      nova_cena_1.setAttribute('id', 'nova-cena-popust-' + counter)
-                              nova_cena_1.setAttribute('data-id', nova_cena)
-                      var nova_cena_tekst = nova_cena.split('.')
-
-                      if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
-                        else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
-
-                      var popust_1 = document.createElement('div')
-                      popust_1.setAttribute('id', 'popust-popust-' + counter)
-                      popust_1.innerHTML = popust
-
-
-                      var inner_cell_1 = document.createElement('div')
-                      inner_cell_1.setAttribute('class', 'div-inside')
-                      inner_cell_1.append(slika)
-
-                      var popust_container = document.createElement('div')
-                      popust_container.setAttribute('class', 'crveni-krug')
-                      inner_cell_1.append(naziv_1)
-                      popust_container.append(popust_1)
-
-                      
-                      inner_cell_1.append(popust_container)
-                    //   inner_cell_1.append(naziv_1)
-                    
-                      var inner_cell_2 = document.createElement('div')
-                      inner_cell_2.setAttribute('class', 'div-inside')
-                      // inner_cell_2.append(naziv_1)
-
-                      var zuti_cenovnik = document.createElement('div')
-                      zuti_cenovnik.setAttribute('class', 'zuti-cenovnik')
-
-                      var cenovnik_left = document.createElement('div')
-                      cenovnik_left.setAttribute('class', 'cenovnik-left')
-                      cenovnik_left.append(nova_cena_1)
-
-                      var cenovnik_right = document.createElement('div')
-                      cenovnik_right.setAttribute('class', 'cenovnik-right')
-                      cenovnik_right.append(stara_cena_1)
-
-                      zuti_cenovnik.append(cenovnik_left)
-                      zuti_cenovnik.append(cenovnik_right)
-
-                      inner_cell_2.append(zuti_cenovnik)
-
-
-                      var outer_cell = document.createElement('div')
-                      outer_cell.setAttribute('class', 'slicica-div')
-                      outer_cell.append(inner_cell_1)
-                      outer_cell.append(inner_cell_2)
-                    //   outer_cell.append(cell)
-
-                    //   tabela_row.append(outer_cell)
-
-                      var outer_outer_cell = document.createElement('div')
-                      outer_outer_cell.setAttribute('class', 'spoljni-div')
-                      outer_outer_cell.append(outer_cell)
-                    
-
-
-                    // tabela_row.append(outer_outer_cell)
-
-
-                      var rok = document.createElement('div')
-                      rok.setAttribute('class', 'trajanje')
-                        
-                      if(trajanje != undefined) rok.append(trajanje)
-                      outer_outer_cell.append(rok)
-                        
-                      var lokacija = document.createElement('div')
-                      lokacija.setAttribute('class', 'lokacija')
-                        
                       if(vazenje != undefined) lokacija.append(vazenje)
                       outer_outer_cell.append(lokacija)
                         
@@ -2279,69 +2100,66 @@
                         
                       var query = 'proizvodi-row-popust-' + (red - 1)
 
-                      
+
 
                       document.getElementById(query).append(outer_outer_cell)
 
                       // KALKULATOR START
                       var kalkulator = document.createElement('div')
                       kalkulator.setAttribute('class', 'kalkulator')
-                      
-                      
+
+
                       var selektor_kalkulatora = document.createElement('div')
                       selektor_kalkulatora.setAttribute('class','selektor-kalkulatora')
-                      
+
                       var cekboks = document.createElement('input')
                       cekboks.setAttribute('class','cekboks-kalkulatora')
                       cekboks.setAttribute('type', 'checkbox')
-                      
+
                       var span_cekboks = document.createElement('span')
                       span_cekboks.setAttribute('class', 'checkmark')
-                      
+
                       var telo_kalkulatora = document.createElement('div')
                       telo_kalkulatora.setAttribute('class','telo-kalkulatora')
                       telo_kalkulatora.setAttribute('style', 'display:none;')
-                      
+
                       var minus_dugme = document.createElement('button')
                       minus_dugme.setAttribute('class','decrease')
                       minus_dugme.innerHTML = '-'
-                      
+
                       var kolicina = document.createElement('span')
                       kolicina.setAttribute('class', 'kolicina')
                       kolicina.innerHTML = '0'
-                    
+
                       var plus_dugme = document.createElement('button')
                       plus_dugme.setAttribute('class','increase')
                       plus_dugme.innerHTML = '+'
-                      
+
                       var iznos_popusta = document.createElement('span')
                       iznos_popusta.setAttribute('class', 'popust-artikal')
                       iznos_popusta.setAttribute('style', 'display:none')
                       iznos_popusta.innerHTML = '0'
-                      
+
                       telo_kalkulatora.append(minus_dugme)
                       telo_kalkulatora.append(kolicina)
                       telo_kalkulatora.append(plus_dugme)
                       telo_kalkulatora.append(iznos_popusta)
-                      
+
                       selektor_kalkulatora.append(cekboks)
                       selektor_kalkulatora.append(span_cekboks)
                       // selektor_kalkulatora.append(telo_kalkulatora)
                       kalkulator.append(selektor_kalkulatora)
-                    
-                    
-                    
-                    
+
                       outer_outer_cell.prepend(kalkulator)
                       outer_outer_cell.append(telo_kalkulatora)
-                    
-                    // KALKULATOR END
+
+                      // KALKULATOR END
+                      }
 
 
 
-                  }
-
-                  counter++
+                    }
+                      counter++
 
                 });
               
@@ -2367,23 +2185,23 @@
 
                     switch(link) {
                       case '1': 
-                        option_link_href = 'https://shopandgo.in.rs/izaberi-uvek-sveze.html'
+                        option_link_href = 'izaberi-uvek-sveze.html'
                         break;
 
                       case '2': 
-                        option_link_href = 'https://shopandgo.in.rs/uzivaj-u-ukusnom-delikatesu.html'
+                        option_link_href = 'uzivaj-u-ukusnom-delikatesu.html'
                         break;
 
                       case '3': 
-                        option_link_href = 'https://shopandgo.in.rs/pripremi-ukusan-obrok.html'
+                        option_link_href = 'pripremi-ukusan-obrok.html'
                         break;
                       
                       case '4': 
-                        option_link_href = 'https://shopandgo.in.rs/gricni-i-osvezi-se.html'
+                        option_link_href = 'gricni-i-osvezi-se.html'
                         break;
                       
                       case '5': 
-                        option_link_href = 'https://shopandgo.in.rs/plava-cena.html'
+                        option_link_href = 'plava-cena.html'
                         break;
                     }
 
@@ -2463,7 +2281,7 @@
             <a href="pripremi-ukusan-obrok.html">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1489:ukusan-obrokpng" alt="pripremi ukusan obrok">
-                <p class="top-ponuda">PRIPREMI UKUSAN DORUCAK</p>
+                <p class="top-ponuda">PRIPREMI UKUSAN OBROK</p>
               </div>
             </a>
           </li>   
@@ -2567,7 +2385,7 @@
          <div class="header-div" id="in2db">
             <div class="levo-header">
             </div>
-            <center><a href="https://shopandgo.in.rs/pocetna" target="_self"><img src="https://maxi.sales-snap.com/asset/119:logopng" id="iw2i"></a></center>
+            <center><a href="index.html" target="_self"><img src="https://maxi.sales-snap.com/asset/119:logopng" id="iw2i"></a></center>
             <div class="desno-header">
             </div>
          </div>

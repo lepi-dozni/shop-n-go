@@ -914,8 +914,9 @@ html{
 .div-inside img {
     position: absolute;
     width: 24%;
-    margin-top: 59px;
-    max-width: 165px;
+    margin-top: 52px;
+    max-width: 150px;
+    max-height: 150px;
     margin-left: 10px;
 }
 
@@ -958,9 +959,9 @@ html{
 .trajanje {
     font-size: 11px;
     text-align: center;
-    margin-top: -16%;
+    margin-top: -15%;
     color: #522e91;
-    font-family: 'Mont-Book';
+    font-family: 'Muller-ExtraBold';
     font-weight: 800;
     height: 30px;
 }
@@ -1030,7 +1031,8 @@ html{
     .div-inside img {
         width: 100% !important;
         margin-top: 75px;
-        max-width: 215px;
+        max-width: 200px !important;
+        max-height: 200px !important;
     }
 
     .cenovnik-right > div {
@@ -1117,7 +1119,7 @@ html{
     
     .zuti-cenovnik {
         margin-left: -6px;
-        top: 140px;
+        top: 138px;
     }
     
     .crveni-krug {
@@ -1132,6 +1134,901 @@ html{
     
 
 }
+
+        /* redesign */
+        /* home and globals*/
+        .proizvodi-row.footer{
+            width: unset !important;
+          }
+          #interactiveNav .spoljni-div{
+            max-height: unset !important;
+          }
+          .close-menu,
+          .burger-menu{
+              cursor: pointer;
+          }
+          #glavni-kontejner{
+            transition: all .45s ease-in-out;
+            -moz-transition: all .45s ease-in-out;
+            -webkit-transition: all .45s  ease-in-out;
+          }
+          .margin-reset-menu-active{
+            margin-left: 0 !important;
+          }
+          .burger-menu{
+              width: 100px;
+              position: absolute;
+              height: auto;
+              left: 20px;
+              top: 20px;
+          }
+          .show-more-options{
+              color: #fff;
+          }
+          @keyframes slideOut {
+              from {left: 0;}
+              to {left: -300px;}
+          }
+          @keyframes slideIn {
+              from {left: -300px;}
+              to {left: 0;}
+          }
+          .side-bar-slide-right{
+              left: 0px;
+              animation-name: slideIn;
+              animation-duration: 0.6s;
+          }
+          .side-bar-slide-left{
+              left: -300px;
+              animation-name: slideOut;
+              animation-duration: 0.6s;
+          }
+          /* .banner-slider{
+              width: 80%;
+          } */
+          .banner-slider img,
+          .banner-slider-mobile img{
+              height: auto;
+          }
+          #myUL{
+            position: absolute;
+            transition: all .45s ease-in-out;
+            -moz-transition: all .45s ease-in-out;
+            -webkit-transition: all .45s  ease-in-out;
+          }
+          .search-wrapper ul:not(.visible-search-results){
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+          }
+          .visible-search-results{
+            opacity: 1 !important;
+            height: auto;
+            overflow: visible;
+          }
+          /* #mauticform_input_njuzleterkatalogforma_submit{
+            opacity: 0;
+          } */
+          /* media queries redesign */
+          @media only screen and (max-width: 320px) {
+              .search-wrapper,
+              #myUL{
+                width: 240px !important;
+              }
+              .banner-slider{
+                display: none;
+              }
+              .banner-slider-mobile{
+                display: block;
+              }
+              .kalkulator{
+                margin-top: 24px !important;
+                margin-left: -9px !important;
+              }
+              .burger-menu{
+                left: -27px !important;
+                top: 37px !important;
+                height: 20px;
+              }
+              #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
+                width: 240px !important;
+              }
+              #kalkulator,
+              .sort-wrapper{
+                width: 97% !important;
+              }
+              .sort-button{
+                width: 100% !important;
+              }
+              #kalkulator{
+                font-size: 34px;
+                height: auto !important;
+              }
+              #kalkulator > div{
+                margin-top: 6px !important;
+              }
+              .discount-sort .close-button{
+                right: unset;
+                top: -12px;
+                left: -15px;
+              }
+          }
+          @media only screen and (min-width: 320px) and (max-width: 600px)  {
+              .search-wrapper,
+              #myUL{
+                width: 320px !important;
+              }
+              .banner-slider{
+                display: none;
+              }
+              .banner-slider-mobile{
+                display: block;
+              }
+              .kalkulator{
+                margin-top: 24px !important;
+                margin-left: -13px !important;
+              }
+              .burger-menu{
+                left: 0px !important;
+                top: 27px !important;
+                height: 40px;
+              }
+              #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
+                width: 300px !important;
+              }
+              #kalkulator,
+              .sort-wrapper{
+                width: 97% !important;
+              }
+              .sort-button{
+                width: 100% !important;
+              }
+              .sort-button{
+                width: 100% !important;
+                font-size: 34px;
+                padding: 20px;
+              }
+              #kalkulator{
+                font-size: 34px;
+                height: auto !important;
+              }
+              #kalkulator > div{
+                margin-top: 6px !important;
+              }
+              .price-sort,
+              .discount-sort{
+                font-size: 20px !important;
+              }
+              .discount-sort .close-button{
+                right: unset;
+                top: -12px;
+                left: -15px;
+              }
+          }
+          @media only screen and (min-width: 600px) and (max-width: 768px)  {
+              .kalkulator{
+                margin-top: 24px !important;
+                margin-left: -13px !important;
+              }
+              .search-wrapper,
+              #myUL{
+                width: 400px !important;
+              }
+              .banner-slider{
+                display: none;
+              }
+              .banner-slider-mobile{
+                display: block;
+              }
+              .burger-menu{
+                left: 0px !important;
+                top: 27px !important;
+                height: 40px;
+              }
+              #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
+                width: 450px !important;
+              }
+              #kalkulator,
+              .sort-wrapper{
+                width: 97% !important;
+              }
+              .sort-button{
+                width: 100% !important;
+              }
+              .sort-button{
+                width: 100% !important;
+                font-size: 34px;
+                padding: 20px;
+              }
+              #kalkulator{
+                font-size: 34px;
+              }
+              #kalkulator > div{
+                margin-top: 21px !important;
+              }
+              .price-sort,
+              .discount-sort{
+                font-size: 20px !important;
+              }
+              .discount-sort .close-button{
+                right: unset;
+                top: -12px;
+                left: -15px;
+              }
+          }
+          @media only screen and (min-width: 600px) and (max-width: 700px){
+            
+          }
+          @media only screen and (min-width: 700px) and (max-width: 800px){
+            .submit-mask{
+                top: 129px;
+                right: 104px;
+                height: 80px !important;
+                width: 80px !important;
+            }
+          }
+          @media only screen and (min-width: 800px) and (max-width: 996px){
+            .submit-mask{
+                top: 129px;
+                right: 94px;
+                height: 80px !important;
+                width: 115px !important;
+            }
+          }
+          @media only screen and (min-width: 768px) and (max-width: 996px){
+              .kalkulator{
+                margin-top: 24px !important;
+                margin-left: -9px !important;
+              }
+              .search-wrapper,
+              #myUL{
+                width: 500px !important;
+              }
+              .banner-slider{
+                display: none;
+              }
+              .banner-slider-mobile{
+                display: block;
+              }
+              .burger-menu{
+                left: 0px !important;
+                top: 27px !important;
+                height: 50px;
+              }
+              #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
+                width: 500px !important;
+              }
+              #kalkulator,
+              .sort-wrapper{
+                width: 97% !important;
+              }
+              .sort-button{
+                width: 100% !important;
+                font-size: 34px;
+                padding: 20px;
+              }
+              #kalkulator{
+                font-size: 34px;
+              }
+              #kalkulator > div{
+                margin-top: 21px !important;
+              }
+              .price-sort,
+              .discount-sort{
+                font-size: 20px !important;
+              }
+              .discount-sort .close-button{
+                right: unset;
+                top: -12px;
+                left: -15px;
+              }
+          }
+          @media only screen and (min-width: 996px){
+              #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
+                  width: 600px !important;
+              }
+              .search-wrapper,
+              #myUL{
+                width: 800px !important;
+              }
+              .banner-slider{
+                display: block;
+              }
+              .banner-slider-mobile{
+                display: none;
+              }
+  
+              .mobile-newsletter {
+                display: none !important;
+              }
+              
+          }
+          @media only screen and (min-width: 996px){
+              .search-wrapper,
+              #myUL{
+                width: 800px !important;
+              }
+              .banner-slider{
+                display: block;
+              }
+              .banner-slider-mobile{
+                display: none;
+              }
+              .submit-mask{
+                top: 40px;
+                right: -429px;
+              }
+          }
+          /* media queries redesign */
+          /* Slider */
+          .slick-loading .slick-list
+          {
+              background: #fff url('./ajax-loader.gif') center center no-repeat;
+          }
+  
+          /* Icons */
+          @font-face
+          {
+              font-family: 'slick';
+              font-weight: normal;
+              font-style: normal;
+  
+              src: url('./fonts/slick.eot');
+              src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+          }
+          /* Arrows */
+          .slick-prev,
+          .slick-next
+          {
+              font-size: 0;
+              line-height: 0;
+  
+              position: absolute;
+              top: 50%;
+  
+              display: block;
+  
+              width: 20px;
+              height: 20px;
+              padding: 0;
+              -webkit-transform: translate(0, -50%);
+              -ms-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+  
+              cursor: pointer;
+  
+              color: transparent;
+              border: none;
+              outline: none;
+              background: transparent;
+          }
+          .slick-prev:hover,
+          .slick-prev:focus,
+          .slick-next:hover,
+          .slick-next:focus
+          {
+              color: transparent;
+              outline: none;
+              background: transparent;
+          }
+          .slick-prev:hover:before,
+          .slick-prev:focus:before,
+          .slick-next:hover:before,
+          .slick-next:focus:before
+          {
+              opacity: 1;
+          }
+          .slick-prev.slick-disabled:before,
+          .slick-next.slick-disabled:before
+          {
+              opacity: .25;
+          }
+  
+          .slick-prev:before,
+          .slick-next:before
+          {
+              font-family: 'slick';
+              font-size: 20px;
+              line-height: 1;
+  
+              opacity: .75;
+              color: white;
+  
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+          }
+  
+          .slick-prev
+          {
+              left: -25px;
+          }
+          [dir='rtl'] .slick-prev
+          {
+              right: -25px;
+              left: auto;
+          }
+          .slick-prev:before
+          {
+              content: '←';
+          }
+          [dir='rtl'] .slick-prev:before
+          {
+              content: '→';
+          }
+  
+          .slick-next
+          {
+              right: -25px;
+          }
+          [dir='rtl'] .slick-next
+          {
+              right: auto;
+              left: -25px;
+          }
+          .slick-next:before
+          {
+              content: '→';
+          }
+          [dir='rtl'] .slick-next:before
+          {
+              content: '←';
+          }
+  
+          /* Dots */
+          .slick-dotted.slick-slider
+          {
+              margin-bottom: 30px;
+          }
+  
+          .slick-dots
+          {
+              position: absolute;
+              bottom: -25px;
+  
+              display: block;
+  
+              width: 100%;
+              padding: 0;
+              margin: 0;
+  
+              list-style: none;
+  
+              text-align: center;
+          }
+          .slick-dots li
+          {
+              position: relative;
+  
+              display: inline-block;
+  
+              width: 20px;
+              height: 20px;
+              margin: 0 5px;
+              padding: 0;
+  
+              cursor: pointer;
+          }
+          .slick-dots li button
+          {
+              font-size: 0;
+              line-height: 0;
+  
+              display: block;
+  
+              width: 20px;
+              height: 20px;
+              padding: 5px;
+  
+              cursor: pointer;
+  
+              color: transparent;
+              border: 0;
+              outline: none;
+              background: transparent;
+          }
+          .slick-dots li button:hover,
+          .slick-dots li button:focus
+          {
+              outline: none;
+          }
+          .slick-dots li button:hover:before,
+          .slick-dots li button:focus:before
+          {
+              opacity: 1;
+          }
+          .slick-dots li button:before
+          {
+              font-family: 'slick';
+              font-size: 50px;
+              line-height: 20px;
+  
+              position: absolute;
+              top: 0;
+              left: 0;
+  
+              width: 20px;
+              height: 20px;
+  
+              content: '•';
+              text-align: center;
+  
+              opacity: .25;
+              color: black;
+  
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+          }
+          .slick-dots li.slick-active button:before
+          {
+              opacity: .75;
+              color: black;
+          }
+          /* home  */
+          /* calculator page */
+  
+          .telo-kalkulatora button{
+              width: 70px;
+              border: 4px solid #4C2987;
+              color: #4C2987;
+              background-color: #fff;
+              border-radius: 20px;
+              font-size: 20px;
+              font-weight: bold;
+              padding: 0;
+              cursor: pointer;
+          }
+          .telo-kalkulatora .kolicina{
+              color: #4C2987;
+              font-weight: bold;
+              margin-left: 10px;
+              margin-right: 10px;
+          }
+          .telo-kalkulatora{
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+          }
+          /* checkbox */
+          .selektor-kalkulatora {
+              display: block;
+              position: relative;
+              padding-left: 35px;
+              margin-bottom: 12px;
+              cursor: pointer;
+              font-size: 22px;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+          }
+          .selektor-kalkulatora input {
+              position: absolute;
+              opacity: 0;
+              cursor: pointer;
+              height: 20px;
+              width: 20px;
+              left: 0;
+              z-index: 1;
+          }
+          /* <span class="checkmark"></span> */
+          .checkmark {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 30px;
+              width: 30px;
+              background-color: #fff;
+              border: 4px solid #4C2987;
+              display: block !important;
+              border-radius: 10px;
+          }
+          .selektor-kalkulatora:hover input ~ .checkmark {
+              background-color: #fff;
+          }
+          .selektor-kalkulatora input:checked ~ .checkmark {
+              background-color: #4C2987;
+          }
+          .checkmark:after {
+              content: "";
+              position: absolute;
+              display: none;
+          }
+          .selektor-kalkulatora input:checked ~ .checkmark:after {
+              display: block;
+          }
+          .selektor-kalkulatora .checkmark:after {
+              left: 5px;
+              top: 0px;
+              width: 7px;
+              height: 13px;
+              border: solid #F8D000;
+              border-width: 0 5px 5px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+          }
+          /* checkbox */
+          /* calculator */
+          #kalkulator{
+              display: block;
+              width: 280px;
+              height: 80px;
+              color: #fff;
+              text-transform: uppercase;
+              overflow: hidden;
+              font-weight: bold;
+              background-color: #4C2987;
+              position: sticky;
+              top: 10px;
+              z-index: 100;
+          }
+          #kalkulator > div{
+              margin-top: 30px;
+          }
+          .usteda,
+          .usteda + span{
+              color: #F8D000;
+          }
+          .kalkulator{
+            margin-top: -10px;
+            margin-left: -10px;
+            position: absolute;
+          }
+          /* calculator */
+          /* sorting options */
+          .sort-button{
+              font-weight: bold;
+              color: #4C2987;
+              display: block;
+              width: 280px;
+              height: auto;
+              text-align: center;
+              overflow: hidden;
+              color: #4C2987;
+              background-color: #F8D000;
+              border-radius: 80px;
+              cursor: pointer;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              padding: 20px;
+          }
+          .sort-wrapper{
+              width: 280px;
+              display: block;
+          }
+          .price-sort{
+              float: left;
+              text-transform: uppercase;
+              font-weight: bold;
+              font-size: 10px;
+              color: #4C2987;
+              cursor: pointer;
+              padding: 10px;
+              border-radius: 40px;
+              background-color: #F8D000;
+              position: relative;
+              margin-bottom: 20px;
+              /* display: none; */
+              opacity: 0;
+              transition: all .45s ease-in-out;
+              -moz-transition: all .45s ease-in-out;
+              -webkit-transition: all .45s  ease-in-out;
+          }
+          .discount-sort{
+              float: right;
+              text-transform: uppercase;
+              position: relative;
+              font-weight: bold;
+              font-size: 10px;
+              border-radius: 40px;
+              color: #4C2987;
+              background-color: #F8D000;
+              cursor: pointer;
+              padding: 10px;
+              margin-bottom: 20px;
+              opacity: 0;
+              /* display: none; */
+              transition: all .45s ease-in-out;
+              -moz-transition: all .45s ease-in-out;
+              -webkit-transition: all .45s  ease-in-out;
+          }
+          .close-button{
+            position: absolute;
+            top: -14px;
+            background-color: #F8D000;
+            right: -14px;
+            font-size: 15px;
+            padding: 3px 6px 3px 6px;
+            border-radius: 100%;
+            border: 3px solid;
+            opacity: 0;
+          }
+          .sort-display-block{
+            /* display: block !important; */
+            opacity: 1;
+          }
+          .active-sort{
+            outline: 3px solid #4C2987;
+          }
+          /* sorting options */
+          /* calculator page */
+          /* search */
+          .search-icon{
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              margin-top: 13px;
+              margin-left: 10px;
+          }
+          /* search */
+          /* newsletter */
+          #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette{
+            border-radius: 95px !important;
+            background: url('/SVG/newsletter_button.svg') no-repeat right center !important;
+            background-color: white !important;
+          }
+          .submit-mask{
+            height: 60px !important;
+            width: 60px !important;
+            /* outline: 3px solid white; */
+            z-index: 100 !important;
+            position: absolute !important;
+            cursor: pointer !important;
+          }
+          #mauticform_njuzleterkatalogforma_prijavite_se_za_newslette{
+            position: relative !important;
+          }
+          #mauticform_njuzleterkatalogforma_submit{
+            display: none !important;
+          }
+          /* newsletter */
+          /* show more */
+          .hide-opacity{
+            opacity: 0 !important;
+          }
+          .show-more-nav-button{
+            display: none;
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            z-index: 100;
+            left: 25px;
+            top: calc(100vh - 100px);
+            background-color: #4C2987;
+            color: #fff;
+            opacity: 1;
+            transition: all .45s ease-in-out;
+            -moz-transition: all .45s ease-in-out;
+            -webkit-transition: all .45s  ease-in-out;
+          }
+          /* show more */
+          /* redesign */
+          .proizvodi-row {
+            flex-wrap: wrap;
+          }
+  
+          .promo-banner {
+            padding: 25px !important;
+          }
+  
+          #tabela-proizvoda .promo-banner > .single-image,
+          #tabela-proizvoda-cena .promo-banner > .single-image,
+          #tabela-proizvoda-popust .promo-banner > .single-image {
+            width: inherit !important;
+          }
+  
+          .sortirana-cena,
+          .sortirani-popust {
+            display: none;
+          }
+  
+          #myInput {
+            background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+            background-position: 10px 12px; /* Position the search icon */
+            background-repeat: no-repeat; /* Do not repeat the icon image */
+            width: 100%; /* Full-width */
+            font-size: 16px; /* Increase font-size */
+            padding: 12px 20px 12px 40px; /* Add some padding */
+            /* border: 1px solid #ddd; Add a grey border */
+            margin-bottom: 12px; /* Add some space below the input */
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border: 4px solid #4C2987;
+          }
+  
+          #myUL {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+          }
+  
+          #myUL li a {
+            border: 1px solid #ddd; /* Add a border to all links */
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6; /* Grey background color */
+            padding: 12px; /* Add some padding */
+            text-decoration: none; /* Remove default text underline */
+            font-size: 18px; /* Increase the font-size */
+            color: black; /* Add a black text color */
+            display: block; /* Make it into a block element to fill the whole list */
+          }
+  
+          #myUL li a:hover:not(.header) {
+            background-color: #eee; /* Add a hover effect to all links, except for headers */
+          }
+  
+          .search-wrapper ,
+          #myUL{
+            width: 400px;
+          }
+  
+  
+  
+          /* NIKOLA style */
+          .price-sort:not(.sort-display-block),
+          .discount-sort:not(.sort-display-block) {
+            display: none;
+          }
+  
+          @media only screen and (max-width: 996px) {
+            .mobile-newsletter .mauticform_wrapper {
+              background-color: #4C2987;
+              width: 97%;
+              border-radius: 20px;
+            }
+  
+            .mobile-newsletter .mauticform-label {
+              text-align: center !important;
+              color: #fff !important;
+              font-size: 2.1em !important;
+              margin-top: 30px;
+            }
+  
+            .mobile-newsletter .mauticform-has-error .mauticform-errormsg {
+              text-align: center;
+              margin-top: 15px;
+            }
+  
+            .mobile-newsletter #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette {
+              margin: auto !important;
+              display: block !important;
+            }
+  
+            .mobile-newsletter .mauticform-row {
+              margin-bottom: 60px !important;
+            }
+  
+            .mobile-newsletter .mauticform-message {
+              width: 100% !important;
+              text-align: center !important;
+            }
+  
+            .submit-mask {
+              top: 66px !important;
+              right: 119px !important;
+            }
+  
+            .proizvodi-row.footer {
+              padding-top: 80px !important;
+            }
+  
+            .proizvodi-row.footer > .f-sekcija.single-image {
+              display: none !important;
+            }
+  
+            .ljubicasta-pozadina > .footer > .f-sekcija {
+              margin-top: 20px !important;
+            }
+  
+            .mobile-newsletter-wrapper {
+              width: 100%;
+              height: auto;
+              display: flex;
+            }
+  
+  
+          }
 
 @font-face {
         font-family: "Mont-Book";
