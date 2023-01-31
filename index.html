@@ -343,6 +343,10 @@
             .banner-slider-mobile{
               display: none;
             }
+
+            .mobile-newsletter {
+              display: none !important;
+            }
             
         }
         @media only screen and (min-width: 996px){
@@ -864,6 +868,74 @@
         #myUL{
           width: 400px;
         }
+
+
+
+        /* NIKOLA style */
+        .price-sort:not(.sort-display-block),
+        .discount-sort:not(.sort-display-block) {
+          display: none;
+        }
+
+        @media only screen and (max-width: 996px) {
+          .mobile-newsletter .mauticform_wrapper {
+            background-color: #4C2987;
+            width: 97%;
+            border-radius: 20px;
+          }
+
+          .mobile-newsletter .mauticform-label {
+            text-align: center !important;
+            color: #fff !important;
+            font-size: 2.1em !important;
+            margin-top: 30px;
+          }
+
+          .mobile-newsletter .mauticform-has-error .mauticform-errormsg {
+            text-align: center;
+            margin-top: 15px;
+          }
+
+          .mobile-newsletter #mauticform_input_njuzleterkatalogforma_prijavite_se_za_newslette {
+            margin: auto !important;
+            display: block !important;
+          }
+
+          .mobile-newsletter .mauticform-row {
+            margin-bottom: 60px !important;
+          }
+
+          .mobile-newsletter .mauticform-message {
+            width: 100% !important;
+            text-align: center !important;
+          }
+
+          .submit-mask {
+            top: 66px !important;
+            right: 119px !important;
+          }
+
+          .proizvodi-row.footer {
+            padding-top: 80px !important;
+          }
+
+          .proizvodi-row.footer > .f-sekcija.single-image {
+            display: none !important;
+          }
+
+          .ljubicasta-pozadina > .footer > .f-sekcija {
+            margin-top: 20px !important;
+          }
+
+          .mobile-newsletter-wrapper {
+            width: 100%;
+            height: auto;
+            display: flex;
+          }
+
+
+        }
+
       </style>
    </head>
    <body>
@@ -876,41 +948,47 @@
       
       <script>
          
-            function determineWindowWidth() {
-                 var width = window.innerWidth - 150
-                 document.getElementById('glavni-kontejner').style.width =  width
+            function determineWindowWidth(procenat, selektor) {
+              var procenat_sirine = procenat
+              setTimeout(function() {
+                console.log(selektor)
+                var width = window.innerWidth * procenat_sirine / 100
+                document.querySelector(selektor).style.width =  width
+                document.querySelector(selektor).style.display = 'block'
+              }, 500)
+                 
          
              }
         
-             setTimeout(function() {
-                 // document.getElementById('glavni-kontejner').style = 'display:block;'
+            //  setTimeout(function() {
+            //      // document.getElementById('glavni-kontejner').style = 'display:block;'
          
-                 document.getElementsByClassName('header-div')[0].style = 'visibility:visible;'
+            //      document.getElementsByClassName('header-div')[0].style = 'visibility:visible;'
          
-                 setTimeout(function() {
-                     document.getElementsByClassName('online-katalog-slika-div')[0].style = 'visibility:visible;'
+            //      setTimeout(function() {
+            //          document.getElementsByClassName('online-katalog-slika-div')[0].style = 'visibility:visible;'
          
-                     setTimeout(function() {
-                         document.getElementsByClassName('kategorije-div')[0].style = 'visibility:visible;'
+            //          setTimeout(function() {
+            //              document.getElementsByClassName('kategorije-div')[0].style = 'visibility:visible;'
          
-                         setTimeout(function() {
-                             document.getElementsByClassName('tabela-proizvoda-div')[0].style = 'visibility:visible;'
+            //              setTimeout(function() {
+            //                  document.getElementsByClassName('tabela-proizvoda-div')[0].style = 'visibility:visible;'
          
-                             setTimeout(function() {
-                                 // if(window.innerWidth < 1000) document.getElementsByClassName('ljubicasta-pozadina')[0].style = 'display:block;'
-                                 //     else document.getElementsByClassName('ljubicasta-pozadina')[0].style = 'display:flex;'
+            //                  setTimeout(function() {
+            //                      // if(window.innerWidth < 1000) document.getElementsByClassName('ljubicasta-pozadina')[0].style = 'display:block;'
+            //                      //     else document.getElementsByClassName('ljubicasta-pozadina')[0].style = 'display:flex;'
          
-                                 document.getElementsByClassName('ljubicasta-pozadina')[0].style = 'visibility:visible;'
-                             }, 1000)
+            //                      document.getElementsByClassName('ljubicasta-pozadina')[0].style = 'visibility:visible;'
+            //                  }, 1000)
          
-                         }, 400) 
+            //              }, 400) 
          
-                     }, 800) 
+            //          }, 800) 
          
-                 }, 400)    
+            //      }, 400)    
                  
                  
-             }, 1000)
+            //  }, 1000)
          
             function getMobileOperatingSystem() {
                  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -935,7 +1013,8 @@
                      window.location = 'https://apps.apple.com/us/app/moj-maxi/id1557471653'
                      return "iOS";
                  }
-         
+                 
+                 window.location = 'https://maxi.sales-snap.com/r/2b56164b6fb54e7012dd594cb?ct=YTozOntzOjg6ImZvY3VzX2lkIjtpOjE7czo0OiJsZWFkIjtzOjc6IjEyODE2MTAiO3M6NzoiY2hhbm5lbCI7YToxOntzOjU6ImZvY3VzIjtpOjE7fX0%3D&'
                  return "unknown";
              }
 
@@ -1134,6 +1213,17 @@
                         tabela_row.setAttribute('class', 'proizvodi-row mobile-newsletter')
                         // var row_id = 'mobile-newsletter'
                         // tabela_row.setAttribute('id', row_id)
+                        var njuzleter_wrapper = document.createElement('div')
+                        njuzleter_wrapper.setAttribute('class','mobile-newsletter-wrapper')
+
+                        
+
+                        var njuzleter = document.createElement('script')
+                        njuzleter.setAttribute('src', 'https://maxi.sales-snap.com/form/generate.js?id=6')
+
+                        njuzleter_wrapper.append(njuzleter)
+                        tabela_row.append(njuzleter_wrapper)
+                        
 
                         document.getElementById('tabela-proizvoda').append(tabela_row)
                       } else if(counter == 8) {
@@ -1141,7 +1231,7 @@
                         tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
                         // var row_id = 'promo-banner'
                         // tabela_row.setAttribute('id', row_id)
-                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
                         document.getElementById('tabela-proizvoda').append(tabela_row)
                       }
                     
@@ -1631,6 +1721,9 @@
                         tabela_row.setAttribute('class', 'proizvodi-row mobile-newsletter')
                         // var row_id = 'mobile-newsletter-cena'
                         // tabela_row.setAttribute('id', row_id)
+                        // var njuzleter = document.createElement('script')
+                        // njuzleter.setAttribute('src', 'https://maxi.sales-snap.com/form/generate.js?id=6')
+                        // tabela_row.append(njuzleter)
 
                         document.getElementById('tabela-proizvoda-cena').append(tabela_row)
 
@@ -1640,7 +1733,7 @@
                         tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
                         // var row_id = 'promo-banner'
                         // tabela_row.setAttribute('id', row_id)
-                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
                         document.getElementById('tabela-proizvoda-cena').append(tabela_row)
 
                       }
@@ -2061,6 +2154,9 @@
                         tabela_row.setAttribute('class', 'proizvodi-row mobile-newsletter')
                         // var row_id = 'mobile-newsletter-cena'
                         // tabela_row.setAttribute('id', row_id)
+                        // var njuzleter = document.createElement('script')
+                        // njuzleter.setAttribute('src', 'https://maxi.sales-snap.com/form/generate.js?id=6')
+                        // tabela_row.append(njuzleter)
 
                         document.getElementById('tabela-proizvoda-popust').append(tabela_row)
 
@@ -2070,7 +2166,7 @@
                         tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
                         // var row_id = 'promo-banner'
                         // tabela_row.setAttribute('id', row_id)
-                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                        tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="javascript:void(0)" onclick="getMobileOperatingSystem()"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" class="promo-banner" id="il1xl"></a></div>'
                         document.getElementById('tabela-proizvoda-popust').append(tabela_row)
 
                       }
@@ -2309,7 +2405,21 @@
         getData()    
         getDataSortPrice()
         getDataSortDiscount() 
-        createSearch()        
+        createSearch()  
+        
+        
+     
+        if(window.innerWidth > 1000) determineWindowWidth(80, '.slick-initialized:not(.banner-slider-mobile)')    
+            else determineWindowWidth(77, '.slick-initialized.banner-slider-mobile')  
+        
+        // setTimeout(function() {
+
+        
+        //   document.querySelector('img.cover.home.close-menu').addEventListener('click', function() {
+        //     determineWindowWidth(75) 
+        //   })
+
+        // }, 2000)
              
       </script>
       
@@ -2462,7 +2572,7 @@
             </div>
          </div>
           <!-- redesign -->
-          <div class="banner-slider">
+          <div style="display: none;" class="banner-slider">
             <img src="dummy_pictures/banner1.png"/>
             <img src="dummy_pictures/banner2.png"/>
             <img src="dummy_pictures/banner3.png"/>
@@ -2475,7 +2585,7 @@
           <!-- redesign -->
          <div class="search-wrapper">
            <img class="search-icon" src="/SVG/search.svg"/>
-          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pretraži proizvode..">
 
           <ul id="myUL">
 
@@ -2699,6 +2809,63 @@
                 })
             })
         }, 1000)
+
+
+
+        // SORT
+
+        function sortPrice() {
+          $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena)').css('display', 'none')
+          $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena) .cekboks-kalkulatora:checked').click()
+
+          $('.mobile-newsletter-wrapper').appendTo('.tabela-proizvoda-div.kategorije.sortirana-cena .mobile-newsletter')
+          $('.tabela-proizvoda-div.kategorije.sortirana-cena').css('display', 'block')
+
+        }
+
+        function sortDiscount() {
+          $('.tabela-proizvoda-div.kategorije:not(.sortirani-popust)').css('display', 'none')
+          $('.tabela-proizvoda-div.kategorije:not(.sortirani-popust) .cekboks-kalkulatora:checked').click()
+
+          $('.mobile-newsletter-wrapper').appendTo('.tabela-proizvoda-div.kategorije.sortirani-popust .mobile-newsletter')
+          $('.tabela-proizvoda-div.kategorije.sortirani-popust').css('display', 'block')
+        }
+
+        function resetSort() {
+          $('.tabela-proizvoda-div.kategorije.sortirani-popust').css('display', 'none')
+          $('.tabela-proizvoda-div.kategorije.sortirani-popust .cekboks-kalkulatora:checked').click()
+
+          $('.tabela-proizvoda-div.kategorije.sortirana-cena').css('display', 'none')
+          $('.tabela-proizvoda-div.kategorije.sortirana-cena .cekboks-kalkulatora:checked').click()
+          
+          $('.mobile-newsletter-wrapper').appendTo('.tabela-proizvoda-div.kategorije:not(.sortirana-cena):not(.sortirani-popust) .mobile-newsletter')
+          $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena):not(.sortirani-popust)').css('display', 'block')
+        }
+
+
+        document.querySelector('.price-sort').addEventListener('click', function() {
+          sortPrice()
+        })
+
+        document.querySelector('.discount-sort').addEventListener('click', function() {
+          sortDiscount()
+        })
+
+        document.querySelector('.price-sort .close-button').addEventListener('click', function() {
+          resetSort()
+        })
+
+        document.querySelector('.discount-sort .close-button').addEventListener('click', function() {
+          resetSort()
+        })
+
+        document.querySelector('.sort-button').addEventListener('click', function() {
+          if(document.querySelector('.close-button.sort-display-block') != null) document.querySelector('.close-button.sort-display-block').click()
+        })
+
+
+
+
         // redesign
         $(document).ready(function(){
           // close sidebar 
@@ -2777,9 +2944,9 @@
           // search options 
           // newsletter 
           var submitMask = '<div class="submit-mask"></div>'
-          $('#mauticform_njuzleterkatalogforma_prijavite_se_za_newslette').append(submitMask)
-          $('.submit-mask').on('click', function(){
-            $('#mauticform_input_njuzleterkatalogforma_submit').click()
+          $('[id="mauticform_njuzleterkatalogforma_prijavite_se_za_newslette"]').append(submitMask)
+          $('.submit-mask').on('click', function(e){
+            $(e.target).parent().next().children('button').click()
           })
           // newsletter 
         });
@@ -2808,18 +2975,29 @@
                   <div class="social-cell-youtube"><a href="https://www.youtube.com/channel/UCDDgelQ8MvzfqCY-Y5gyKLw" target="_blank"><img src="https://maxi.sales-snap.com/asset/142:ytpng" id="iputik"></a></div>
                </div>
 
-               <div class="tabela-aplikacije-div">
-                  <div class="aplikacije-cell"><a onclick="getMobileOperatingSystem()" href="#" target="_blank"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" id="im987-2"></a></div>
-                  <!--                 <div class="aplikacije-cell"><a href="https://apps.apple.com/us/app/moj-maxi/id1557471653" target="_blank"><img src="https://maxi.sales-snap.com/asset/138:googleplaybuttonpng" id="im987"></a></div>
+               <!-- <div class="tabela-aplikacije-div">
+                  <div class="aplikacije-cell"><a onclick="getMobileOperatingSystem()" href="javascript:void(0)" target="_blank"><img src="https://maxi.sales-snap.com/asset/386:shopgo-bannerpng" id="im987-2"></a></div>
+                                  <div class="aplikacije-cell"><a href="https://apps.apple.com/us/app/moj-maxi/id1557471653" target="_blank"><img src="https://maxi.sales-snap.com/asset/138:googleplaybuttonpng" id="im987"></a></div>
                      <div class="aplikacije-cell"><a href="https://play.google.com/store/apps/details?id=com.delhaize.maxi.loyalty" target="_blank"><img src="https://maxi.sales-snap.com/asset/136:appstorepng" id="i8mcf"></a></div>
-                     <div class="aplikacije-cell"><a href="https://appgallery.huawei.com/app/C105399993" target="_blank"><img src="https://maxi.sales-snap.com/asset/137:appgallerypng" id="iputik"></a></div> -->
-               </div>
+                     <div class="aplikacije-cell"><a href="https://appgallery.huawei.com/app/C105399993" target="_blank"><img src="https://maxi.sales-snap.com/asset/137:appgallerypng" id="iputik"></a></div>
+               </div> -->
             </div>
 
             <div class="footer">
 
                <div class="f-sekcija">
-                  <br><a href="https://maxi.sales-snap.com/o-kompaniji">O kompaniji</a><br><a href="tel:0800-3537030">Pozovite nas</a><br><a href="https://maxi.sales-snap.com/kolacici">Politika kola&#269;i&#263;a</a><br><br><br>
+                <br>
+                <a href="#" style="font-weight:bold;text-decoration:unset;">Potrebna vam je pomoć?</a>
+                <br>
+                <a href="#" style="text-decoration:unset;">Često postavljana pitanja</a>
+                <!-- <br>
+                  <a href="https://maxi.sales-snap.com/o-kompaniji">O kompaniji</a> -->
+                  <br>
+                  <a style="text-decoration:unset;" href="tel:0800-3537030">Kontaktirajte nas</a>
+                  <br>
+                  <a style="text-decoration:unset;" href="https://maxi.sales-snap.com/o-kompaniji">Kontakt i podaci o kompaniji</a>
+                  <!-- <a href="https://maxi.sales-snap.com/kolacici">Politika kola&#269;i&#263;a</a> -->
+                  <br><br><br>
                </div>
             </div>
          </div>
