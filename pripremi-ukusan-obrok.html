@@ -16,7 +16,7 @@
       <meta property="og:image:width" content="1024"/>
       <meta property="og:image:height" content="1024"/>
       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+      <script src="https://maxi.sales-snap.com/focus/5.js" type="text/javascript" charset="utf-8" async="async"></script>
       <!-- redesign  -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -315,7 +315,7 @@
                                 tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
                                 // var row_id = 'promo-banner'
                                 // tabela_row.setAttribute('id', row_id)
-                                tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                                tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="plava-cena" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
                                 document.getElementById('tabela-proizvoda').append(tabela_row)
                             } else if(counter == 4) {
                                 var tabela_row = document.createElement('div') 
@@ -834,7 +834,7 @@
                             tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
                             // var row_id = 'promo-banner-cena'
                             // tabela_row.setAttribute('id', row_id)
-                            tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                            tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="plava-cena" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
                             document.getElementById('tabela-proizvoda-cena').append(tabela_row)
 
                             } else if(counter == 4) {
@@ -1278,7 +1278,7 @@
                             tabela_row.setAttribute('class', 'proizvodi-row promo-banner')
                             // var row_id = 'promo-banner-cena'
                             // tabela_row.setAttribute('id', row_id)
-                            tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="https://maxi.sales-snap.com/uvek-niske-cene" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
+                            tabela_row.innerHTML = '<div class="proizvodi-cell single-image"><a href="plava-cena" target="_self"><img src="https://maxi.sales-snap.com/asset/1372:kategorijeplava-cenahome-page-minpng3" class="promo-banner" id="il1xl"></a></div>'
                             document.getElementById('tabela-proizvoda-popust').append(tabela_row)
 
                             } else if(counter == 4) {
@@ -1500,23 +1500,23 @@
 
                     switch(link) {
                       case '1': 
-                        option_link_href = 'izaberi-uvek-sveze.html'
+                        option_link_href = 'izaberi-uvek-sveze'
                         break;
 
                       case '2': 
-                        option_link_href = 'uzivaj-u-ukusnom-delikatesu.html'
+                        option_link_href = 'uzivaj-u-ukusnom-delikatesu'
                         break;
 
                       case '3': 
-                        option_link_href = 'pripremi-ukusan-obrok.html'
+                        option_link_href = 'pripremi-ukusan-obrok'
                         break;
                       
                       case '4': 
-                        option_link_href = 'gricni-i-osvezi-se.html'
+                        option_link_href = 'gricni-i-osvezi-se'
                         break;
                       
                       case '5': 
-                        option_link_href = 'plava-cena.html'
+                        option_link_href = 'plava-cena'
                         break;
                     }
 
@@ -1576,7 +1576,7 @@ console.log(podnaslov_kategorija)
               <!-- redesign  -->
               <img class="cover home close-menu" src="/SVG/close.svg">
               <!-- redesign -->
-              <a class="home" href="index.html" target="_self" >
+              <a class="home" href="https://shop-and-go.maxi.rs/" target="_self" >
               <img id="nav_pocetna" onclick="clickNavLink(event)" class="cover home" src="https://maxi.sales-snap.com/asset/1486:homepng1">
             </a>
           </li> 
@@ -1589,7 +1589,7 @@ console.log(podnaslov_kategorija)
           
           <!-- NOVI SIDEBAR             -->
           <li id="sidebar_proizvod_1" class="nav__items">
-            <a href="izaberi-uvek-sveze.html">
+            <a href="izaberi-uvek-sveze">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1487:izaberi-uvek-svezepng1" alt="izaberi uvek sveze">
                 <p class="top-ponuda">IZABERI UVEK SVEŽE</p>
@@ -1597,7 +1597,7 @@ console.log(podnaslov_kategorija)
             </a>
           </li>          
           <li id="sidebar_proizvod_2" class="nav__items">
-            <a href="uzivaj-u-ukusnom-delikatesu.html">
+            <a href="uzivaj-u-ukusnom-delikatesu">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1488:delikatespng" alt="uzivaj u ukusnom delikatesu">
                 <p class="top-ponuda">UŽIVAJ U UKUSNOM DELIKATESU</p>
@@ -1605,7 +1605,7 @@ console.log(podnaslov_kategorija)
             </a>
           </li> 
           <li id="sidebar_proizvod_3" class="nav__items">
-            <a href="pripremi-ukusan-obrok.html">
+            <a href="pripremi-ukusan-obrok">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1489:ukusan-obrokpng" alt="pripremi ukusan obrok">
                 <p class="top-ponuda">PRIPREMI UKUSAN OBROK</p>
@@ -1613,7 +1613,7 @@ console.log(podnaslov_kategorija)
             </a>
           </li>   
           <li id="sidebar_proizvod_4" class="nav__items">
-            <a href="gricni-i-osvezi-se.html">
+            <a href="gricni-i-osvezi-se">
               <div class="spoljni-div">
                 <img src="https://maxi.sales-snap.com/asset/1490:gricnipng" alt="gricni i osvezi se">
                 <p class="top-ponuda">GRICNI I OSVEŽI SE</p>
@@ -1712,7 +1712,7 @@ console.log(podnaslov_kategorija)
          <div class="header-div" id="in2db">
             <div class="levo-header">
             </div>
-            <center><a href="index.html" target="_self"><img src="https://maxi.sales-snap.com/asset/119:logopng" id="iw2i"></a></center>
+            <center><a href="https://shop-and-go.maxi.rs/" target="_self"><img src="https://maxi.sales-snap.com/asset/119:logopng" id="iw2i"></a></center>
             <div class="desno-header">
             </div>
          </div>
@@ -1724,7 +1724,7 @@ console.log(podnaslov_kategorija)
 
                     <div id="desktop_naslov" class="baner-naslov">PRIPREMI UKUSAN OBROK</div>
                     <div id="desktop_podnaslov" class="baner-podnaslov-trajanje"></div>
-                    <img class="baner-pozadina" alt="" src="https://maxi.sales-snap.com/asset/620:kategorijeizaberi-uvek-svezedesktop-1-minpng">
+                    <img class="baner-pozadina" alt="" src="https://maxi.sales-snap.com/asset/1515:kategorijepripremi-ukusan-obrokdesktop-copy-minpng">
 
                 </div>
 
@@ -1732,7 +1732,7 @@ console.log(podnaslov_kategorija)
 
                     <div id="mobile_naslov" class="baner-naslov">PRIPREMI UKUSAN OBROK</div>
                     <div id="mobile_podnaslov" class="baner-podnaslov-trajanje"></div>
-                    <img class="baner-pozadina" alt="" src="https://maxi.sales-snap.com/asset/620:kategorijeizaberi-uvek-svezedesktop-1-minpng">
+                    <img class="baner-pozadina" alt="" src="https://maxi.sales-snap.com/asset/1515:kategorijepripremi-ukusan-obrokdesktop-copy-minpng">
 
                 </div>
                 <!-- <a href="https://www.maxi.rs/recipes/recipeDetails/Banana-split/r/R876" target="_blank"> -->
