@@ -534,6 +534,12 @@ html{
     .social-cell-instagram{
         padding-right:15px;
     }
+    .social-cell-linkedin{
+        padding-right:15px;
+    }
+    .social-cell-youtube{
+        padding-right:15px;
+    }
     .tabela-proizvoda-div.kategorije{
         width:80% !important;
         padding-left:0 !important;
@@ -1133,6 +1139,10 @@ html{
     
     
 
+}
+
+body > .mf-bar-collapser {
+    display: none !important;
 }
 
         /* redesign */
