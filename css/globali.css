@@ -20,7 +20,7 @@
     width:60px;
     top:0;
     height:100%;
-    z-index:100;
+    z-index:111111;
     background-color:#320962;
     transition:width 0.3s ease;
     cursor:pointer;
@@ -253,7 +253,7 @@ html{
 }
 .ljubicasta-pozadina{
     background-color:#522d91;
-    z-index:10 !important;
+    z-index: 111111 !important;
     position:relative !important;
 }
 .tabela-proizvoda-div.kategorije{
@@ -449,7 +449,7 @@ html{
 #iicfni{
     display:none;
 } */
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1050px){
     .nav__items a img {
         padding: 0 !important;
     }
@@ -464,7 +464,6 @@ html{
     }
     .kontejner{
         margin-left:150px !important;
-        undefined:undefined;
     }
     .mobile-banner{
         display:none !important;
@@ -607,7 +606,7 @@ html{
         font-size:27px !important;
     }
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1050px){
     .nav__cont{
         width:200px !important;
         overflow:scroll !important;
@@ -734,7 +733,7 @@ html{
         padding-bottom:20px;
     }
     .top-ponuda{
-        font-size:30px !important;
+        font-size:25px !important;
         overflow-wrap:break-word;
     }
     .footer > .f-sekcija{
@@ -789,6 +788,10 @@ html{
         width: 100% !important;
         height: 100% !important;
         border-radius: 0 !important;
+    }
+
+    .online-katalog-slika-div {
+        margin-bottom: 40px !important;
     }
 
 }
@@ -933,7 +936,6 @@ html{
     margin-left: 10px;
     font-size: 18px;
     width: 175%;
-    font-weight: bold;
     font-family: 'Mont-Book';
 }
 
@@ -982,7 +984,7 @@ html{
     height: 30px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
     .naziv-proizvoda {
         font-size: 20px;
     }
@@ -1000,7 +1002,7 @@ html{
     }
 
     .baner-naslov {
-        font-size: 42px;
+        font-size: 30px;
         text-align: center;
         padding-left: 0;
     }
@@ -1066,7 +1068,7 @@ html{
     }
 
     .crveni-krug {
-        top: 155px;
+        top: 145px;
         font-size: 25px;
         margin-left: 147%;
     }
@@ -1080,7 +1082,7 @@ html{
             /* 26. septembar */
 
     .zuti-cenovnik {
-        top: 224px !important;
+        top: 215px !important;
         margin-left: 1% !important; 
         width: 160px !important;
     }
@@ -1105,7 +1107,13 @@ html{
         font-weight: 500;
     }
     
+    .nav__cont {
+        z-index: 10 !important;
+    }
 
+    .banner-slider-mobile {
+        margin-left: 25px !important;
+    }
 
     
 }
@@ -1139,10 +1147,6 @@ html{
     
     
 
-}
-
-body > .mf-bar-collapser {
-    display: none !important;
 }
 
         /* redesign */

@@ -1421,11 +1421,7 @@ img[src*="smrznutaboranijazutamaxi450gpng"] {
     .online-katalog-slika-div img {
         width: 40%;
         height: auto;
-        margin-left: 30%;
-    }
-    
-    .desktop-banner {
-        height: 50%;
+        display: block;
     }
     
     /*.baner-naslov {*/
