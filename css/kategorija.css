@@ -1254,14 +1254,11 @@ img[src*="smrznutaboranijazutamaxi450gpng"] {
     /* 26. septembar  */
     
     .online-katalog-slika-div img {
-        width: 60%;
+        width: 40%;
         height: auto;
         display: block;
     }
     
-    .desktop-banner {
-        height: 50%;
-    }
 }
 
 
@@ -1421,11 +1418,7 @@ img[src*="smrznutaboranijazutamaxi450gpng"] {
     .online-katalog-slika-div img {
         width: 40%;
         height: auto;
-        margin-left: 30%;
-    }
-    
-    .desktop-banner {
-        height: 50%;
+        display: block;
     }
     
     /*.baner-naslov {*/
@@ -1458,9 +1451,6 @@ img[src*="smrznutaboranijazutamaxi450gpng"] {
         width: 90% !important;
     }
     
-    .desktop-banner {
-        height: 52% !important;
-    }
 }
 
 
