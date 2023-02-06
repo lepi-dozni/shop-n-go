@@ -1,5 +1,5 @@
 async function getData() {
-    const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+    const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
     const data = await response.text();
     
@@ -143,6 +143,8 @@ async function getData() {
             tabela_row.append(outer_outer_cell)
 
               red++;
+
+
         } else {
 
           
@@ -183,6 +185,7 @@ async function getData() {
           if(nova_cena_tekst[1] === '00') nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup style="visibility:hidden;">' + nova_cena_tekst[1] + '</sup>'
           else nova_cena_1.innerHTML = nova_cena_tekst[0] + '<sup>' + nova_cena_tekst[1] + '</sup>'
 
+          
           var popust_1 = document.createElement('div')
           popust_1.setAttribute('id', 'popust-' + counter)
           popust_1.innerHTML = popust
@@ -197,6 +200,7 @@ async function getData() {
           inner_cell_1.append(naziv_1)
           popust_container.append(popust_1)
 
+          if(popust == '0%') popust_container.style.display = 'none'
           
           inner_cell_1.append(popust_container)
 
@@ -496,6 +500,7 @@ async function getData() {
           inner_cell_1.append(naziv_1)
           popust_container.append(popust_1)
 
+          if(popust == '0%') popust_container.style.display = 'none'
           
           inner_cell_1.append(popust_container)
           //   inner_cell_1.append(naziv_1)
@@ -700,7 +705,7 @@ async function getData() {
 // }
 
 async function getDataSortPrice() {
-    const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+    const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
     const data = await response.text();
     
@@ -945,6 +950,7 @@ async function getDataSortPrice() {
             inner_cell_1.append(naziv_1)
             popust_container.append(popust_1)
 
+            if(popust == '0%') popust_container.style.display = 'none'
             
             inner_cell_1.append(popust_container)
 
@@ -1250,6 +1256,7 @@ async function getDataSortPrice() {
           inner_cell_1.append(naziv_1)
           popust_container.append(popust_1)
 
+          if(popust == '0%') popust_container.style.display = 'none'
           
           inner_cell_1.append(popust_container)
         //   inner_cell_1.append(naziv_1)
@@ -1374,7 +1381,7 @@ async function getDataSortPrice() {
 
 
 async function getDataSortDiscount() {
-    const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+    const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
     const data = await response.text();
     
@@ -1620,6 +1627,7 @@ async function getDataSortDiscount() {
             inner_cell_1.append(naziv_1)
             popust_container.append(popust_1)
 
+            if(popust == '0%') popust_container.style.display = 'none'
             
             inner_cell_1.append(popust_container)
 
@@ -1923,6 +1931,7 @@ async function getDataSortDiscount() {
           inner_cell_1.append(naziv_1)
           popust_container.append(popust_1)
 
+          if(popust == '0%') popust_container.style.display = 'none'
 
           inner_cell_1.append(popust_container)
           //   inner_cell_1.append(naziv_1)
@@ -2048,7 +2057,7 @@ async function getDataSortDiscount() {
 
 async function createSearch() {
   
-  const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+  const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
     const data = await response.text();
     
@@ -2105,7 +2114,7 @@ async function createSearch() {
 // CATEGORY FUNCTIONS
 async function getDataCategory(sifra) {
     const sifra_kategorije = sifra
-    const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+    const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
     const data = await response.text();
     
@@ -2186,6 +2195,7 @@ async function getDataCategory(sifra) {
                 inner_cell_1.append(naziv_1)
                 popust_container.append(popust_1)
 
+                if(popust == '0%') popust_container.style.display = 'none'
                 
                 inner_cell_1.append(popust_container)
 
@@ -2374,6 +2384,7 @@ async function getDataCategory(sifra) {
                 inner_cell_1.append(naziv_1)
                 popust_container.append(popust_1)
 
+                if(popust == '0%') popust_container.style.display = 'none'
                 
                 inner_cell_1.append(popust_container)
                 //   inner_cell_1.append(naziv_1)
@@ -2496,7 +2507,7 @@ async function getDataCategory(sifra) {
 
 async function getDataSortPriceCategory(sifra) {
     const sifra_kategorije = sifra
-    const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+    const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
     const data = await response.text();
     
@@ -2621,6 +2632,7 @@ async function getDataSortPriceCategory(sifra) {
                 inner_cell_1.append(naziv_1)
                 popust_container.append(popust_1)
 
+                if(popust == '0%') popust_container.style.display = 'none'
                 
                 inner_cell_1.append(popust_container)
 
@@ -2813,6 +2825,8 @@ async function getDataSortPriceCategory(sifra) {
             inner_cell_1.append(naziv_1)
             popust_container.append(popust_1)
 
+            if(popust == '0%') popust_container.style.display = 'none'
+
             
             inner_cell_1.append(popust_container)
             //   inner_cell_1.append(naziv_1)
@@ -2938,7 +2952,7 @@ async function getDataSortPriceCategory(sifra) {
 
 async function getDataSortDiscountCategory(sifra) {
     const sifra_kategorije = sifra
-    const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+    const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
     const data = await response.text();
     
@@ -3064,6 +3078,8 @@ async function getDataSortDiscountCategory(sifra) {
                 popust_container.setAttribute('class', 'crveni-krug')
                 inner_cell_1.append(naziv_1)
                 popust_container.append(popust_1)
+
+                if(popust == '0%') popust_container.style.display = 'none'
 
                 
                 inner_cell_1.append(popust_container)
@@ -3255,6 +3271,8 @@ async function getDataSortDiscountCategory(sifra) {
             inner_cell_1.append(naziv_1)
             popust_container.append(popust_1)
 
+            if(popust == '0%') popust_container.style.display = 'none'
+
 
             inner_cell_1.append(popust_container)
             //   inner_cell_1.append(naziv_1)
@@ -3380,7 +3398,7 @@ async function getDataSortDiscountCategory(sifra) {
 
 // async function createSearch() {
   
-//   const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+//   const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
 //     // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
 //     const data = await response.text();
     
@@ -3432,7 +3450,7 @@ async function getDataSortDiscountCategory(sifra) {
 // }
 
 async function datumAkcije() {
-    const response = await fetch('tabele/pocetna.csv', {cache:"no-store"});
+    const response = await fetch('tabele/pocetna-test.csv', {cache:"no-store"});
     const data = await response.text();
 
     const name_row = data.split('\n')
