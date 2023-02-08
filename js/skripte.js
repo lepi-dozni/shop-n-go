@@ -15,13 +15,14 @@ async function getData() {
     rows.forEach(element => {
         const row = element.split(';')
         const  kategorija = row[0]
-        const naziv = row[1]
-        const stara_cena = row[2]
-        const nova_cena = row[3]
-        const popust = row[4]
-        const url = row[5]
-        const trajanje = row[6]
-        const vazenje = row[7]
+        const sifra_artikla = row[1]
+        const naziv = row[2]
+        const stara_cena = row[3]
+        const nova_cena = row[4]
+        const popust = row[5]
+        const url = row[6]
+        const trajanje = row[7]
+        const vazenje = row[8]
 
       if(counter % 4 == 0 || counter == 0) {
 
@@ -37,8 +38,9 @@ async function getData() {
 
               var cell = document.createElement('div')
               cell.setAttribute('class', 'prozivodi-cell')
-              cell.setAttribute('id', 'cell-' + counter)
-
+              cell.setAttribute('id', sifra_artikla)
+              
+           
             //   var link = document.createElement('a')
             //   var homepage = 'https://maxi.sales-snap.com/page/preview/20'
             //   link.setAttribute('href', homepage)
@@ -125,6 +127,7 @@ async function getData() {
 
             var outer_outer_cell = document.createElement('div')
             outer_outer_cell.setAttribute('class', 'spoljni-div')
+            outer_outer_cell.setAttribute('id', sifra_artikla)
             outer_outer_cell.append(outer_cell)
 
 
@@ -156,7 +159,7 @@ async function getData() {
 
           var cell = document.createElement('div')
           cell.setAttribute('class', 'prozivodi-cell')
-          cell.setAttribute('id', 'cell-' + counter)
+          cell.setAttribute('id', sifra_artikla)
 
           var razmak = document.createElement('br')
 
@@ -234,6 +237,7 @@ async function getData() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
 
 
@@ -348,7 +352,7 @@ async function getData() {
         if(kategorija == '5') {
           var cell = document.createElement('div')
           cell.setAttribute('class', 'prozivodi-cell')
-          cell.setAttribute('id', 'cell-' + counter)
+          cell.setAttribute('id', sifra_artikla)
 
 
         //   var link = document.createElement('a')
@@ -431,6 +435,7 @@ async function getData() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
 
           // tabela_row.append(outer_outer_cell)
@@ -458,7 +463,7 @@ async function getData() {
         } else {
           var cell = document.createElement('div')
           cell.setAttribute('class', 'prozivodi-cell')
-          cell.setAttribute('id', 'cell-' + counter)
+          cell.setAttribute('id', sifra_artikla)
 
           var razmak = document.createElement('br')
 
@@ -536,6 +541,7 @@ async function getData() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
         
         
@@ -763,13 +769,14 @@ async function getDataSortPrice() {
     new_row.forEach(element => {
         const row = element.split(';')
         const kategorija = row[0]
-        const naziv = row[1]
-        const stara_cena = row[2]
-        const nova_cena = row[3]
-        const popust = row[4]
-        const url = row[5]
-        const trajanje = row[6]
-        const vazenje = row[7]       
+        const sifra_artikla = row[1]
+        const naziv = row[2]
+        const stara_cena = row[3]
+        const nova_cena = row[4]
+        const popust = row[5]
+        const url = row[6]
+        const trajanje = row[7]
+        const vazenje = row[8]       
         
         
 
@@ -875,6 +882,7 @@ async function getDataSortPrice() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
 
 
@@ -984,6 +992,7 @@ async function getDataSortPrice() {
 
             var outer_outer_cell = document.createElement('div')
             outer_outer_cell.setAttribute('class', 'spoljni-div')
+            outer_outer_cell.setAttribute('id', sifra_artikla)
             outer_outer_cell.append(outer_cell)
 
       
@@ -1182,6 +1191,7 @@ async function getDataSortPrice() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
 
           // tabela_row.append(outer_outer_cell)
@@ -1292,6 +1302,7 @@ async function getDataSortPrice() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
         
         
@@ -1442,13 +1453,14 @@ async function getDataSortDiscount() {
     reversed_array.forEach(element => {
         const row = element.split(';')
         const kategorija = row[0]
-        const naziv = row[1]
-        const stara_cena = row[2]
-        const nova_cena = row[3]
-        const popust = row[4]
-        const url = row[5]
-        const trajanje = row[6]
-        const vazenje = row[7]
+        const sifra_artikla = row[1]
+        const naziv = row[2]
+        const stara_cena = row[3]
+        const nova_cena = row[4]
+        const popust = row[5]
+        const url = row[6]
+        const trajanje = row[7]
+        const vazenje = row[8]
       
 
         if(counter % 4 == 0 || counter == 0) {
@@ -1553,6 +1565,7 @@ async function getDataSortDiscount() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
 
 
@@ -1661,6 +1674,7 @@ async function getDataSortDiscount() {
 
             var outer_outer_cell = document.createElement('div')
             outer_outer_cell.setAttribute('class', 'spoljni-div')
+            outer_outer_cell.setAttribute('id', sifra_artikla)
             outer_outer_cell.append(outer_cell)
 
 
@@ -1857,6 +1871,7 @@ async function getDataSortDiscount() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
 
           // tabela_row.append(outer_outer_cell)
@@ -1967,6 +1982,7 @@ async function getDataSortDiscount() {
 
           var outer_outer_cell = document.createElement('div')
           outer_outer_cell.setAttribute('class', 'spoljni-div')
+          outer_outer_cell.setAttribute('id', sifra_artikla)
           outer_outer_cell.append(outer_cell)
 
 
@@ -2068,33 +2084,34 @@ async function createSearch() {
     rows.forEach(element => {
         const row = element.split(';')
         const link = row[0]
-        const naziv = row[1]
-        const nova_cena = row[2]
-        const stara_cena = row[3]
-        const popust = row[4]
+        const sifra_artikla = row[1]
+        const naziv = row[2]
+        const nova_cena = row[3]
+        const stara_cena = row[4]
+        const popust = row[5]
   
         let option_link_element = document.createElement('a')
         let option_link_href = ''
         var tekst = naziv + ', ' + nova_cena + ' din'
         switch(link) {
           case '1': 
-            option_link_href = 'izaberi-uvek-sveze'
+            option_link_href = 'izaberi-uvek-sveze#' + sifra_artikla
             break;
 
           case '2': 
-            option_link_href = 'uzivaj-u-ukusnom-delikatesu'
+            option_link_href = 'uzivaj-u-ukusnom-delikatesu#' + sifra_artikla
             break;
 
           case '3': 
-            option_link_href = 'pripremi-ukusan-obrok'
+            option_link_href = 'pripremi-ukusan-obrok#' + sifra_artikla
             break;
           
           case '4': 
-            option_link_href = 'gricni-i-osvezi-se'
+            option_link_href = 'gricni-i-osvezi-se#' + sifra_artikla
             break;
           
           case '5': 
-            option_link_href = 'plava-cena'
+            option_link_href = 'plava-cena#' + sifra_artikla
             break;
         }
         
@@ -2130,13 +2147,14 @@ async function getDataCategory(sifra) {
     rows.forEach(element => {
         const row = element.split(';')
         const kategorija = row[0]
-        const naziv = row[1]
-        const stara_cena = row[2]
-        const nova_cena = row[3]
-        const popust = row[4]
-        const url = row[5]
-        const trajanje = row[6]
-        const vazenje = row[7]
+        const sifra_artikla = row[1]
+        const naziv = row[2]
+        const stara_cena = row[3]
+        const nova_cena = row[4]
+        const popust = row[5]
+        const url = row[6]
+        const trajanje = row[7]
+        const vazenje = row[8]
 
         if(sifra_kategorije == kategorija) {
 
@@ -2229,6 +2247,7 @@ async function getDataCategory(sifra) {
 
                 var outer_outer_cell = document.createElement('div')
                 outer_outer_cell.setAttribute('class', 'spoljni-div')
+                outer_outer_cell.setAttribute('id', sifra_artikla)
                 outer_outer_cell.append(outer_cell)
 
 
@@ -2420,6 +2439,7 @@ async function getDataCategory(sifra) {
 
                 var outer_outer_cell = document.createElement('div')
                 outer_outer_cell.setAttribute('class', 'spoljni-div')
+                outer_outer_cell.setAttribute('id', sifra_artikla)
                 outer_outer_cell.append(outer_cell)
                 
                 
@@ -2565,13 +2585,14 @@ async function getDataSortPriceCategory(sifra) {
     new_row.forEach(element => {
         const row = element.split(';')
         const kategorija = row[0]
-        const naziv = row[1]
-        const stara_cena = row[2]
-        const nova_cena = row[3]
-        const popust = row[4]
-        const url = row[5]
-        const trajanje = row[6]
-        const vazenje = row[7]  
+        const sifra_artikla = row[1]
+        const naziv = row[2]
+        const stara_cena = row[3]
+        const nova_cena = row[4]
+        const popust = row[5]
+        const url = row[6]
+        const trajanje = row[7]
+        const vazenje = row[8]  
         
         if(sifra_kategorije == kategorija) {
 
@@ -2666,6 +2687,7 @@ async function getDataSortPriceCategory(sifra) {
 
                 var outer_outer_cell = document.createElement('div')
                 outer_outer_cell.setAttribute('class', 'spoljni-div')
+                outer_outer_cell.setAttribute('id', sifra_artikla)
                 outer_outer_cell.append(outer_cell)
 
         
@@ -2862,6 +2884,7 @@ async function getDataSortPriceCategory(sifra) {
 
             var outer_outer_cell = document.createElement('div')
             outer_outer_cell.setAttribute('class', 'spoljni-div')
+            outer_outer_cell.setAttribute('id', sifra_artikla)
             outer_outer_cell.append(outer_cell)
             
             
@@ -3013,13 +3036,14 @@ async function getDataSortDiscountCategory(sifra) {
     reversed_array.forEach(element => {
         const row = element.split(';')
         const kategorija = row[0]
-        const naziv = row[1]
-        const stara_cena = row[2]
-        const nova_cena = row[3]
-        const popust = row[4]
-        const url = row[5]
-        const trajanje = row[6]
-        const vazenje = row[7]
+        const sifra_artikla = row[1]
+        const naziv = row[2]
+        const stara_cena = row[3]
+        const nova_cena = row[4]
+        const popust = row[5]
+        const url = row[6]
+        const trajanje = row[7]
+        const vazenje = row[8]
       
 
         if(sifra_kategorije == kategorija) {
@@ -3114,6 +3138,7 @@ async function getDataSortDiscountCategory(sifra) {
 
                 var outer_outer_cell = document.createElement('div')
                 outer_outer_cell.setAttribute('class', 'spoljni-div')
+                outer_outer_cell.setAttribute('id', sifra_artikla)
                 outer_outer_cell.append(outer_cell)
 
 
@@ -3308,6 +3333,7 @@ async function getDataSortDiscountCategory(sifra) {
 
             var outer_outer_cell = document.createElement('div')
             outer_outer_cell.setAttribute('class', 'spoljni-div')
+            outer_outer_cell.setAttribute('id', sifra_artikla)
             outer_outer_cell.append(outer_cell)
 
 
@@ -3456,8 +3482,8 @@ async function datumAkcije() {
     const name_row = data.split('\n')
     var podnaslov_kategorija = name_row[0].split(';')
 console.log(podnaslov_kategorija)
-    document.getElementById('desktop_podnaslov').innerHTML = podnaslov_kategorija[8]
-    document.getElementById('mobile_podnaslov').innerHTML = podnaslov_kategorija[8]
+    document.getElementById('desktop_podnaslov').innerHTML = podnaslov_kategorija[9]
+    document.getElementById('mobile_podnaslov').innerHTML = podnaslov_kategorija[9]
 }
 
 async function getDataCarousel() {
@@ -3508,4 +3534,12 @@ async function getDataCarousel() {
         autoplay: true,
         speed: 500
     });
+}
+
+function jumpToElement() {
+  if(document.URL.indexOf('#') > -1) {
+    var location = document.URL.split('#')
+    console.log(location[1])
+    document.getElementById(location[1]).scrollIntoView()
+  }
 }
