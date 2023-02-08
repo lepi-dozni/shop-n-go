@@ -23,8 +23,8 @@
       <!-- <link rel="stylesheet" type="text/css" href="css/redesign.css"/> -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-      <script type="text/javascript" src="js/skripte.js"></script>
-      <!-- <script type="text/javascript" src="https://maxi.sales-snap.com/asset/1593:skriptejs"></script> -->
+      <!-- <script type="text/javascript" src="js/skripte.js"></script> -->
+      <script type="text/javascript" src="https://maxi.sales-snap.com/asset/1593:skriptejs"></script>
       <!-- redesign -->
 
       <!-- Google Tag Manager -->
@@ -2322,7 +2322,7 @@ body > .mf-bar-collapser {
                 var width = window.innerWidth * procenat_sirine / 100
                 document.querySelector(selektor).style.width =  width
                 document.querySelector(selektor).style.display = 'block'
-              }, 500)
+              }, 1000)
                  
          
              }
@@ -2394,7 +2394,11 @@ body > .mf-bar-collapser {
         getDataSortPrice()
         getDataSortDiscount() 
         createSearch()  
-        getDataCarousel()
+        
+        setTimeout(function() {
+            getDataCarousel()
+            getImage()
+        }, 800)
         
         
      

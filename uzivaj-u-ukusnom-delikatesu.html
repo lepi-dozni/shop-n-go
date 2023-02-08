@@ -4774,7 +4774,12 @@
         getDataSortDiscountCategory('2') 
         createSearch()
         datumAkcije() 
-        getDataCarousel()  
+        setTimeout(function() {
+            getImage()
+        }, 500)
+        setTimeout(function() {
+            getDataCarousel()  
+        }, 1000)  
         setTimeout(function() {
             jumpToElement()
         }, 2500)

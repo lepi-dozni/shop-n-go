@@ -23,8 +23,8 @@
       <!-- <link rel="stylesheet" type="text/css" href="css/redesign.css"/> -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/skripte.js"></script>
-  <!-- <script type="text/javascript" src="https://maxi.sales-snap.com/asset/1593:skriptejs"></script> -->
+  <!-- <script type="text/javascript" src="js/skripte.js"></script> -->
+  <script type="text/javascript" src="https://maxi.sales-snap.com/asset/1593:skriptejs"></script>
       <!-- redesign -->
 
       <!-- Google Tag Manager -->
@@ -4774,7 +4774,13 @@
         getDataSortDiscountCategory('1') 
         createSearch()
         datumAkcije() 
-        getDataCarousel()  
+        setTimeout(function() {
+            getImage()
+        }, 500)
+        setTimeout(function() {
+            getDataCarousel()  
+        }, 1000)
+        
         setTimeout(function() {
             jumpToElement()
         }, 2500)

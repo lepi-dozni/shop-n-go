@@ -10,6 +10,7 @@ async function getData() {
     var counter = 0;
 
     var red = 0;
+
     
     // KREIRANJE HTML ELEMENATA ZA ARTIKLE
     rows.forEach(element => {
@@ -20,9 +21,9 @@ async function getData() {
         const stara_cena = row[3]
         const nova_cena = row[4]
         const popust = row[5]
-        const url = row[6]
-        const trajanje = row[7]
-        const vazenje = row[8]
+        const url = ''
+        const trajanje = row[6]
+        const vazenje = row[7]
 
       if(counter % 4 == 0 || counter == 0) {
 
@@ -623,7 +624,6 @@ async function getData() {
       }
       counter++
     });
-  
 }   
 
 // async function getDataSidebar() {
@@ -725,22 +725,22 @@ async function getDataSortPrice() {
     let new_row = [rows_copy[0]]
 
     for(var x = 1; x < rows_copy.length; x++) {
-      let current_price = parseInt(rows_copy[x].split(';')[3])
+      let current_price = parseInt(rows_copy[x].split(';')[4])
 
-      if(current_price < parseInt(new_row[x-1].split(';')[3])) {
+      if(current_price < parseInt(new_row[x-1].split(';')[4])) {
         if(x - 1 == 0) {
           let temp = new_row[x-1]
           new_row[x-1] = rows_copy[x]
           new_row[x] = temp
         } else {
           var y = x - 2
-          if(current_price > parseInt(new_row[y].split(';')[3])) {
+          if(current_price > parseInt(new_row[y].split(';')[4])) {
             let temp = new_row[y + 1]
             new_row[y + 1] = rows_copy[x]
             new_row[x] = temp
           } else {
             
-            while(y > -1 && current_price < parseInt(new_row[y].split(';')[3])) {
+            while(y > -1 && current_price < parseInt(new_row[y].split(';')[4])) {
               y--
             }
 
@@ -774,9 +774,9 @@ async function getDataSortPrice() {
         const stara_cena = row[3]
         const nova_cena = row[4]
         const popust = row[5]
-        const url = row[6]
-        const trajanje = row[7]
-        const vazenje = row[8]       
+        const url = ''
+        const trajanje = row[6]
+        const vazenje = row[7]       
         
         
 
@@ -1406,23 +1406,23 @@ async function getDataSortDiscount() {
     let new_row = [rows_copy[0]]
 
     for(var x = 1; x < rows_copy.length; x++) {
-      let current_price = parseInt(rows_copy[x].split(';')[4])
+      let current_price = parseInt(rows_copy[x].split(';')[5])
 
 
-      if(current_price < parseInt(new_row[x-1].split(';')[4])) {
+      if(current_price < parseInt(new_row[x-1].split(';')[5])) {
         if(x - 1 == 0) {
           let temp = new_row[x-1]
           new_row[x-1] = rows_copy[x]
           new_row[x] = temp
         } else {
           var y = x - 2
-          if(current_price > parseInt(new_row[y].split(';')[4])) {
+          if(current_price > parseInt(new_row[y].split(';')[5])) {
             let temp = new_row[y + 1]
             new_row[y + 1] = rows_copy[x]
             new_row[x] = temp
           } else {
             
-            while(y > -1 && current_price < parseInt(new_row[y].split(';')[4])) {
+            while(y > -1 && current_price < parseInt(new_row[y].split(';')[5])) {
 
               y--
             }
@@ -1458,9 +1458,9 @@ async function getDataSortDiscount() {
         const stara_cena = row[3]
         const nova_cena = row[4]
         const popust = row[5]
-        const url = row[6]
-        const trajanje = row[7]
-        const vazenje = row[8]
+        const url = ''
+        const trajanje = row[6]
+        const vazenje = row[7]
       
 
         if(counter % 4 == 0 || counter == 0) {
@@ -2152,9 +2152,9 @@ async function getDataCategory(sifra) {
         const stara_cena = row[3]
         const nova_cena = row[4]
         const popust = row[5]
-        const url = row[6]
-        const trajanje = row[7]
-        const vazenje = row[8]
+        const url = ''
+        const trajanje = row[6]
+        const vazenje = row[7]
 
         if(sifra_kategorije == kategorija) {
 
@@ -2590,9 +2590,9 @@ async function getDataSortPriceCategory(sifra) {
         const stara_cena = row[3]
         const nova_cena = row[4]
         const popust = row[5]
-        const url = row[6]
-        const trajanje = row[7]
-        const vazenje = row[8]  
+        const url = ''
+        const trajanje = row[6]
+        const vazenje = row[7]  
         
         if(sifra_kategorije == kategorija) {
 
@@ -3041,9 +3041,9 @@ async function getDataSortDiscountCategory(sifra) {
         const stara_cena = row[3]
         const nova_cena = row[4]
         const popust = row[5]
-        const url = row[6]
-        const trajanje = row[7]
-        const vazenje = row[8]
+        const url = ''
+        const trajanje = row[6]
+        const vazenje = row[7]
       
 
         if(sifra_kategorije == kategorija) {
@@ -3482,8 +3482,8 @@ async function datumAkcije() {
     const name_row = data.split('\n')
     var podnaslov_kategorija = name_row[0].split(';')
 console.log(podnaslov_kategorija)
-    document.getElementById('desktop_podnaslov').innerHTML = podnaslov_kategorija[9]
-    document.getElementById('mobile_podnaslov').innerHTML = podnaslov_kategorija[9]
+    document.getElementById('desktop_podnaslov').innerHTML = podnaslov_kategorija[8]
+    document.getElementById('mobile_podnaslov').innerHTML = podnaslov_kategorija[8]
 }
 
 async function getDataCarousel() {
@@ -3542,4 +3542,24 @@ function jumpToElement() {
     console.log(location[1])
     document.getElementById(location[1]).scrollIntoView()
   }
+}
+
+async function getImage() {
+  const response = await fetch('tabele/sifrarnik-slika.csv', {cache:"no-store"});
+  // const response = await fetch('https://maxi.sales-snap.com/asset/194:nazivi-i-cene-artikala-za-digital-lifletcsv');
+  const data = await response.text();
+
+  const rows = data.split('\n').slice(1)
+
+  rows.forEach(element => {
+    const row = element.split(';')
+    const sifra_artikla = row[0]
+    const src = row[1]
+
+    $('[id="' + sifra_artikla + '"] img').attr('src', src)
+
+  })
+
+  
+
 }
