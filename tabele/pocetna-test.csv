@@ -1,7 +1,7 @@
 ﻿kategorija;sifra-artikla;naziv-artikla;redovna-cena;akcijska-cena;popust;datum-akcije;važi u odabranim objektima;20.10.-26.10.2022.
 1;7352098;Limun, 500g;119.99;59.00;25%;;;
-1;7372071;Kruška Cepuna, 1kg;174.99;109.99;12%;3.2-9.2.2023.;;
-1;7336806;Salata iceberg, 200g;144.99;99.99;45%;3.2-9.2.2023.;;
+1;7372071;Kruška Cepuna, 1kg;174.99;109.99;12%;3.2-9.2.2023.;važi u odabranim objektima;
+1;7336806;Salata iceberg, 200g;144.99;99.99;45%;3.2-9.2.2023.;važi u odabranim objektima;
 1;7290792;Jabuka Zlatni delišes domaći, 1kg;133.99;89.00;34%;3.2-9.2.2023.;;
 1;7441357;Kobasica za pečenje, 450g;369.99;319.99;14%;;;
 1;7617851;Pileća KaoĐorđeva, 450g;499.99;449.99;10%;;;
@@ -12,7 +12,7 @@
 3;7184090;Jogurt Balans+ probiotic, 1kg;184.99;159.99;14%;;;
 3;7185077;Kisela pavlaka 20%mm Moja Kravica, 180g ;97.99;79.99;18%;;;
 3;7205007;Tunjevina u maslinovom ulju Rio Mare, 3x80g;769.99;549.00;29%;;;
-3;7177165;Ulje maslinovo Extra virgin Monini, 1l;2131.00;1399.00;34%;;;
+3;7177165;Ulje maslinovo Extra virgin Monini, 1l;2131.99;1399.99;34%;;;
 4;7176016;Kafa mlevena Grand Gold, 200g;384.99;339.00;12%;;;
 4;7176157;Biskvit Jaffa, 300g;224.99;164.99;27%;;;
 4;7200879;Pivo Zaječarsko, 0.5l;89.99;73.00;19%;;;

@@ -943,8 +943,8 @@ html{
     font-size: 57px;
 }
 .cenovnik-right {
-    margin-top: 17px;
-    margin-left: -87%;
+    margin-top: 19px;
+    margin-left: -77%;
 }
 .cenovnik-right span {
     font-size: 21px;
@@ -957,7 +957,7 @@ html{
     display: flex;
     position: relative;
     top: 113px;
-    font-size: 20px;
+    font-size: 30px;
     margin-left: 130%;
     color: white;
     font-weight: bold;
@@ -988,8 +988,8 @@ html{
 }
 
 .cenovnik-left > div {
-    font-size: 35px;
-    margin-left: 6px;
+    font-size: 40px;
+    margin-left: 0px;
     color: #522e91;
     font-weight: bold;
 }
@@ -997,7 +997,7 @@ html{
 .cenovnik-right > div {
     text-decoration: line-through;
     color: #522e91;
-    margin-left: 75px;
+    margin-left: 77px;
     font-weight: bold;
     font-size: 14px;
     text-decoration-color: #e32;
@@ -1193,13 +1193,15 @@ html{
     }
     
     .zuti-cenovnik {
-        margin-left: -6px;
+        margin-left: -21px;
         top: 138px;
+        width: 135px;
     }
     
     .crveni-krug {
-        top: 79px;
+        top: 70px;
         margin-left: 143px;
+        font-size: 30px;
     }
     
     .naziv-proizvoda {
@@ -2273,7 +2275,39 @@ body > .mf-bar-collapser {
     
     .plava-cena .cenovnik-left > div {
         color: #000 !important;
-    }    
+    }   
+    
+    /* 22.02.2023 */
+    .lokacija,
+    .trajanje {
+        font-size: 16px;
+    }
+
+    .div-inside img {
+        margin-top: 90px;
+    }
+
+    .crveni-krug {
+        top: 118px;
+        font-size: 45px;
+        margin-left: 132%;
+        width: 110px;
+    }
+
+    .cenovnik-left > div {
+        font-size: 55px;
+    }
+
+    .cenovnik-right {
+        margin-left: -67%;
+        margin-top: 27px;
+    }
+
+    .zuti-cenovnik {
+        top: 205px !important;
+        margin-left: -23% !important;
+        width: 200px !important;
+    }
     
 }
 
@@ -2632,6 +2666,7 @@ body > .mf-bar-collapser {
             <div class="sort-button">
                 SORTIRAJ ARTIKLE
             </div>
+
             <div class="price-sort">
                 sortiraj po ceni
                 <div class="close-button">X</div>
@@ -2644,11 +2679,51 @@ body > .mf-bar-collapser {
         <!-- redesign -->
         <div id="kalkulator">
           <div id="proizvod_1" style="text-align:center;">
-              <span>Ukupna uŠteda: </span>
+              <span>Ukupna ušteda: </span>
               <span class="usteda">0</span>
               <span> din</span>
           </div>
-          
+            
+            <button style="display: none;" id="izracunaj">
+                SAČUVAJ UŠTEDU
+            </button>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+            <script>
+                document.getElementById('izracunaj').addEventListener('click', function() {
+
+                    var doc = new jsPDF()
+
+
+                    var tekst = 'Spisak artikala:\n'
+                    
+
+                    for(x=0;x < $('.cekboks-kalkulatora:checked').length;x++) {
+
+                        
+                        var element = $('.cekboks-kalkulatora:checked:eq(' + x + ')')
+                        tekst += element.parents('.spoljni-div').find('.naziv-proizvoda').text().trim() + ', kol: '
+
+                        tekst += element.parents('.spoljni-div').find('.kolicina').text().trim() + ', ušteda: '
+
+                        var stara_cena = parseFloat(element.parents('.spoljni-div').find('div[id*="stara-cena"]').attr('data-id'))
+                        var nova_cena = parseFloat(element.parents('.spoljni-div').find('div[id*="nova-cena"]').attr('data-id'))
+                        var razlika = parseFloat(stara_cena - nova_cena).toFixed(2).replace('.', ',')
+                        
+                        
+                        tekst += razlika + ' din\n'
+
+                        console.log(tekst)
+                    }
+
+
+                    tekst += '\nUkupna ušteda:\n' + $('#kalkulator .usteda').text().replace('.', ',') + ' din'
+                    doc.setFont('times')
+                    doc.setFontType('normal')
+                    doc.text(tekst, 10, 10,{charSpace: '0.9'})
+                    doc.save('a4.pdf')
+                })
+            </script>
         
         </div>    
 
@@ -2687,7 +2762,7 @@ body > .mf-bar-collapser {
             
         // KALKULATOR START  
         function oduzimanje(event) {
-            
+            console.log(parseInt($(event.target).parents('.spoljni-div').find('.kolicina').text()))
             if(parseInt($(event.target).parents('.spoljni-div').find('.kolicina').text()) < 2) {
 
                 var stara_cena = parseFloat($(event.target).parents('.spoljni-div').find('div[id*="stara-cena"]').attr('data-id'))
@@ -2702,6 +2777,8 @@ body > .mf-bar-collapser {
                 var trenutna_usteda_artikal = parseFloat($(event.target).parents('.spoljni-div').find('.popust-artikal').text())
                 var nova_usteda_artikal = parseFloat(trenutna_usteda_artikal - razlika).toFixed(2)
                 $(event.target).parents('.spoljni-div').find('.popust-artikal').text(nova_usteda_artikal)
+
+                $(event.target).parents('.spoljni-div').find('.cekboks-kalkulatora').click()
                 
             } else {
 
@@ -2767,12 +2844,14 @@ body > .mf-bar-collapser {
                         $(event.target).parents('.spoljni-div').children('.telo-kalkulatora').css('display', 'block')
                         // $(event.target).next().find('.kolicina').text('1')
                         sabiranje(event)
+                        $('#izracunaj').css('display', 'block')
 
                     } else {
 
                         $(event.target).parents('.spoljni-div').children('.telo-kalkulatora').css('display', 'none')
                         // $(event.target).next().find('.kolicina').text('0')
                         oduzmiSve(event)
+                        $('#izracunaj').css('display', 'none')
                     }
 
                 })
