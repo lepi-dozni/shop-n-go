@@ -2897,8 +2897,29 @@
                 width: 240px !important;
                 height: 240px !important;
             }
+
+            #izracunaj {
+                float: right;
+                margin-right: -80px;
+                background: transparent;
+                border: none;
+                margin-top: -50px;
+            }
+            
+            #izracunaj img {
+                height: 80px;
+                width: 80px;
+            }
+            
+            #kalkulator {
+            overflow: visible !important;
+            }
+            
+            #kalkulator > div {
+                padding-top: 30px;
+            }
         
-        } 
+} 
         
         @media only screen and (max-width: 1000px) {
         
@@ -4685,8 +4706,50 @@
         margin-left: -23% !important;
         width: 200px !important;
     }
+    
+        .selektor-kalkulatora input,
+    .checkmark {
+        height: 50px;
+        width: 50px;
+    }
+    
+    .selektor-kalkulatora .checkmark:after {
+        width: 14px;
+        height: 26px;
+        left: 11px;
+    }
+    
+    .kalkulator {
+        margin-top: 7px !important;
+    }
+    
+    #izracunaj {
+        background: transparent;
+        border: none;
+        display: inline;
+        margin-top: -80px;
+        float: right;
+    }
+    
+    #izracunaj img {
+        height: 120px;
+        width: 120px;
+    }
+    
+    #kalkulator {
+        overflow: visible !important;
+    }
+    
+    #kalkulator > div {
+        padding-top: 20px !important;
+    }
+    
+    .telo-kalkulatora button,
+    .telo-kalkulatora .kolicina{
+        font-size: 35px;
+    }
             
-        }
+}
         
         
         
@@ -5095,6 +5158,46 @@
               <span> din</span>
           </div>
           
+                      <button id="izracunaj">
+                <img src="https://maxi.sales-snap.com/asset/1823:calculatorpng"></img>
+            </button>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+            <script>
+                document.getElementById('izracunaj').addEventListener('click', function() {
+
+                    var doc = new jsPDF()
+
+
+                    var tekst = 'Spisak artikala:\n'
+                    
+
+                    for(x=0;x < $('.cekboks-kalkulatora:checked').length;x++) {
+
+                        
+                        var element = $('.cekboks-kalkulatora:checked:eq(' + x + ')')
+                        tekst += element.parents('.spoljni-div').find('.naziv-proizvoda').text().trim() + ', kol: '
+
+                        tekst += element.parents('.spoljni-div').find('.kolicina').text().trim() + ', ušteda: '
+
+                        var stara_cena = parseFloat(element.parents('.spoljni-div').find('div[id*="stara-cena"]').attr('data-id'))
+                        var nova_cena = parseFloat(element.parents('.spoljni-div').find('div[id*="nova-cena"]').attr('data-id'))
+                        var razlika = parseFloat(stara_cena - nova_cena).toFixed(2).replace('.', ',')
+                        
+                        
+                        tekst += razlika + ' din\n'
+
+                        console.log(tekst)
+                    }
+
+
+                    tekst += '\nUkupna ušteda:\n' + $('#kalkulator .usteda').text().replace('.', ',') + ' din'
+                    doc.setFont('times')
+                    doc.setFontType('normal')
+                    doc.text(tekst, 10, 10,{charSpace: '0.9'})
+                    doc.save('a4.pdf')
+                })
+            </script>
         
         </div>    
 
