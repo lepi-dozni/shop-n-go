@@ -965,7 +965,7 @@ html{
     font-size: 30px;
     margin-left: 130%;
     color: white;
-    font-weight: bold;
+    font-weight: normal;
     font-family: 'Mont-Black';
 }
 .white-h1 {
@@ -2437,7 +2437,7 @@ body > .mf-bar-collapser {
                 var width = window.innerWidth * procenat_sirine / 100
                 document.querySelector(selektor).style.width =  width
                 document.querySelector(selektor).style.display = 'block'
-              }, 1000)
+              }, 2000)
                  
          
              }
@@ -2838,7 +2838,7 @@ body > .mf-bar-collapser {
         
         </div>    
 
-        <div style="display: block;" class="tabela-proizvoda-div kategorije" >
+        <div style="display: block;" class="tabela-proizvoda-div kategorije active" >
 
           <div class="proizvodi-row" id="tabela-proizvoda">
               <!-- SVI NESORTIRANI PROIZVODI -->
@@ -2933,6 +2933,8 @@ body > .mf-bar-collapser {
             $(event.target).parents('.spoljni-div').find('.popust-artikal').text(nova_usteda_artikal)
 
             // updateStorage($(event.target).parents('.spoljni-div').attr('id'))
+            
+            
 
         }
         
@@ -3005,11 +3007,13 @@ body > .mf-bar-collapser {
         function sortPrice() {
              updateStorage()
           $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena)').css('display', 'none')
+          $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena)').removeClass('active')
           $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena) .cekboks-kalkulatora:checked').click()
           
 
           $('.mobile-newsletter-wrapper').appendTo('.tabela-proizvoda-div.kategorije.sortirana-cena .mobile-newsletter')
           $('.tabela-proizvoda-div.kategorije.sortirana-cena').css('display', 'block')
+          $('.tabela-proizvoda-div.kategorije.sortirana-cena').addClass('active')
 
            
             applyStorage()
@@ -3022,10 +3026,12 @@ body > .mf-bar-collapser {
 
              updateStorage()
           $('.tabela-proizvoda-div.kategorije:not(.sortirani-popust)').css('display', 'none')
+          $('.tabela-proizvoda-div.kategorije:not(.sortirani-popust)').removeClass('active')
           $('.tabela-proizvoda-div.kategorije:not(.sortirani-popust) .cekboks-kalkulatora:checked').click()
 
           $('.mobile-newsletter-wrapper').appendTo('.tabela-proizvoda-div.kategorije.sortirani-popust .mobile-newsletter')
           $('.tabela-proizvoda-div.kategorije.sortirani-popust').css('display', 'block')
+          $('.tabela-proizvoda-div.kategorije.sortirani-popust').addClass('active')
 
           
             applyStorage()
@@ -3037,13 +3043,16 @@ body > .mf-bar-collapser {
 
              updateStorage()
           $('.tabela-proizvoda-div.kategorije.sortirani-popust').css('display', 'none')
+          $('.tabela-proizvoda-div.kategorije.sortirani-popust').removeClass('active')
           $('.tabela-proizvoda-div.kategorije.sortirani-popust .cekboks-kalkulatora:checked').click()
 
           $('.tabela-proizvoda-div.kategorije.sortirana-cena').css('display', 'none')
+           $('.tabela-proizvoda-div.kategorije.sortirana-cena').removeClass('active')
           $('.tabela-proizvoda-div.kategorije.sortirana-cena .cekboks-kalkulatora:checked').click()
           
           $('.mobile-newsletter-wrapper').appendTo('.tabela-proizvoda-div.kategorije:not(.sortirana-cena):not(.sortirani-popust) .mobile-newsletter')
           $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena):not(.sortirani-popust)').css('display', 'block')
+          $('.tabela-proizvoda-div.kategorije:not(.sortirana-cena):not(.sortirani-popust)').addClass('active')
 
           
             applyStorage()
@@ -3076,6 +3085,7 @@ body > .mf-bar-collapser {
 
         // CUVANJE VREDNOSI KALKULATORA
 
+    if(window.innerWidth > 1050) {
         window.addEventListener("beforeunload", function(event) {
             // localStorage.setItem('nikola', 'nikola')
 
@@ -3083,6 +3093,10 @@ body > .mf-bar-collapser {
 
             
         });
+    }
+        
+        
+        
 
         function updateStorage() {
             for(var x = 0; x < $('.tabela-proizvoda-div[style*="block"] .cekboks-kalkulatora').length; x++) {
@@ -3102,6 +3116,7 @@ body > .mf-bar-collapser {
 
 
             }
+        
         }
 
         // function updateStorage(ID) {
@@ -3117,11 +3132,13 @@ body > .mf-bar-collapser {
         setTimeout(function() {
 
             applyStorage()
+            
 
         }, 3000)
 
         
         function applyStorage() {
+            console.log(localStorage)
             for (var i = 0; i < localStorage.length; i++) {
                 var key = localStorage.key(i);
                 // var value = localStorage.getItem(key);
