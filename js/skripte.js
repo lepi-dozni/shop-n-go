@@ -3497,6 +3497,7 @@ if(window.innerWidth < 1050) {
          
   $('a').on('click', function() {
       updateStorage()
+      applyStorage()
   })
 
 
