@@ -23,7 +23,7 @@
       <!-- <link rel="stylesheet" type="text/css" href="css/redesign.css"/> -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-      <!-- <script type="text/javascript" src="js/skripte.js"></script> -->
+       <!--<script type="text/javascript" src="js/skripte.js"></script> -->
       <script type="text/javascript" src="https://maxi.sales-snap.com/asset/1593:skriptejs"></script>
       <!-- redesign -->
 
@@ -2392,6 +2392,10 @@ body > .mf-bar-collapser {
     
 }
 
+.mf-notification-iframe-top-right {
+    height: 329px !important;
+}
+
 @font-face {
         font-family: "Mont-Book";
         src: url("fonts/Mont-Book.otf");
@@ -2831,10 +2835,24 @@ body > .mf-bar-collapser {
                     doc.save('a4.pdf')
 
 
+                    addFavorite()
+
+
                     // BRISANJE VREDNOSI KALKULATORA
                     $('#tabela-proizvoda .cekboks-kalkulatora:checked').click()
                 })
             </script>
+            <script>
+                setTimeout(function() {
+                    var skripta = document.createElement('script')
+                    skripta.setAttribute('src', 'https://maxi.sales-snap.com/focus/7.js')
+                    skripta.setAttribute('type', 'text/javascript')
+                    skripta.setAttribute('charset', 'utf-8')
+                    skripta.setAttribute('async', 'async')
+                    document.querySelector('body').prepend(skripta)
+                }, 3000)
+            </script>
+            <!-- <script src="https://maxi.sales-snap.com/focus/7.js" type="text/javascript" charset="utf-8" async="async"></script> -->
         
         </div>    
 
@@ -3085,15 +3103,15 @@ body > .mf-bar-collapser {
 
         // CUVANJE VREDNOSI KALKULATORA
 
-    if(window.innerWidth > 1050) {
-        window.addEventListener("beforeunload", function(event) {
-            // localStorage.setItem('nikola', 'nikola')
+    // if(window.innerWidth > 1050) {
+    //     window.addEventListener("beforeunload", function(event) {
+    //         // localStorage.setItem('nikola', 'nikola')
 
-            updateStorage()
+    //         updateStorage()
 
             
-        });
-    }
+    //     });
+    // }
     
       $('a').on('click', function() {
       updateStorage()

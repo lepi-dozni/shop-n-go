@@ -3498,6 +3498,7 @@ if(window.innerWidth < 1050) {
   $('a').on('click', function() {
       updateStorage()
       applyStorage()
+      console.log('apply')
   })
 
 
@@ -3555,4 +3556,17 @@ function updateStorage() {
               }
           }
       }
-  
+      function addFavorite() {
+        for(var x = 0; x < $('.tabela-proizvoda-div[style*="block"] .cekboks-kalkulatora').length; x++) {
+      
+          if($('.tabela-proizvoda-div[style*="block"] .cekboks-kalkulatora:eq(' + x + ')')[0].checked == true) {
+              var key = 'OMILJENI' + $('.tabela-proizvoda-div[style*="block"] .cekboks-kalkulatora:eq(' + x + ')').parents('.spoljni-div').attr('id')
+              var value = $('.tabela-proizvoda-div[style*="block"] .cekboks-kalkulatora:eq(' + x + ')').parents('.spoljni-div').find('.kolicina').text()
+              console.log('1')
+              localStorage.setItem(key,value)
+          } 
+        
+      
+      
+        }
+      }
